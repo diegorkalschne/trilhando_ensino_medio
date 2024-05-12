@@ -1,0 +1,56 @@
+[gd_scene load_steps=7 format=3 uid="uid://ckgmyc6b4iuil"]
+
+[ext_resource type="Script" path="res://scripts/select_character.gd" id="1_p0dqd"]
+[ext_resource type="Texture2D" uid="uid://c2rq6np2nrxpb" path="res://assets/images/background_menu.jpg" id="1_rq6b4"]
+[ext_resource type="Texture2D" uid="uid://13gqynqwmc50" path="res://sprites/boy/Idle (1).png" id="2_rxvv8"]
+[ext_resource type="Texture2D" uid="uid://cquqm8vcrigdt" path="res://sprites/girl/Idle (1).png" id="3_m5vi4"]
+[ext_resource type="Texture2D" uid="uid://dx3y7nnmjdtew" path="res://sprites/boy2/Idle (1).png" id="4_5d0b4"]
+
+[sub_resource type="Theme" id="Theme_lmjex"]
+default_font_size = 40
+
+[node name="select_character" type="Node2D"]
+script = ExtResource("1_p0dqd")
+
+[node name="BackgroundMenu" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(0.75, 0.6)
+texture = ExtResource("1_rq6b4")
+
+[node name="BoyButton" type="Button" parent="."]
+offset_right = 376.0
+offset_bottom = 648.0
+
+[node name="Boy" type="Sprite2D" parent="BoyButton"]
+position = Vector2(368, 360)
+texture = ExtResource("2_rxvv8")
+
+[node name="Boy2Button" type="Button" parent="."]
+offset_left = 376.0
+offset_right = 768.0
+offset_bottom = 648.0
+
+[node name="Boy2" type="Sprite2D" parent="Boy2Button"]
+position = Vector2(142, 357)
+texture = ExtResource("4_5d0b4")
+
+[node name="GirlButton" type="Button" parent="."]
+offset_left = 768.0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="Girl" type="Sprite2D" parent="GirlButton"]
+position = Vector2(190, 358)
+texture = ExtResource("3_m5vi4")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_right = 1152.0
+offset_bottom = 64.0
+theme = SubResource("Theme_lmjex")
+bbcode_enabled = true
+text = "[center]Selecione seu personagem[/center]"
+language = "pt_BR"
+
+[connection signal="pressed" from="BoyButton" to="." method="_on_boy_button_pressed"]
+[connection signal="pressed" from="Boy2Button" to="." method="_on_boy_2_button_pressed"]
+[connection signal="pressed" from="GirlButton" to="." method="_on_girl_button_pressed"]

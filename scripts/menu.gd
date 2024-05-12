@@ -5,7 +5,7 @@ func _ready():
 
 #Função para ação de "Começar" o jogo
 func _on_comecar_pressed():
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://scenes/select_character.tscn")
 	
 #Função para ir para a cena de "Ajuda"
 func _on_ajuda_pressed():
