@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/menu.gd" id="1_18d68"]
 [ext_resource type="Texture2D" uid="uid://c2rq6np2nrxpb" path="res://assets/images/background_menu.jpg" id="2_1v461"]
 
-[node name="MenuContainer" type="VBoxContainer"]
+[node name="menu_container" type="VBoxContainer"]
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
@@ -15,29 +15,29 @@ grow_vertical = 0
 size_flags_horizontal = 4
 script = ExtResource("1_18d68")
 
-[node name="BackgroundMenu" type="Sprite2D" parent="."]
+[node name="background_menu" type="Sprite2D" parent="."]
 position = Vector2(566, -196)
 scale = Vector2(0.75, 0.6)
 texture = ExtResource("2_1v461")
 
-[node name="Comecar" type="Button" parent="."]
+[node name="comecar" type="Button" parent="."]
 layout_mode = 2
 tooltip_text = "Começar"
 text = "Começar"
 language = "pt_BR"
 
-[node name="Ajuda" type="Button" parent="."]
+[node name="ajuda" type="Button" parent="."]
 layout_mode = 2
 tooltip_text = "Ajuda"
 text = "Ajuda"
 language = "pt_BR"
 
-[node name="Sair" type="Button" parent="."]
+[node name="sair" type="Button" parent="."]
 layout_mode = 2
 tooltip_text = "Sair"
 text = "Sair"
 language = "pt_BR"
 
-[connection signal="pressed" from="Comecar" to="." method="_on_comecar_pressed"]
-[connection signal="pressed" from="Ajuda" to="." method="_on_ajuda_pressed"]
-[connection signal="pressed" from="Sair" to="." method="_on_sair_pressed"]
+[connection signal="pressed" from="comecar" to="." method="_on_comecar_pressed"]
+[connection signal="pressed" from="ajuda" to="." method="_on_ajuda_pressed"]
+[connection signal="pressed" from="sair" to="." method="_on_sair_pressed"]

@@ -12,38 +12,38 @@ default_font_size = 40
 [node name="select_character" type="Node2D"]
 script = ExtResource("1_p0dqd")
 
-[node name="BackgroundMenu" type="Sprite2D" parent="."]
+[node name="background_menu" type="Sprite2D" parent="."]
 position = Vector2(576, 324)
 scale = Vector2(0.75, 0.6)
 texture = ExtResource("1_rq6b4")
 
-[node name="BoyButton" type="Button" parent="."]
+[node name="boy_button" type="Button" parent="."]
 offset_right = 376.0
 offset_bottom = 648.0
 
-[node name="Boy" type="Sprite2D" parent="BoyButton"]
+[node name="boy" type="Sprite2D" parent="boy_button"]
 position = Vector2(368, 360)
 texture = ExtResource("2_rxvv8")
 
-[node name="Boy2Button" type="Button" parent="."]
+[node name="boy_2_button" type="Button" parent="."]
 offset_left = 376.0
 offset_right = 768.0
 offset_bottom = 648.0
 
-[node name="Boy2" type="Sprite2D" parent="Boy2Button"]
+[node name="boy_2" type="Sprite2D" parent="boy_2_button"]
 position = Vector2(142, 357)
 texture = ExtResource("4_5d0b4")
 
-[node name="GirlButton" type="Button" parent="."]
+[node name="girl_button" type="Button" parent="."]
 offset_left = 768.0
 offset_right = 1152.0
 offset_bottom = 648.0
 
-[node name="Girl" type="Sprite2D" parent="GirlButton"]
+[node name="girl" type="Sprite2D" parent="girl_button"]
 position = Vector2(190, 358)
 texture = ExtResource("3_m5vi4")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
+[node name="rich_text_label" type="RichTextLabel" parent="."]
 offset_right = 1152.0
 offset_bottom = 64.0
 theme = SubResource("Theme_lmjex")
@@ -51,6 +51,6 @@ bbcode_enabled = true
 text = "[center]Selecione seu personagem[/center]"
 language = "pt_BR"
 
-[connection signal="pressed" from="BoyButton" to="." method="_on_boy_button_pressed"]
-[connection signal="pressed" from="Boy2Button" to="." method="_on_boy_2_button_pressed"]
-[connection signal="pressed" from="GirlButton" to="." method="_on_girl_button_pressed"]
+[connection signal="pressed" from="boy_button" to="." method="_on_boy_button_pressed"]
+[connection signal="pressed" from="boy_2_button" to="." method="_on_boy_2_button_pressed"]
+[connection signal="pressed" from="girl_button" to="." method="_on_girl_button_pressed"]
