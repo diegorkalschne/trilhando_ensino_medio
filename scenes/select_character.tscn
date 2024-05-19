@@ -43,7 +43,7 @@ offset_bottom = 648.0
 position = Vector2(190, 358)
 texture = ExtResource("3_m5vi4")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
+[node name="SelectCharacterText" type="RichTextLabel" parent="."]
 offset_right = 1152.0
 offset_bottom = 64.0
 theme = SubResource("Theme_lmjex")
