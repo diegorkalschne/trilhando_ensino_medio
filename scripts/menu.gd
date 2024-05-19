@@ -1,7 +1,7 @@
 extends VBoxContainer
 
 func _ready():
-	$Comecar.grab_focus()
+	$comecar.grab_focus()
 
 #Função para ação de "Começar" o jogo
 func _on_comecar_pressed():
