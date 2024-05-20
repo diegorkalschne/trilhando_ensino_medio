@@ -17,13 +17,21 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 GameStats="*res://scripts/global/game_stats.gd"
+Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 [dialogic]
 
-directories/dch_directory={}
-directories/dtl_directory={}
+directories/dch_directory={
+"character1": "res://assets/characters/character1.dch"
+}
+directories/dtl_directory={
+"timeline1": "res://assets/timelines/timeline1.dtl"
+}
+layout/style_list=[]
+layout/default_style="Default"
+variables={}
+glossary/default_case_sensitive=true
 
 [display]
 

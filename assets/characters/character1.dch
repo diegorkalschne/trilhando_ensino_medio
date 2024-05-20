@@ -2,18 +2,694 @@
 "@path": "res://addons/dialogic/Resources/character.gd",
 "@subpath": NodePath(""),
 "_translation_id": "",
-"color": Color(1, 1, 1, 1),
+"color": Color(0.316629, 0.00778198, 0.996094, 1),
 "custom_info": {
 "sound_mood_default": "",
 "sound_moods": {},
 "style": ""
 },
-"default_portrait": "",
-"description": "",
+"default_portrait": "Idle (11)",
+"description": "um personagem de teste",
 "display_name": "character1",
 "mirror": false,
-"nicknames": [""],
+"nicknames": ["personagem teste"],
 "offset": Vector2(0, 0),
-"portraits": {},
+"portraits": {
+"Dead (1)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Dead (1).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Dead (10)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Dead (10).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Dead (11)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Dead (11).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Dead (12)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Dead (12).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Dead (13)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Dead (13).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Dead (14)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Dead (14).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Dead (15)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Dead (15).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Dead (2)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Dead (2).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Dead (3)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Dead (3).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Dead (4)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Dead (4).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Dead (5)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Dead (5).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Dead (6)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Dead (6).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Dead (7)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Dead (7).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Dead (8)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Dead (8).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Dead (9)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Dead (9).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Idle (1)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Idle (1).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Idle (10)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Idle (10).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Idle (11)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Idle (11).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Idle (12)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Idle (12).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Idle (13)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Idle (13).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Idle (14)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Idle (14).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Idle (15)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Idle (15).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Idle (2)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Idle (2).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Idle (3)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Idle (3).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Idle (4)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Idle (4).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Idle (5)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Idle (5).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Idle (6)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Idle (6).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Idle (7)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Idle (7).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Idle (8)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Idle (8).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Idle (9)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Idle (9).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Jump (1)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Jump (1).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Jump (10)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Jump (10).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Jump (11)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Jump (11).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Jump (12)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Jump (12).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Jump (13)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Jump (13).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Jump (14)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Jump (14).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Jump (15)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Jump (15).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Jump (2)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Jump (2).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Jump (3)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Jump (3).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Jump (4)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Jump (4).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Jump (5)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Jump (5).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Jump (6)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Jump (6).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Jump (7)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Jump (7).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Jump (8)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Jump (8).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Jump (9)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Jump (9).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Run (1)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Run (1).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Run (10)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Run (10).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Run (11)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Run (11).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Run (12)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Run (12).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Run (13)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Run (13).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Run (14)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Run (14).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Run (15)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Run (15).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Run (2)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Run (2).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Run (3)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Run (3).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Run (4)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Run (4).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Run (5)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Run (5).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Run (6)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Run (6).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Run (7)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Run (7).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Run (8)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Run (8).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Run (9)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Run (9).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Walk (1)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Walk (1).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Walk (10)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Walk (10).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Walk (11)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Walk (11).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Walk (12)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Walk (12).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Walk (13)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Walk (13).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Walk (14)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Walk (14).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Walk (15)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Walk (15).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Walk (2)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Walk (2).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Walk (3)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Walk (3).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Walk (4)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Walk (4).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Walk (5)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Walk (5).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Walk (6)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Walk (6).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Walk (7)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Walk (7).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Walk (8)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Walk (8).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Walk (9)": {
+"export_overrides": {
+"image": "\"res://sprites/boy/Walk (9).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+}
+},
 "scale": 1.0
 }

@@ -1,0 +1,6 @@
+join  1
+timeline 1 t1
+timeline 1 t2
+- choice1
+- choice2
+timeline 1 t3
