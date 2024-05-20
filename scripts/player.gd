@@ -9,6 +9,7 @@ const SPEED = 200
 func _ready():
 	sprites.scale = Vector2(0.3, 0.3) # Altera a escala do personagem
 	sprites.speed_scale = 10 # Altera a velocidade dos frames da animação
+	sprites.position = Vector2(60, 500)
 
 # Movimento do personagem
 func _physics_process(delta):
