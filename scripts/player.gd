@@ -4,16 +4,22 @@ extends CharacterBody2D
 @onready var sprites = $sprites as AnimatedSprite2D
 
 # Velocidade de movimento
-const SPEED = 300.0
+const SPEED = 200
+
+func _ready():
+	sprites.scale = Vector2(0.3, 0.3) # Altera a escala do personagem
+	sprites.speed_scale = 10 # Altera a velocidade dos frames da animação
 
 # Movimento do personagem
 func _physics_process(delta):
 	var direction = Input.get_axis("ui_left", "ui_right")
 	if direction:
 		if direction > 0:
-			sprites.flip_h = false # direita
+			# Inverter horizontalmente o personagem para ele olhar para a 'direita'
+			sprites.flip_h = false
 		elif direction < 0:
-			sprites.flip_h = true # esquerda
+			# Inverter horizontalmente o personagem para ele olhar para a 'esquerda'
+			sprites.flip_h = true
 		
 		velocity.x = direction * SPEED
 		sprites.play("walk") # Personagem está andando
@@ -32,9 +38,11 @@ func setTextureSprite():
 	sprites.play("idle")  # Começa com animação de idle por padrão
 	
 func _loadTextureSprite(animation_name: String, keyword_file: String):
-	# Caso o player já tenha frames setados, reutilizao o mesmo
+	# Caso o player já tenha frames setados, reutiliza o mesmo
+	# Utilizado para não sobreescrever sprites já existentes
 	var sprite_frames = sprites.sprite_frames
 	if sprite_frames == null:
+		# Caso não tenha, inicia um novo
 		sprite_frames = SpriteFrames.new()
 	
 	# Adiciona a animação no SpriteFrames
@@ -56,19 +64,21 @@ func _loadTextureSprite(animation_name: String, keyword_file: String):
 
 # Função para contar quantos arquivos tem em um diretório, conforme uma string
 func count_files_with_keyword(directory_path: String, keyword: String) -> int:
+	# Tenta achar o diretório
 	var dir = DirAccess.open(directory_path)
 	if not dir:
 		print("Failed to open directory")
 		return 0
 
-	var file_count = 0
-	
+	# Obtém todos os arquivo do diretório
 	var files = dir.get_files()
 	
+	var file_count = 0
 	for i in range(files.size()):
 		var file = files[i]
+		# Verifica se o arquivo atual, possui a "keyword" no nome
 		if file.find(keyword) != -1:
 			file_count += 1
 			
-	# Divido por 2 para ignorar os arquivos 'duplicados' que o próprio godot cria ao importar algo
+	# Divide por 2 para ignorar os arquivos 'duplicados' que o próprio godot cria ao importar algo
 	return file_count / 2 
