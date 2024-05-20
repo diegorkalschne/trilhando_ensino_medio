@@ -1,3 +1,15 @@
-[gd_scene format=3 uid="uid://cclukcoaspp54"]
+[gd_scene load_steps=4 format=3 uid="uid://cclukcoaspp54"]
+
+[ext_resource type="Script" path="res://scripts/intro_school.gd" id="1_brole"]
+[ext_resource type="Texture2D" uid="uid://c2rq6np2nrxpb" path="res://assets/images/background_menu.jpg" id="2_eashg"]
+[ext_resource type="PackedScene" uid="uid://pttkd3w45ndi" path="res://scenes/player.tscn" id="3_7d0jj"]
 
 [node name="intro_school" type="Node2D"]
+script = ExtResource("1_brole")
+
+[node name="background_menu" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(0.75, 0.6)
+texture = ExtResource("2_eashg")
+
+[node name="player" parent="." instance=ExtResource("3_7d0jj")]

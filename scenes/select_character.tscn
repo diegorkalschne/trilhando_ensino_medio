@@ -1,10 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://ckgmyc6b4iuil"]
+[gd_scene load_steps=6 format=3 uid="uid://ckgmyc6b4iuil"]
 
 [ext_resource type="Script" path="res://scripts/select_character.gd" id="1_p0dqd"]
 [ext_resource type="Texture2D" uid="uid://c2rq6np2nrxpb" path="res://assets/images/background_menu.jpg" id="1_rq6b4"]
 [ext_resource type="Texture2D" uid="uid://13gqynqwmc50" path="res://sprites/boy/Idle (1).png" id="2_rxvv8"]
 [ext_resource type="Texture2D" uid="uid://cquqm8vcrigdt" path="res://sprites/girl/Idle (1).png" id="3_m5vi4"]
-[ext_resource type="Texture2D" uid="uid://dx3y7nnmjdtew" path="res://sprites/boy2/Idle (1).png" id="4_5d0b4"]
 
 [sub_resource type="Theme" id="Theme_lmjex"]
 default_font_size = 40
@@ -18,29 +17,20 @@ scale = Vector2(0.75, 0.6)
 texture = ExtResource("1_rq6b4")
 
 [node name="boy_button" type="Button" parent="."]
-offset_right = 376.0
+offset_right = 600.0
 offset_bottom = 648.0
 
 [node name="boy" type="Sprite2D" parent="boy_button"]
-position = Vector2(368, 360)
+position = Vector2(504, 360)
 texture = ExtResource("2_rxvv8")
 
-[node name="boy_2_button" type="Button" parent="."]
-offset_left = 376.0
-offset_right = 768.0
-offset_bottom = 648.0
-
-[node name="boy_2" type="Sprite2D" parent="boy_2_button"]
-position = Vector2(142, 357)
-texture = ExtResource("4_5d0b4")
-
 [node name="girl_button" type="Button" parent="."]
-offset_left = 768.0
+offset_left = 600.0
 offset_right = 1152.0
 offset_bottom = 648.0
 
 [node name="girl" type="Sprite2D" parent="girl_button"]
-position = Vector2(190, 358)
+position = Vector2(240, 360)
 texture = ExtResource("3_m5vi4")
 
 [node name="SelectCharacterText" type="RichTextLabel" parent="."]
@@ -52,5 +42,4 @@ text = "[center]Selecione seu personagem[/center]"
 language = "pt_BR"
 
 [connection signal="pressed" from="boy_button" to="." method="_on_boy_button_pressed"]
-[connection signal="pressed" from="boy_2_button" to="." method="_on_boy_2_button_pressed"]
 [connection signal="pressed" from="girl_button" to="." method="_on_girl_button_pressed"]
