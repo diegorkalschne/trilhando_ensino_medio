@@ -1,0 +1,1075 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+"_translation_id": "",
+"color": Color(0.996078, 0.00784314, 0.933333, 1),
+"custom_info": {
+"sound_mood_default": "",
+"sound_moods": {
+"Mood 1": {
+"mode": 0,
+"name": "Mood 1",
+"pitch_base": 1.0,
+"pitch_variance": 0.0,
+"skip_characters": 0.0,
+"sound_path": "",
+"volume_base": 0.0,
+"volume_variance": 0.0
+}
+},
+"style": ""
+},
+"default_portrait": "Idle (11)",
+"description": "um personagem de teste",
+"display_name": "girl1",
+"mirror": false,
+"nicknames": ["personagem teste"],
+"offset": Vector2(0, 0),
+"portraits": {
+"Dead (1)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Dead (1).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Dead (10)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Dead (10).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Dead (11)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Dead (11).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Dead (12)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Dead (12).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Dead (13)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Dead (13).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Dead (14)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Dead (14).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Dead (15)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Dead (15).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Dead (16)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Dead (16).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Dead (17)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Dead (17).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Dead (18)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Dead (18).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Dead (19)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Dead (19).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Dead (2)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Dead (2).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Dead (20)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Dead (20).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Dead (21)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Dead (21).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Dead (22)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Dead (22).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Dead (23)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Dead (23).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Dead (24)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Dead (24).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Dead (25)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Dead (25).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Dead (26)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Dead (26).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Dead (27)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Dead (27).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Dead (28)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Dead (28).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Dead (29)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Dead (29).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Dead (3)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Dead (3).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Dead (30)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Dead (30).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Dead (4)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Dead (4).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Dead (5)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Dead (5).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Dead (6)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Dead (6).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Dead (7)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Dead (7).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Dead (8)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Dead (8).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Dead (9)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Dead (9).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Idle (1)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Idle (1).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Idle (10)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Idle (10).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Idle (11)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Idle (11).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Idle (12)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Idle (12).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Idle (13)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Idle (13).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Idle (14)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Idle (14).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Idle (15)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Idle (15).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Idle (16)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Idle (16).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Idle (2)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Idle (2).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Idle (3)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Idle (3).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Idle (4)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Idle (4).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Idle (5)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Idle (5).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Idle (6)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Idle (6).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Idle (7)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Idle (7).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Idle (8)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Idle (8).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Idle (9)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Idle (9).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Jump (1)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Jump (1).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Jump (10)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Jump (10).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Jump (11)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Jump (11).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Jump (12)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Jump (12).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Jump (13)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Jump (13).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Jump (14)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Jump (14).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Jump (15)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Jump (15).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Jump (16)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Jump (16).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Jump (17)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Jump (17).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Jump (18)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Jump (18).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Jump (19)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Jump (19).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Jump (2)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Jump (2).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Jump (20)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Jump (20).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Jump (21)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Jump (21).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Jump (22)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Jump (22).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Jump (23)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Jump (23).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Jump (24)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Jump (24).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Jump (25)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Jump (25).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Jump (26)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Jump (26).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Jump (27)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Jump (27).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Jump (28)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Jump (28).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Jump (29)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Jump (29).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Jump (3)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Jump (3).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Jump (30)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Jump (30).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Jump (4)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Jump (4).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Jump (5)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Jump (5).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Jump (6)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Jump (6).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Jump (7)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Jump (7).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Jump (8)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Jump (8).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Jump (9)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Jump (9).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Run (1)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Run (1).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Run (10)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Run (10).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Run (11)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Run (11).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Run (12)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Run (12).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Run (13)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Run (13).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Run (14)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Run (14).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Run (15)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Run (15).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Run (16)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Run (16).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Run (17)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Run (17).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Run (18)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Run (18).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Run (19)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Run (19).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Run (2)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Run (2).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Run (20)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Run (20).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Run (3)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Run (3).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Run (4)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Run (4).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Run (5)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Run (5).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Run (6)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Run (6).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Run (7)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Run (7).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Run (8)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Run (8).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Run (9)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Run (9).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Walk (1)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Walk (1).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Walk (10)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Walk (10).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Walk (11)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Walk (11).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Walk (12)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Walk (12).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Walk (13)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Walk (13).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Walk (14)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Walk (14).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Walk (15)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Walk (15).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Walk (16)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Walk (16).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Walk (17)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Walk (17).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Walk (18)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Walk (18).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Walk (19)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Walk (19).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Walk (2)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Walk (2).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Walk (20)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Walk (20).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Walk (3)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Walk (3).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Walk (4)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Walk (4).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Walk (5)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Walk (5).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Walk (6)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Walk (6).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Walk (7)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Walk (7).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Walk (8)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Walk (8).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Walk (9)": {
+"export_overrides": {
+"image": "\"res://sprites/girl/Walk (9).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+}
+},
+"scale": 1.0
+}

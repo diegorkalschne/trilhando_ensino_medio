@@ -1,10 +1,10 @@
-join character1 1
-character1: Hoje é seu primeiro dia na escola {nome da escola}. Você chega nos portões da escola e para não se atrasar, decide entrar nela.
-character1: W, A, S, D para se movimentar
-character1: Você é novo na escola e está entrando no Novo Ensino Médio pela primeira vez. Sem saber onde fica a sua sala de aula, você vê a sala da diretora e decide ir lá perguntar onde ela é.
-character1: SPACE_BAR para entrar na sala
+join boy1 1
+boy1: Hoje é seu primeiro dia na escola {nome da escola}. Você chega nos portões da escola e para não se atrasar, decide entrar nela.
+boy1: W, A, S, D para se movimentar
+boy1: Você é novo na escola e está entrando no Novo Ensino Médio pela primeira vez. Sem saber onde fica a sua sala de aula, você vê a sala da diretora e decide ir lá perguntar onde ela é.
+boy1: SPACE_BAR para entrar na sala
 - Bom dia!
 - Olá!
-character1: Olá {nome do jogador}, bom dia!! Seja muito bem vindo a {nome da escola}. Sei que deve estar cheio de perguntas, mas logo em seguida teremos uma apresentação de início de ano no auditório. Após isso, você pode ir para a sua sala {número da sala}, que irei lá falar com vocês do 1º ano.
-character1: *Jogador vai caminhando até a sala {número da sala}. O mesmo estará livre no mapa, podendo passar por todas as salas (que estarão com interação bloqueada).\
-Jogador chega na sala e entra nela.
+leave boy1
+join girl1 0
+girl1: Olá {nome do jogador}, bom dia!! Seja muito bem vindo a {nome da escola}. Sei que deve estar cheio de perguntas, mas logo em seguida teremos uma apresentação de início de ano no auditório. Após isso, você pode ir para a sua sala {número da sala}, que irei lá falar com vocês do 1º ano.
