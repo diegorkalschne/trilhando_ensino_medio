@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dsv7i12sjjsp0"]
+
+[ext_resource type="PackedScene" uid="uid://bhaayclmlm54o" path="res://scenes/change_scene_detect.tscn" id="1_pjg54"]
+[ext_resource type="PackedScene" uid="uid://pttkd3w45ndi" path="res://scenes/player.tscn" id="2_82g4s"]
+
+[node name="school3" type="Node2D"]
+
+[node name="change_scene_detect" parent="." instance=ExtResource("1_pjg54")]
+
+[node name="Button" type="Button" parent="."]
+offset_left = 384.0
+offset_top = 232.0
+offset_right = 856.0
+offset_bottom = 440.0
+text = "Cena 3"
+
+[node name="player" parent="." instance=ExtResource("2_82g4s")]

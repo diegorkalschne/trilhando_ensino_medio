@@ -1,15 +1,42 @@
 extends CharacterBody2D
 
-@onready var player = $Player
+@onready var player = $Player as CharacterBody2D
 @onready var sprites = $sprites as AnimatedSprite2D
+@onready var collision = $collision as CollisionShape2D
 
 # Velocidade de movimento
 const SPEED = 200
 
 func _ready():
-	sprites.scale = Vector2(0.3, 0.3) # Altera a escala do personagem
 	sprites.speed_scale = 10 # Altera a velocidade dos frames da animação
-	sprites.position = Vector2(60, 500)
+	sprites.scale = Vector2(0.3, 0.3) # Altera a escala do personagem
+	
+	if (GameStats.walk_direction_state == GameStats.WalkState.FORWARD):
+		# Personagem está indo para a direita
+		sprites.position = Vector2(120, 500)
+	
+		if (GameStats.selected_player.find("boy") != -1):
+			# personagem 'boy' está selecionado
+			collision.position = Vector2(70, 500)
+		elif  (GameStats.selected_player.find("girl") != -1):
+			# personagem 'girl' está selecionado
+			collision.position = Vector2(130, 500)
+	elif (GameStats.walk_direction_state == GameStats.WalkState.BACK):
+		# Personagem está indo para a esquerda
+	
+		if (GameStats.selected_player.find("boy") != -1):
+			sprites.position = Vector2(1130, 500)
+			sprites.flip_h = true
+			adjust_sprite_position()
+			# personagem 'boy' está selecionado
+			collision.position = Vector2(1080, 500)
+		elif  (GameStats.selected_player.find("girl") != -1):
+			# personagem 'girl' está selecionado
+			sprites.position = Vector2(1050, 500)
+			sprites.flip_h = true
+			adjust_sprite_position()
+			collision.position = Vector2(1060, 500)
+	
 
 # Movimento do personagem
 func _physics_process(delta):
@@ -17,10 +44,16 @@ func _physics_process(delta):
 	if direction:
 		if direction > 0:
 			# Inverter horizontalmente o personagem para ele olhar para a 'direita'
-			sprites.flip_h = false
+			if (sprites.flip_h):
+				sprites.flip_h = false
+				adjust_sprite_position()
+				GameStats.walk_direction_state = GameStats.WalkState.FORWARD # Para setar globalmente que o personagem foi pra direita
 		elif direction < 0:
 			# Inverter horizontalmente o personagem para ele olhar para a 'esquerda'
-			sprites.flip_h = true
+			if (!sprites.flip_h):
+				sprites.flip_h = true
+				adjust_sprite_position()
+				GameStats.walk_direction_state = GameStats.WalkState.BACK # Para setar globalmente que o personagem foi pra esquerda
 		
 		velocity.x = direction * SPEED
 		sprites.play("walk") # Personagem está andando
@@ -29,6 +62,24 @@ func _physics_process(delta):
 		sprites.play("idle") # Personagem parou de andar
 
 	move_and_slide()
+
+# Método para ajustar a posição do sprite ao inverter
+func adjust_sprite_position():	
+	#var current_animation = sprites.animation
+	#var current_frame = sprites.frame
+	#var texture = sprites.sprite_frames.get_frame_texture(current_animation, current_frame)
+	
+	var offset
+	if (GameStats.selected_player.find("boy") != -1):
+		offset = Vector2(100, 0)
+	elif  (GameStats.selected_player.find("girl") != -1):
+		offset = Vector2(-15, 0)
+	
+	
+	if sprites.flip_h:
+		sprites.position -= offset
+	else:
+		sprites.position += offset
 
 # Método para setar todas as 'Textures' de todas as animações do personagem selecionado
 func setTextureSprite():

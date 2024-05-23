@@ -4,3 +4,7 @@ extends Node2D
 
 func _ready():	
 	player.setTextureSprite()
+
+
+func _on_area_2d_body_entered(body):
+	print(body)
