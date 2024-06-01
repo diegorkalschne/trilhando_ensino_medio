@@ -1,8 +1,5 @@
 extends Node2D
 
-func _ready():
-	pass # Replace with function body.
-
 # Quando o personagem "Boy" é selecionado
 func _on_boy_button_pressed():
 	GameStats.onSelectPlayer("res://sprites/boy/")
