@@ -55,6 +55,8 @@ text/autopauses={}
 
 [display]
 
+window/size/viewport_width=1066
+window/size/viewport_height=600
 window/stretch/mode="viewport"
 
 [editor_plugins]
