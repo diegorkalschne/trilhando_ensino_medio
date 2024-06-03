@@ -1,0 +1,10 @@
+boy1: Você é novo na escola e está entrando no Novo Ensino Médio pela primeira vez. Sem saber onde fica a sua sala de aula, você vê a sala da diretora e decide ir lá perguntar onde ela é.
+boy1: SPACE_BAR para entrar na sala
+- Bom dia!
+	leave boy1 [animation="Slide Out Left"]
+	join girl1 0 [animation="Slide In Right"]
+	girl1: Bom dia {nome_do_jogador}, bom dia!! Seja muito bem vindo a {nome_da_escola}. Sei que deve estar cheio de perguntas, mas logo em seguida teremos uma apresentação de início de ano no auditório. Após isso, você pode ir para a sua sala {número_da_sala}, que irei lá falar com vocês do 1º ano.
+- Olá!
+	leave boy1 [animation="Slide Out Left"]
+	join girl1 0 [animation="Slide In Right"]
+	girl1: Olá {nome_do_jogador}, bom dia!! Seja muito bem vindo a {nome_da_escola}. Sei que deve estar cheio de perguntas, mas logo em seguida teremos uma apresentação de início de ano no auditório. Após isso, você pode ir para a sua sala {número_da_sala}, que irei lá falar com vocês do 1º ano.

@@ -24,7 +24,7 @@
 "display_name": "girl1",
 "mirror": false,
 "nicknames": ["personagem teste"],
-"offset": Vector2(0, 0),
+"offset": Vector2(0, -45),
 "portraits": {
 "Dead (1)": {
 "export_overrides": {
@@ -1071,5 +1071,5 @@
 "scene": ""
 }
 },
-"scale": 1.0
+"scale": 0.85
 }

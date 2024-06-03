@@ -1,10 +1,3 @@
-join boy1 1
 boy1: Hoje é seu primeiro dia na escola {nome_da_escola}. Você chega nos portões da escola e para não se atrasar, decide entrar nela.
 boy1: W, A, S, D para se movimentar
-boy1: Você é novo na escola e está entrando no Novo Ensino Médio pela primeira vez. Sem saber onde fica a sua sala de aula, você vê a sala da diretora e decide ir lá perguntar onde ela é.
-boy1: SPACE_BAR para entrar na sala
-- Bom dia!
-- Olá!
-leave boy1
-join girl1 0
-girl1: Olá {nome_do_jogador}, bom dia!! Seja muito bem vindo a {nome_da_escola}. Sei que deve estar cheio de perguntas, mas logo em seguida teremos uma apresentação de início de ano no auditório. Após isso, você pode ir para a sua sala {número_da_sala}, que irei lá falar com vocês do 1º ano.
+girl1: Bom dia {nome_do_jogador}, bom dia!! Seja muito bem vindo a {nome_da_escola}. Sei que deve estar cheio de perguntas, mas logo em seguida teremos uma apresentação de início de ano no auditório. Após isso, você pode ir para a sua sala {número_da_sala}, que irei lá falar com vocês do 1º ano.
