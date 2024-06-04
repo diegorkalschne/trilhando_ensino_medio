@@ -3,39 +3,44 @@ extends CharacterBody2D
 @onready var player = $Player as CharacterBody2D
 @onready var sprites = $sprites as AnimatedSprite2D
 @onready var collision = $collision as CollisionShape2D
+@onready var camera = $camera as Camera2D
 
 # Velocidade de movimento
-const SPEED = 200
+const SPEED = 500 #200
 
 func _ready():
 	sprites.speed_scale = 10 # Altera a velocidade dos frames da animação
 	sprites.scale = Vector2(0.3, 0.3) # Altera a escala do personagem
 	
+	const y_position = 430 #Posição padrão do Y do jogador
+	
 	if (GameStats.getWalkDirectionState() == GameStats.WalkState.FORWARD):
 		# Personagem está indo para a direita
-		sprites.position = Vector2(120, 500)
+		sprites.position = Vector2(120, y_position)
 	
 		if (GameStats.getSelectedPlayer().find("boy") != -1):
 			# personagem 'boy' está selecionado
-			collision.position = Vector2(70, 500)
+			collision.position = Vector2(70, y_position)
 		elif  (GameStats.getSelectedPlayer().find("girl") != -1):
 			# personagem 'girl' está selecionado
-			collision.position = Vector2(130, 500)
+			collision.position = Vector2(130, y_position)
 	elif (GameStats.getWalkDirectionState() == GameStats.WalkState.BACK):
 		# Personagem está indo para a esquerda
 	
 		if (GameStats.getSelectedPlayer().find("boy") != -1):
-			sprites.position = Vector2(1130, 500)
+			sprites.position = Vector2(1130, y_position)
 			sprites.flip_h = true
 			adjust_sprite_position()
 			# personagem 'boy' está selecionado
-			collision.position = Vector2(1080, 500)
+			collision.position = Vector2(1080, y_position)
 		elif  (GameStats.getSelectedPlayer().find("girl") != -1):
 			# personagem 'girl' está selecionado
-			sprites.position = Vector2(1050, 500)
+			sprites.position = Vector2(1050, y_position)
 			sprites.flip_h = true
 			adjust_sprite_position()
-			collision.position = Vector2(1060, 500)
+			collision.position = Vector2(1060, y_position)
+	
+	camera.position = sprites.position
 	
 
 # Movimento do personagem
@@ -134,3 +139,13 @@ func count_files_with_keyword(directory_path: String, keyword: String) -> int:
 			
 	# Divide por 2 para ignorar os arquivos 'duplicados' que o próprio godot cria ao importar algo
 	return file_count / 2 
+
+
+func disableCamera():
+	camera.enabled = false
+
+func setPositionCamera(position):
+	camera.offset = position
+
+func setRigthCameraLimit(limit):
+	camera.limit_right = float(limit)

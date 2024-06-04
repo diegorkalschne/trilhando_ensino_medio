@@ -1,5 +1,19 @@
 extends Node2D
 
+@onready var _rigth_area = $rigth_area
+@onready var _left_area = $left_area
+
+# Função para alterar a posição X que a parede direita de colisão se encontra
+func changeRigthEdgePosition(x):
+	var current_position = _rigth_area.position
+	_rigth_area.position = Vector2(x, current_position.y)
+
+# Função para alterar a posição X que a parede esquerda de colisão se encontra
+func changeLeftEdgePosition(x):
+	var current_position = _left_area.position
+	_left_area.position = Vector2(x, current_position.y)
+
+
 # Quando o player chega na direita da tela
 func _on_rigth_area_body_entered(body):
 	var next_scene = GameStats.getCurrentScene() + 1;

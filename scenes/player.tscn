@@ -25,10 +25,20 @@ size = Vector2(75, 146)
 script = ExtResource("1_1meb4")
 
 [node name="sprites" type="AnimatedSprite2D" parent="."]
-position = Vector2(48, 80)
+position = Vector2(6.05, 4.60001)
 scale = Vector2(0.3, 0.3)
 sprite_frames = SubResource("SpriteFrames_qe86v")
 
 [node name="collision" type="CollisionShape2D" parent="."]
-position = Vector2(42.5, 73)
+position = Vector2(0.550003, -2.39999)
 shape = SubResource("RectangleShape2D_joq7o")
+
+[node name="camera" type="Camera2D" parent="."]
+limit_left = 0
+limit_top = 0
+limit_right = 4000
+limit_bottom = 0
+limit_smoothed = true
+drag_horizontal_enabled = true
+editor_draw_limits = true
+editor_draw_drag_margin = true

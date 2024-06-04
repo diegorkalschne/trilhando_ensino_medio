@@ -2,6 +2,7 @@ extends VBoxContainer
 
 func _ready():
 	$player.visible = false # Esconde o player. É utilizado apenas para setar as sprites do mesmo
+	$player.disableCamera() # Desabilita a câmera do player, no menu
 	
 	$carregar_jogo.grab_focus()
 	
