@@ -9,6 +9,9 @@ extends CharacterBody2D
 const SPEED = 500 #200
 
 func _ready():
+	if (sprites.sprite_frames == null or sprites.sprite_frames.get_animation_names().size() == 1):
+		setTextureSprite();
+	
 	sprites.speed_scale = 10 # Altera a velocidade dos frames da animação
 	sprites.scale = Vector2(0.3, 0.3) # Altera a escala do personagem
 	

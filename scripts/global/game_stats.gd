@@ -102,3 +102,11 @@ func loadData():
 			_walk_direction_state = WalkState.values()[dict["walk_direction_state"]]
 	else:
 		_has_game_saved = false
+
+# Função que retorna o tamanho total da cena, em pixels, conforme o tamanho do tile map
+func sceneWidth(tile_map):
+	var scene_size_rect = tile_map.get_used_rect().size
+	
+	var tile_size = tile_map.tile_set.tile_size
+	
+	return (scene_size_rect.x - 1) * tile_size.x

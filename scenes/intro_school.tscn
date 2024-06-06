@@ -1,9 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://cclukcoaspp54"]
+[gd_scene load_steps=11 format=3 uid="uid://cclukcoaspp54"]
 
 [ext_resource type="Script" path="res://scripts/intro_school.gd" id="1_brole"]
 [ext_resource type="Texture2D" uid="uid://dii50pv1xatgf" path="res://assets/images/outside_background.png" id="2_e2elb"]
 [ext_resource type="PackedScene" uid="uid://pttkd3w45ndi" path="res://scenes/player.tscn" id="3_7d0jj"]
-[ext_resource type="PackedScene" uid="uid://bhaayclmlm54o" path="res://scenes/change_scene_detect.tscn" id="4_d4nk5"]
+[ext_resource type="AudioStream" uid="uid://dtua46lpfxlst" path="res://songs/music1.wav" id="4_2brk4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ti65k"]
 texture = ExtResource("2_e2elb")
@@ -4639,6 +4639,21 @@ sources/0 = SubResource("TileSetAtlasSource_ti65k")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c75gp"]
 size = Vector2(18, 672)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_83gav"]
+size = Vector2(80, 136)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6unav"]
+bg_color = Color(0.219608, 0.219608, 0.219608, 0.784314)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+corner_detail = 20
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_7vh0o"]
+
 [node name="intro_school" type="Node2D"]
 script = ExtResource("1_brole")
 
@@ -4650,10 +4665,43 @@ layer_0/tile_data = PackedInt32Array(65536, 0, 0, 131072, 0, 1, 196608, 0, 2, 26
 [node name="player" parent="." instance=ExtResource("3_7d0jj")]
 position = Vector2(48, 104)
 
-[node name="ChangeSceneDetect" parent="." instance=ExtResource("4_d4nk5")]
+[node name="rigth_edge" type="StaticBody2D" parent="."]
+position = Vector2(2018, -8)
+
+[node name="left_edge_collision" type="CollisionShape2D" parent="rigth_edge"]
+position = Vector2(-9, 322)
+shape = SubResource("RectangleShape2D_c75gp")
 
 [node name="left_edge" type="StaticBody2D" parent="."]
 
 [node name="left_edge_collision" type="CollisionShape2D" parent="left_edge"]
 position = Vector2(-9, 322)
 shape = SubResource("RectangleShape2D_c75gp")
+
+[node name="door_school_area" type="Area2D" parent="."]
+position = Vector2(1672, 536)
+
+[node name="door_school_collision" type="CollisionShape2D" parent="door_school_area"]
+position = Vector2(8, 4)
+shape = SubResource("RectangleShape2D_83gav")
+
+[node name="label_door" type="Label" parent="."]
+offset_left = 1592.0
+offset_top = 433.0
+offset_right = 1787.0
+offset_bottom = 456.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_6unav")
+text = "Pressione \"E\" para entrar"
+label_settings = SubResource("LabelSettings_7vh0o")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_2brk4")
+volume_db = -5.0
+autoplay = true
+
+[connection signal="body_entered" from="door_school_area" to="." method="_on_door_school_area_body_entered"]
+[connection signal="body_exited" from="door_school_area" to="." method="_on_door_school_area_body_exited"]

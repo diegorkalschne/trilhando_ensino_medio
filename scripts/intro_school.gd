@@ -1,25 +1,41 @@
 extends Node2D
 
 @onready var player = $player
+@onready var label_door = $label_door
+@onready var music = $music
 
+var body_in_area_door = false
+
+# Função executa quando a cena é instanciada
 func _ready():	
-	player.setTextureSprite()
-	
 	# Obtém o tamanho total da cena, em pixels
-	var scene_width = sceneWidth()
+	var scene_width = GameStats.sceneWidth($background)
 
 	# Define até onde a câmera irá se movimentar no lado direito da tela	
 	player.setRigthCameraLimit(scene_width)
 	
-	# Define onde está a área de detecção de mudança de cena
-	$ChangeSceneDetect.changeRigthEdgePosition(900)
+	label_door.visible = false # Esconde a label de entrar na porta
+	
+	music.play()
 
-# Função que retorna o tamanho total da cena, em pixels, conforme o tamanho do tile map
-func sceneWidth():
-	var tile_map = $background # Substitua pelo caminho correto do seu TileMap na cena
-	
-	var scene_size_rect = tile_map.get_used_rect().size
-	
-	var tile_size = tile_map.tile_set.tile_size
-	
-	return (scene_size_rect.x - 1) * tile_size.x
+# Função executada ao sair da cena.
+func _exit_tree():
+	music.stop() # Para a música ao sair da cena
+
+# Função que detecta quando algum evento aconteceu
+func _input(event):
+	# player pressionou "E" ao interagir com a porta da escola
+	if event.is_action_pressed("interact") and body_in_area_door:
+		GameStats.onChangeScene(1) # Foi para a cena 1
+		get_tree().change_scene_to_file("res://scenes/school/school1.tscn")
+
+
+# Função para quando o player entrar na área da porta da escola
+func _on_door_school_area_body_entered(body):
+	label_door.visible = true
+	body_in_area_door = true
+
+# Função para quando o player sair na área da porta da escola
+func _on_door_school_area_body_exited(body):
+	label_door.visible = false
+	body_in_area_door = false
