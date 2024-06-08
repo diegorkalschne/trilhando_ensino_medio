@@ -27,6 +27,7 @@ func _input(event):
 	# player pressionou "E" ao interagir com a porta da escola
 	if event.is_action_pressed("interact") and body_in_area_door:
 		GameStats.onChangeScene(1) # Foi para a cena 1
+		GameStats.onChangeWalkDirectionState(GameStats.WalkState.FORWARD)
 		get_tree().change_scene_to_file("res://scenes/school/school1.tscn")
 
 

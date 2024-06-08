@@ -10,7 +10,6 @@ func _ready():
 	if (!GameStats.hasGameSaved()):
 		$carregar_jogo.visible = false
 		$comecar.grab_focus()
-		
 
 # Função para ação de "Começar" o jogo
 func _on_comecar_pressed():

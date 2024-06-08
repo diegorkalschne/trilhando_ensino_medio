@@ -1,0 +1,14 @@
+[
+	{
+		"id": 1,
+		"question": "Qual é a capital da França?",
+		"options": ["Paris", "Londres", "Roma", "Berlim"],
+		"answer": "Paris"
+	},
+	{
+		"id": 2,
+		"question": "Qual é a capital da Espanha?",
+		"options": ["Lisboa", "Madri", "Barcelona", "Sevilha"],
+		"answer": "Madri"
+	}
+]

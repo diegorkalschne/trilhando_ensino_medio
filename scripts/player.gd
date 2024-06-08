@@ -9,13 +9,31 @@ extends CharacterBody2D
 const SPEED = 500 #200
 
 func _ready():
+	var parent = get_parent() # Obtém a cena "pai" onde o player está
+	var background_node
+	
+	# Procura se a cena pai tem um nó chamado "background", o que se espera ser o TileSet
+	if parent and parent.has_node("background"):
+		background_node = parent.get_node("background")
+	
 	if (sprites.sprite_frames == null or sprites.sprite_frames.get_animation_names().size() == 1):
 		setTextureSprite();
 	
 	sprites.speed_scale = 10 # Altera a velocidade dos frames da animação
-	sprites.scale = Vector2(0.3, 0.3) # Altera a escala do personagem
+	var scale_factor = 0.3
+	sprites.scale = Vector2(scale_factor, scale_factor) # Altera a escala do personagem
 	
-	const y_position = 430 #Posição padrão do Y do jogador
+	var y_position = 430 #Posição padrão do Y do jogador
+	if (background_node):
+		var scene_heigth = GameStats.sceneHeigth(background_node)
+		
+		var current_animation = sprites.animation
+		var current_frame = sprites.frame
+		var texture = sprites.sprite_frames.get_frame_texture("idle", 0)
+		
+		var texture_heigth = texture.get_height()
+		
+		y_position = scene_heigth - (texture_heigth * scale_factor)
 	
 	if (GameStats.getWalkDirectionState() == GameStats.WalkState.FORWARD):
 		# Personagem está indo para a direita

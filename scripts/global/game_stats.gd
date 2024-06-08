@@ -110,3 +110,10 @@ func sceneWidth(tile_map):
 	var tile_size = tile_map.tile_set.tile_size
 	
 	return (scene_size_rect.x - 1) * tile_size.x
+
+func sceneHeigth(tile_map):
+	var scene_size_rect = tile_map.get_used_rect().size
+	
+	var tile_size = tile_map.tile_set.tile_size
+	
+	return (scene_size_rect.y - 1) * tile_size.y

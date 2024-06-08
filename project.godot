@@ -18,7 +18,6 @@ config/icon="res://icon.svg"
 [autoload]
 
 GameStats="*res://scripts/global/game_stats.gd"
-Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 [dialogic]
 
