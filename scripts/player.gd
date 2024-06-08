@@ -27,13 +27,11 @@ func _ready():
 	if (background_node):
 		var scene_heigth = GameStats.sceneHeigth(background_node)
 		
-		var current_animation = sprites.animation
-		var current_frame = sprites.frame
 		var texture = sprites.sprite_frames.get_frame_texture("idle", 0)
 		
 		var texture_heigth = texture.get_height()
 		
-		y_position = scene_heigth - (texture_heigth * scale_factor)
+		y_position = (scene_heigth - (texture_heigth * scale_factor)) + 70
 	
 	if (GameStats.getWalkDirectionState() == GameStats.WalkState.FORWARD):
 		# Personagem está indo para a direita

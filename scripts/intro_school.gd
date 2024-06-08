@@ -32,11 +32,11 @@ func _input(event):
 
 
 # Função para quando o player entrar na área da porta da escola
-func _on_door_school_area_body_entered(body):
+func _on_door_school_area_body_entered(_body):
 	label_door.visible = true
 	body_in_area_door = true
 
 # Função para quando o player sair na área da porta da escola
-func _on_door_school_area_body_exited(body):
+func _on_door_school_area_body_exited(_body):
 	label_door.visible = false
 	body_in_area_door = false
