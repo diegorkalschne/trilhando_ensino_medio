@@ -64,6 +64,10 @@ func _ready():
 
 # Movimento do personagem
 func _physics_process(_delta):
+	if QuestionsGame.getInQuizScene():
+		# Caso o player esteja na cena do quiz, a movimentação é desabilitada
+		return
+	
 	var direction = Input.get_axis("ui_left", "ui_right")
 	if direction:
 		if direction > 0:

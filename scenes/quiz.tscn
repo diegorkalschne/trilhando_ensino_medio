@@ -1,6 +1,54 @@
-[gd_scene load_steps=2 format=3 uid="uid://ddnqng3fgtlh7"]
+[gd_scene load_steps=8 format=3 uid="uid://ddnqng3fgtlh7"]
 
 [ext_resource type="Script" path="res://scripts/quiz.gd" id="1_h2cl7"]
+[ext_resource type="Script" path="res://scripts/background_quiz.gd" id="2_s5wsq"]
+[ext_resource type="AudioStream" uid="uid://dtua46lpfxlst" path="res://songs/music1.wav" id="3_k6ejs"]
+[ext_resource type="AudioStream" uid="uid://dbqnp5xv526v5" path="res://songs/effects/correct_answer.mp3" id="4_f338n"]
+[ext_resource type="AudioStream" uid="uid://bi3hkqwrwvx7x" path="res://songs/effects/incorrect_answer.mp3" id="5_8gw5o"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jeurr"]
+bg_color = Color(0.219608, 0.219608, 0.219608, 0.784314)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+corner_detail = 20
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_jajjn"]
 
 [node name="Quiz" type="Node2D"]
 script = ExtResource("1_h2cl7")
+
+[node name="background" type="Sprite2D" parent="."]
+script = ExtResource("2_s5wsq")
+
+[node name="question" type="Label" parent="."]
+offset_left = 40.0
+offset_top = 16.0
+offset_right = 1016.0
+offset_bottom = 200.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_jeurr")
+label_settings = SubResource("LabelSettings_jajjn")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="options" type="VBoxContainer" parent="."]
+offset_left = 32.0
+offset_top = 219.0
+offset_right = 1024.0
+offset_bottom = 363.0
+
+[node name="music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_k6ejs")
+volume_db = -5.0
+
+[node name="correct_answer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_f338n")
+
+[node name="incorrect_answer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_8gw5o")
+volume_db = 20.0

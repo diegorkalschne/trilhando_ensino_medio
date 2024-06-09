@@ -64,7 +64,7 @@ func _input(event):
 	# player pressionou "E" ao interagir com uma das portas
 	if event.is_action_pressed("interact"):
 		if bodyAreaEntered["door_101"]:
-			pass
+			QuestionsGame.changeSceneQuiz(0, "res://assets/images/background_menu.jpg");
 		elif bodyAreaEntered["door_102"]:
 			pass
 		elif bodyAreaEntered["door_103"]:

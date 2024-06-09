@@ -1,16 +1,23 @@
 extends Node
 
-# Variável para armazenar as questões do quiz
-var questions = []
-var current_question_index = 0
+# Questões disponíveis
+var _questions = []
 
-var dialog_node
+# Armazena se o player está vendo a cena de quiz ou não
+var _in_quiz_scene = false
+
+# Função para mudar o estado se o player está na cena de quiz ou não
+func changeInQuizScene(value: bool):
+	_in_quiz_scene = value
+
+func getInQuizScene():
+	return _in_quiz_scene
 
 func _ready():
-	# Carregar as perguntas do arquivo JSON ao iniciar
-	questions = load_questions_from_json("res://assets/questions/questions.json")
+	# Iniciliza o script carregando as questões do arquivo json
+	_questions = load_questions_from_json("res://assets/questions/questions.json")
 
-# Função para carregar perguntas de um arquivo JSON
+# Lê um arquivo .json e retorna o conteúdo
 func load_questions_from_json(file_path: String):
 	if FileAccess.file_exists(file_path):
 		var data_file = FileAccess.open(file_path, FileAccess.READ)
@@ -23,38 +30,21 @@ func load_questions_from_json(file_path: String):
 		print("O arquivo não existe")
 		return []
 
-# Função para criar um diálogo para uma questão específica
-func display_question():
-	if current_question_index < questions.size():
-		var question = questions[current_question_index]
-		
-		# Adiciona a Label da pergunta
-		var question_label = Label.new()
-		question_label.text = question["question"]
-		add_child(question_label)
-		
-		# Adiciona os botões de alternativas
-		var options = question["options"]
-		for option in options:
-			var option_button = Button.new()
-			option_button.text = option
-			option_button.pressed.connect(Callable(self._on_option_button_pressed).bind(option).bind(question['answer']))
-			add_child(option_button)
-		
-	else:
-		print("Quiz terminado!")
+# Função para verificar se o usuário está apto para responder ou não uma questão no momento
+func _can_go_to_question(question: int):
+	return true
 
-func _on_option_button_pressed(selected_option: String, correct_answer: String):
-	if selected_option == correct_answer:
-		print("Correto!")
-	else:
-		print("Incorreto, a resposta correta era: " + correct_answer)
+# Função para mudar para a cena de quiz
+func changeSceneQuiz(question: int, background_path: String):
+	# Verificação para ver se o usuário pode responder a questão selecionada
+	if !_can_go_to_question(question):
+		return
 	
-	current_question_index += 1
-	clear_scene()
-	display_question()
-
-func clear_scene():
-	# Remove todos os filhos da cena
-	for child in get_children():
-		remove_child(child)
+	var scene = load("res://scenes/quiz.tscn").instantiate()
+	get_tree().root.add_child(scene)
+	#get_tree().current_scene.queue_free()
+	get_tree().current_scene = scene
+	changeInQuizScene(true) # Marca que está na cena do quiz
+	
+	if scene.has_method("initQuiz"):
+		scene.call("initQuiz", _questions[question], background_path)
