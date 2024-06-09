@@ -1,6 +1,5 @@
 extends CharacterBody2D
 
-@onready var player = $Player as CharacterBody2D
 @onready var sprites = $sprites as AnimatedSprite2D
 @onready var collision = $collision as CollisionShape2D
 @onready var camera = $camera as Camera2D
@@ -59,11 +58,12 @@ func _ready():
 			adjust_sprite_position()
 			collision.position = Vector2(1060, y_position)
 	
+	# Leva a câmera até a posição que o player está
 	camera.position = sprites.position
 	
 
 # Movimento do personagem
-func _physics_process(delta):
+func _physics_process(_delta):
 	var direction = Input.get_axis("ui_left", "ui_right")
 	if direction:
 		if direction > 0:
@@ -86,6 +86,8 @@ func _physics_process(delta):
 		sprites.play("idle") # Personagem parou de andar
 
 	move_and_slide()
+	
+	print(position)
 
 # Método para ajustar a posição do sprite ao inverter
 func adjust_sprite_position():	
@@ -157,14 +159,19 @@ func count_files_with_keyword(directory_path: String, keyword: String) -> int:
 			file_count += 1
 			
 	# Divide por 2 para ignorar os arquivos 'duplicados' que o próprio godot cria ao importar algo
+	@warning_ignore("integer_division")
 	return file_count / 2 
 
 
 func disableCamera():
 	camera.enabled = false
 
-func setPositionCamera(position):
-	camera.offset = position
+func setPositionCamera(offset):
+	camera.offset = offset
 
 func setRigthCameraLimit(limit):
 	camera.limit_right = float(limit)
+
+func setInitialPositionPlayer(position):
+	sprites.position = position
+	position = position

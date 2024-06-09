@@ -15,7 +15,7 @@ func changeLeftEdgePosition(x):
 
 
 # Quando o player chega na direita da tela
-func _on_rigth_area_body_entered(body):
+func _on_rigth_area_body_entered(_body):
 	var next_scene = GameStats.getCurrentScene() + 1;
 	
 	# Verifica se ainda pode ir para a próxima cena
@@ -25,7 +25,7 @@ func _on_rigth_area_body_entered(body):
 		get_tree().change_scene_to_file(scene_path);
 
 # Quando o player chega na esquerda da tela
-func _on_left_area_body_entered(body):
+func _on_left_area_body_entered(_body):
 	var previous_scene = GameStats.getCurrentScene() - 1;
 	
 	# Volta cenas da escola caso seja maior que 0
