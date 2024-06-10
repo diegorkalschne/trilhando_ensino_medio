@@ -9,7 +9,7 @@ var body_in_area_door = false
 # Função executa quando a cena é instanciada
 func _ready():	
 	# Obtém o tamanho total da cena, em pixels
-	var scene_width = GameStats.sceneWidth($parallax_background.get_node("background"))
+	var scene_width = GameStats.sceneWidth($background)
 
 	# Define até onde a câmera irá se movimentar no lado direito da tela	
 	player.setRigthCameraLimit(scene_width)
