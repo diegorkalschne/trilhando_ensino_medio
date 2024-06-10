@@ -5,6 +5,9 @@ enum WalkState {
 	BACK
 }
 
+# Lista de questões que estão pe
+var _whitelist_questions = []
+
 # Caminho onde serão salvos os dados do usuário
 var save_path = "user://variable.save"
 # Armazena o número máximo de cenas que o jogo terá
