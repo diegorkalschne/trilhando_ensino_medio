@@ -5051,17 +5051,13 @@ layer_0/tile_data = PackedInt32Array(-131072, 0, 0, -65536, 0, 1, 0, 0, 2, 65536
 
 [node name="player" parent="." instance=ExtResource("3_7d0jj")]
 
-[node name="parallax_background#paralax_layer" type="ParallaxLayer" parent="."]
-
-[node name="parallax_background_paralax_layer#Sprite2D" type="Sprite2D" parent="."]
+[node name="parallax_background_clouds" type="Sprite2D" parent="."]
 texture_repeat = 2
 material = SubResource("ShaderMaterial_rie8l")
 position = Vector2(998, 269)
 texture = ExtResource("3_utusn")
 
-[node name="parallax_background#paralax_layer2" type="ParallaxLayer" parent="."]
-
-[node name="parallax_background_paralax_layer2#Sprite2D" type="Sprite2D" parent="."]
+[node name="parallax_background_birds" type="Sprite2D" parent="."]
 texture_repeat = 2
 material = SubResource("ShaderMaterial_nnwyc")
 position = Vector2(999, 296)
