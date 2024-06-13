@@ -14,9 +14,6 @@ var bodyAreaEntered = {
 }
 
 func _ready():
-	# Seta a posição inicial do player ao entrar na cena
-	#player.setInitialPositionPlayer(Vector2(-133, 0))
-	
 	# Obtém o tamanho total da cena, em pixels
 	var scene_width = GameStats.sceneWidth($background)
 
@@ -97,4 +94,5 @@ func _input(event):
 		elif bodyAreaEntered["door_306"]:
 			pass
 		elif bodyAreaEntered["downstair"]:
+			GameMovement.setNextPositionPlayer(Vector2(833, 0))
 			get_tree().change_scene_to_file("res://scenes/school/school3.tscn")

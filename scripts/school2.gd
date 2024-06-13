@@ -65,15 +65,17 @@ func _input(event):
 	if event.is_action_pressed("interact"):
 		if bodyAreaEntered["door_101"]:
 			QuestionsGame.changeSceneQuiz(0, "res://assets/images/background_menu.jpg");
+			GameMovement.setNextPositionPlayer(Vector2(175, 0))
 		elif bodyAreaEntered["door_102"]:
-			pass
+			GameMovement.setNextPositionPlayer(Vector2(466, 0))
 		elif bodyAreaEntered["door_103"]:
-			pass
+			GameMovement.setNextPositionPlayer(Vector2(816, 0))
 		elif bodyAreaEntered["door_104"]:
-			pass
+			GameMovement.setNextPositionPlayer(Vector2(1400, 0))
 		elif bodyAreaEntered["bathroom_boy"]:
-			pass
+			GameMovement.setNextPositionPlayer(Vector2(1641, 0))
 		elif bodyAreaEntered["bathroom_girl"]:
-			pass
+			GameMovement.setNextPositionPlayer(Vector2(1790, 0))
 		elif bodyAreaEntered["upstair"]:
+			GameMovement.setNextPositionPlayer(Vector2(1141, 0))
 			get_tree().change_scene_to_file("res://scenes/school/school3.tscn");

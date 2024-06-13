@@ -6,36 +6,40 @@ extends CharacterBody2D
 
 # Velocidade de movimento
 const SPEED = 500 #200
+var scale_factor = 0.3 # Escala do tamanho do personagem
+var animation_scale = 10 # Altera a velocidade dos frames da animação
 
 func _ready():
 	var parent = get_parent() # Obtém a cena "pai" onde o player está
-	var background_node
-	
-	# Procura se a cena pai tem um nó chamado "background", o que se espera ser o TileSet
-	if parent and parent.has_node("background"):
-		background_node = parent.get_node("background")
+	var background_node = getBackgroundNode()
+	var scene_width
 	
 	if (sprites.sprite_frames == null or sprites.sprite_frames.get_animation_names().size() == 1):
 		setTextureSprite();
 	
-	sprites.speed_scale = 10 # Altera a velocidade dos frames da animação
-	var scale_factor = 0.3
+	sprites.speed_scale = animation_scale
 	sprites.scale = Vector2(scale_factor, scale_factor) # Altera a escala do personagem
+	
+	if (!GameMovement.getSetAutomaticPosition()):
+		# No momento o player está configurado para ser setado em uma cena em específica
+		setInitialPositionPlayer(GameMovement.getNextPositionPlayer()) # Seta o jogar na posição determinada
+		GameMovement.clearNextPosition() # Reseta a posição determinada, para a próxima movimentação
+		return
 	
 	var y_position = 430 #Posição padrão do Y do jogador
 	if (background_node):
-		var scene_heigth = GameStats.sceneHeigth(background_node)
+		scene_width = GameStats.sceneWidth(background_node)
 		
-		var texture = sprites.sprite_frames.get_frame_texture("idle", 0)
-		
-		var texture_heigth = texture.get_height()
-		
-		y_position = (scene_heigth - (texture_heigth * scale_factor)) + 70
+		y_position = getPlayerPositionY(background_node)
+	else:
+		return #Se não tiver um background na cena, não seta a posição do player
 	
 	if (GameStats.getWalkDirectionState() == GameStats.WalkState.FORWARD):
 		# Personagem está indo para a direita
+		# Seta a posição inicial dos sprites
 		sprites.position = Vector2(120, y_position)
-	
+		
+		# Seta a posição inicial dos collisions
 		if (GameStats.getSelectedPlayer().find("boy") != -1):
 			# personagem 'boy' está selecionado
 			collision.position = Vector2(70, y_position)
@@ -46,17 +50,17 @@ func _ready():
 		# Personagem está indo para a esquerda
 	
 		if (GameStats.getSelectedPlayer().find("boy") != -1):
-			sprites.position = Vector2(1130, y_position)
+			sprites.position = Vector2(scene_width - 100, y_position) #1130
 			sprites.flip_h = true
 			adjust_sprite_position()
 			# personagem 'boy' está selecionado
-			collision.position = Vector2(1080, y_position)
+			collision.position = Vector2(scene_width - 150, y_position) #1080
 		elif  (GameStats.getSelectedPlayer().find("girl") != -1):
 			# personagem 'girl' está selecionado
-			sprites.position = Vector2(1050, y_position)
+			sprites.position = Vector2(scene_width - 100, y_position) #1050
 			sprites.flip_h = true
 			adjust_sprite_position()
-			collision.position = Vector2(1060, y_position)
+			collision.position = Vector2(scene_width - 110, y_position) #1060
 	
 	# Leva a câmera até a posição que o player está
 	camera.position = sprites.position
@@ -176,6 +180,54 @@ func setPositionCamera(offset):
 func setRigthCameraLimit(limit):
 	camera.limit_right = float(limit)
 
-func setInitialPositionPlayer(position):
-	sprites.position = position
-	position = position
+func getBackgroundNode():
+	var parent = get_parent() # Obtém a cena "pai" onde o player está
+	var background_node
+	
+	# Procura se a cena pai tem um nó chamado "background", o que se espera ser o TileSet
+	if parent and parent.has_node("background"):
+		background_node = parent.get_node("background")
+		
+		return background_node
+	else:
+		return null
+	
+func getPlayerPositionY(background_node: TileMap):
+	var scene_heigth = GameStats.sceneHeigth(background_node)
+	var texture = sprites.sprite_frames.get_frame_texture("idle", 0)
+	var texture_heigth = texture.get_height()
+	
+	# Calcula a posição padrão do "boy"
+	var y_position = (scene_heigth - (texture_heigth * scale_factor)) + 70
+	
+	if (GameStats.getSelectedPlayer().find("girl") != -1):
+		# Para a "girl" tira alguns pixels
+		y_position -= 30
+	
+	return y_position
+
+# Dado as posições X e Y da cena, seta o player diretamente naquela posição
+func setInitialPositionPlayer(position: Vector2):	
+	sprites.flip_h = false # Irá deixar sempre o jogador indo para a direita
+	adjust_sprite_position()
+	GameStats.onChangeWalkDirectionState(GameStats.WalkState.FORWARD) # Para setar globalmente que o personagem foi pra direita
+	
+	var background_node = getBackgroundNode()
+	if (background_node == null):
+		return
+	
+	var y_position = getPlayerPositionY(background_node)
+	
+	# Seta a posição inicial dos sprites
+	sprites.position = Vector2(position.x, y_position)
+	
+	# Seta a posição inicial dos collisions
+	if (GameStats.getSelectedPlayer().find("boy") != -1):
+		# personagem 'boy' está selecionado
+		collision.position = Vector2(position.x - 50, y_position)
+	elif (GameStats.getSelectedPlayer().find("girl") != -1):
+		# personagem 'girl' está selecionado
+		collision.position = Vector2(position.x + 10, y_position)
+	
+	# Leva a câmera até a posição que o player está
+	camera.position = sprites.position

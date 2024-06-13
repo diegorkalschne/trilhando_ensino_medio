@@ -20,6 +20,9 @@ func _ready():
 	# Define até onde a câmera irá se movimentar no lado direito da tela	
 	player.setRigthCameraLimit(scene_width)
 	
+	# TODO: remover depois
+	GameStats.onAddWhitelistQuestion(0)
+	
 	# Marca todas as labels como false
 	for label in bodyAreaEntered:
 		if has_node("label_%s" % label):
@@ -59,16 +62,18 @@ func _input(event):
 	# player pressionou "E" ao interagir com uma das portas
 	if event.is_action_pressed("interact"):
 		if bodyAreaEntered["door_201"]:
-			pass
+			GameMovement.setNextPositionPlayer(Vector2(-1008, 0))
 		elif bodyAreaEntered["door_202"]:
-			pass
+			GameMovement.setNextPositionPlayer(Vector2(-741, 0))
 		elif bodyAreaEntered["door_203"]:
-			pass
+			GameMovement.setNextPositionPlayer(Vector2(-416, 0))
 		elif bodyAreaEntered["door_204"]:
-			pass
+			GameMovement.setNextPositionPlayer(Vector2(391, 0))
 		elif bodyAreaEntered["door_205"]:
-			pass
+			GameMovement.setNextPositionPlayer(Vector2(700, 0))
 		elif bodyAreaEntered["upstair"]:
+			GameMovement.setNextPositionPlayer(Vector2(-924, 0))
 			get_tree().change_scene_to_file("res://scenes/school/school4.tscn")
 		elif bodyAreaEntered["downstair"]:
+			GameMovement.setNextPositionPlayer(Vector2(1116, 0))
 			get_tree().change_scene_to_file("res://scenes/school/school2.tscn")

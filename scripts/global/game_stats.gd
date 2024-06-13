@@ -5,8 +5,11 @@ enum WalkState {
 	BACK
 }
 
-# Lista de questões que estão pe
+# Lista de questões que estão permitidas pro usuário fazer
 var _whitelist_questions = []
+
+# Lista de questões que o jogador já fez
+var _questions_player_resolved = []
 
 # Caminho onde serão salvos os dados do usuário
 var save_path = "user://variable.save"
@@ -46,6 +49,34 @@ func onChangeScene(scene):
 func getCurrentScene():
 	return _current_scene
 
+# Adiciona uma nova questão que estará disponível para o player fazer
+func onAddWhitelistQuestion(question_id: int):
+	# Adiciona apenas caso já não esteja na lista
+	if (!_whitelist_questions.has(question_id)):
+		_whitelist_questions.append(question_id)
+		saveData()
+
+# Verifica se o player pode respondeu uma questão ou não
+func playerCanResponseQuestion(question_id: int):
+	if _whitelist_questions.size() == 0:
+		return false
+	
+	return _whitelist_questions[-1] == question_id
+
+# Salva uma questão que o player já finalizou
+func addQuestionResolved(question_id: int):
+	# Adiciona apenas caso já não esteja na lista
+	if (!_questions_player_resolved.has(question_id)):
+		_questions_player_resolved.append(question_id)
+		saveData()
+
+# Função para verificar se o player já resolveu ou não uma questão
+func playerHasResolvedQuestion(question_id: int):
+	if (_questions_player_resolved.size() == 0):
+		return false
+	
+	return _questions_player_resolved.has(question_id)
+
 # Função chamada ao selecionar um novo player.
 # Salva as informações do usuário
 func onSelectPlayer(player):
@@ -63,6 +94,15 @@ func hasGameSaved():
 # Função para resetar o jogo do usuário. Chamado sempre que um novo jogo é iniciado
 func resetData():
 	saveData({}) # Salva um dicionário vazio
+	
+	# Reseta todas as variáveis de controle
+	_selected_player = ''
+	_current_scene = 0
+	_walk_direction_state = WalkState.FORWARD
+	_whitelist_questions = []
+	_questions_player_resolved = []
+	_has_game_saved = false
+	
 
 # Função para salvar os dados do usuário localmente
 func saveData(data=null):
@@ -73,6 +113,8 @@ func saveData(data=null):
 		"selected_player": _selected_player,
 		"current_scene": _current_scene,
 		"walk_direction_state": int(_walk_direction_state), # Salva a enum como index
+		"whitelist_questions": _whitelist_questions,
+		"questions_player_resolved": _questions_player_resolved
 	}
 	
 	if (data != null):
@@ -97,12 +139,16 @@ func loadData():
 		
 		# Através do dicionário, resgata todas as variáveis e seta cada
 		# uma individualmente
-		if (dict.has("selected_player")):
+		if dict.has("selected_player"):
 			_selected_player = dict["selected_player"]
-		if (dict.has("current_scene")):
+		if dict.has("current_scene"):
 			_current_scene = dict["current_scene"]
-		if (dict.has("walk_direction_state")):
+		if dict.has("walk_direction_state"):
 			_walk_direction_state = WalkState.values()[dict["walk_direction_state"]]
+		if dict.has("whitelist_questions"):
+			_whitelist_questions = dict["whitelist_questions"]
+		if dict.has("questions_player_resolved"):
+			_questions_player_resolved = dict["questions_player_resolved"]
 	else:
 		_has_game_saved = false
 

@@ -56,6 +56,8 @@ func _on_correct_answer(button: Button):
 	button.disabled = true # Desabilita o botão ao errar
 	$correct_answer.play()
 	
+	GameStats.addQuestionResolved(current_quiz["id"])
+	
 	await get_tree().create_timer(2).timeout
 	
 	queue_free() # Descarta a cena atual do quiz e volta para a anterior

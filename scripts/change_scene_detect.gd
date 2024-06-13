@@ -37,4 +37,6 @@ func _on_left_area_body_entered(_body):
 		# Cena zero volta para a introdução da escola (parte de fora)
 		GameStats.onChangeScene(previous_scene);
 		get_tree().change_scene_to_file("res://scenes/intro_school.tscn");
+		
+		GameMovement.setNextPositionPlayer(Vector2(1616, 40))
 	

@@ -31,13 +31,19 @@ func load_questions_from_json(file_path: String):
 		return []
 
 # Função para verificar se o usuário está apto para responder ou não uma questão no momento
-func _can_go_to_question(question: int):
-	return true
+func _can_go_to_question(question_id: int):
+	# Verifica se o player já não resolveu a questão. Continua apenas enquanto não resolveu
+	if (!GameStats.playerHasResolvedQuestion(question_id)):
+		# Verifica se o player está apto a responder a questão
+		if (GameStats.playerCanResponseQuestion(question_id)):
+			return true # Player está apto a responder a questão
+	
+	return false # Player não está apto a responder a questão
 
 # Função para mudar para a cena de quiz
-func changeSceneQuiz(question: int, background_path: String):
+func changeSceneQuiz(question_id: int, background_path: String):
 	# Verificação para ver se o usuário pode responder a questão selecionada
-	if !_can_go_to_question(question):
+	if !_can_go_to_question(question_id):
 		return
 	
 	var scene = load("res://scenes/quiz.tscn").instantiate()
@@ -47,4 +53,4 @@ func changeSceneQuiz(question: int, background_path: String):
 	changeInQuizScene(true) # Marca que está na cena do quiz
 	
 	if scene.has_method("initQuiz"):
-		scene.call("initQuiz", _questions[question], background_path)
+		scene.call("initQuiz", _questions[question_id], background_path)
