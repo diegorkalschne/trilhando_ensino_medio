@@ -72,8 +72,10 @@ func _input(event):
 		elif bodyAreaEntered["door_205"]:
 			GameMovement.setNextPositionPlayer(Vector2(700, 0))
 		elif bodyAreaEntered["upstair"]:
-			GameMovement.setNextPositionPlayer(Vector2(-924, 0))
+			GameMovement.setNextPositionPlayer(Vector2(899, 0))
+			GameStats.onChangeScene(4)
 			get_tree().change_scene_to_file("res://scenes/school/school4.tscn")
 		elif bodyAreaEntered["downstair"]:
 			GameMovement.setNextPositionPlayer(Vector2(1116, 0))
+			GameStats.onChangeScene(2)
 			get_tree().change_scene_to_file("res://scenes/school/school2.tscn")

@@ -78,4 +78,5 @@ func _input(event):
 			GameMovement.setNextPositionPlayer(Vector2(1790, 0))
 		elif bodyAreaEntered["upstair"]:
 			GameMovement.setNextPositionPlayer(Vector2(1141, 0))
+			GameStats.onChangeScene(3)
 			get_tree().change_scene_to_file("res://scenes/school/school3.tscn");

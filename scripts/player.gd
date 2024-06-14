@@ -197,12 +197,36 @@ func getPlayerPositionY(background_node: TileMap):
 	var texture = sprites.sprite_frames.get_frame_texture("idle", 0)
 	var texture_heigth = texture.get_height()
 	
+	print(GameStats.getCurrentScene())
+	
+	var adjust = 0
+	if GameStats.getCurrentScene() == 0:
+		# Na cena 0 ("intro_school"), há uma diferença no background
+		if GameStats.getSelectedPlayer().find("boy") != -1:
+			# Boy
+			adjust = 280
+		else:
+			# Girl
+			adjust = 123
+	elif GameStats.getCurrentScene() == 4:
+		# Na cena 3 (top floor), é necessário fazer um ajuste apenas para a menina
+		if GameStats.getSelectedPlayer().find("girl") != -1:
+			adjust = 25
+	else:
+		# Todas as outras cenas
+		if GameStats.getSelectedPlayer().find("boy") != -1:
+			# Boy
+			adjust = 70
+		else:
+			# Girl
+			adjust = 15
+	
 	# Calcula a posição padrão do "boy"
-	var y_position = (scene_heigth - (texture_heigth * scale_factor)) + 70
+	var y_position = (scene_heigth - (texture_heigth * scale_factor)) + adjust
 	
 	if (GameStats.getSelectedPlayer().find("girl") != -1):
 		# Para a "girl" tira alguns pixels
-		y_position -= 30
+		y_position += adjust
 	
 	return y_position
 

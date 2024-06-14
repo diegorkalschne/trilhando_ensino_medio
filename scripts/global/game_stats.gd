@@ -32,7 +32,7 @@ func _ready():
 	loadData()
 
 # Função ao alterar o estado da direção do personagem
-func onChangeWalkDirectionState(state):
+func onChangeWalkDirectionState(state: WalkState):
 	_walk_direction_state = state
 	saveData()
 
@@ -41,7 +41,7 @@ func getWalkDirectionState():
 	return _walk_direction_state
 
 # Função chamada quando é alterado a cena que o usuário está
-func onChangeScene(scene):
+func onChangeScene(scene: int):
 	_current_scene = scene
 	saveData()
 
@@ -79,7 +79,7 @@ func playerHasResolvedQuestion(question_id: int):
 
 # Função chamada ao selecionar um novo player.
 # Salva as informações do usuário
-func onSelectPlayer(player):
+func onSelectPlayer(player: String):
 	_selected_player = player
 	saveData()
 
