@@ -19,6 +19,8 @@ var max_scences = 3
 # Qual personagem está atualmente selecionado
 var _selected_player = ''
 
+var _current_player_position: Vector2 = Vector2(0,0)
+
 # Cena 0 é da introdução da escola
 var _current_scene = 0
 
@@ -30,6 +32,14 @@ var _has_game_saved = false
 func _ready():
 	# Ao iniciar o script, carrega os dados do usuário
 	loadData()
+
+# Método que atualiza a posição atual do player sempre que ela muda
+func onChangePlayerPosition(position: Vector2):
+	_current_player_position = position
+
+# Recupera a última posição do player
+func getCurrentPlayerPosition():
+	return _current_player_position
 
 # Função ao alterar o estado da direção do personagem
 func onChangeWalkDirectionState(state: WalkState):

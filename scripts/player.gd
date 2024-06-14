@@ -8,6 +8,7 @@ extends CharacterBody2D
 const SPEED = 500 #200
 var scale_factor = 0.3 # Escala do tamanho do personagem
 var animation_scale = 10 # Altera a velocidade dos frames da animação
+var y_position = 0
 
 func _ready():
 	var parent = get_parent() # Obtém a cena "pai" onde o player está
@@ -26,7 +27,7 @@ func _ready():
 		GameMovement.clearNextPosition() # Reseta a posição determinada, para a próxima movimentação
 		return
 	
-	var y_position = 430 #Posição padrão do Y do jogador
+	y_position = 430 #Posição padrão do Y do jogador
 	if (background_node):
 		scene_width = GameStats.sceneWidth(background_node)
 		
@@ -96,6 +97,8 @@ func _physics_process(_delta):
 	move_and_slide()
 	
 	print(position)
+	var playerPosition = Vector2(position.x, y_position)
+	GameStats.onChangePlayerPosition(playerPosition)
 
 # Método para ajustar a posição do sprite ao inverter
 func adjust_sprite_position():	
@@ -240,7 +243,7 @@ func setInitialPositionPlayer(position: Vector2):
 	if (background_node == null):
 		return
 	
-	var y_position = getPlayerPositionY(background_node)
+	y_position = getPlayerPositionY(background_node)
 	
 	# Seta a posição inicial dos sprites
 	sprites.position = Vector2(position.x, y_position)

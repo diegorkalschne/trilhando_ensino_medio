@@ -41,9 +41,17 @@ func _can_go_to_question(question_id: int):
 	return false # Player não está apto a responder a questão
 
 # Função para mudar para a cena de quiz
-func changeSceneQuiz(question_id: int, background_path: String):
+func changeSceneQuiz(question_id: int, background_path: String):	
 	# Verificação para ver se o usuário pode responder a questão selecionada
 	if !_can_go_to_question(question_id):
+		# Instancia um snackbar
+		var snackbar = load("res://scenes/snackbar.tscn").instantiate() as Snackbar
+		get_tree().root.add_child(snackbar)
+		
+		var tree = get_tree().root.get_child(0);
+		
+		# Exibe uma mensagem pro jogador
+		snackbar.show_message("Quiz ainda não acessível", GameStats.getCurrentPlayerPosition(), 1)
 		return
 	
 	var scene = load("res://scenes/quiz.tscn").instantiate()
