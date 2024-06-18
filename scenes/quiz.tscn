@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://ddnqng3fgtlh7"]
+[gd_scene load_steps=9 format=3 uid="uid://ddnqng3fgtlh7"]
 
 [ext_resource type="Script" path="res://scripts/quiz.gd" id="1_h2cl7"]
 [ext_resource type="Script" path="res://scripts/background_quiz.gd" id="2_s5wsq"]
+[ext_resource type="Script" path="res://scripts/vbox_container_buttons_quiz.gd" id="3_dwwht"]
 [ext_resource type="AudioStream" uid="uid://dtua46lpfxlst" path="res://songs/music1.wav" id="3_k6ejs"]
 [ext_resource type="AudioStream" uid="uid://dbqnp5xv526v5" path="res://songs/effects/correct_answer.mp3" id="4_f338n"]
 [ext_resource type="AudioStream" uid="uid://bi3hkqwrwvx7x" path="res://songs/effects/incorrect_answer.mp3" id="5_8gw5o"]
@@ -41,6 +42,7 @@ offset_left = 32.0
 offset_top = 219.0
 offset_right = 1024.0
 offset_bottom = 363.0
+script = ExtResource("3_dwwht")
 
 [node name="music" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_k6ejs")

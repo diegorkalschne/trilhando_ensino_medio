@@ -1,6 +1,5 @@
 extends Node2D
 
-@onready var change_scene_detect = $change_scene_detect
 @onready var player = $player
 
 func _ready():
@@ -9,6 +8,14 @@ func _ready():
 
 	# Define até onde a câmera irá se movimentar no lado direito da tela	
 	player.setRigthCameraLimit(scene_width)
-	
-	# Define onde ficará o "collider" que detecta que o player chegou no final da cena
-	change_scene_detect.changeRigthEdgePosition(900);
+
+# Função para voltar para a cena inicial do jogo (entrada da escola)
+func _on_left_area_body_entered(body):
+	GameStats.onChangeScene(0);
+	get_tree().change_scene_to_file("res://scenes/intro_school.tscn");
+	GameMovement.setNextPositionPlayer(Vector2(1616, 40))
+
+# Vai para a school1
+func _on_rigth_area_body_entered(body):
+	GameStats.onChangeScene(2);
+	get_tree().change_scene_to_file("res://scenes/school/school2.tscn");

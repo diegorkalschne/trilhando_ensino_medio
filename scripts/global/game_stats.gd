@@ -60,28 +60,28 @@ func getCurrentScene():
 	return _current_scene
 
 # Adiciona uma nova questão que estará disponível para o player fazer
-func onAddWhitelistQuestion(question_id: int):
+func onAddWhitelistQuestion(question_id: String):
 	# Adiciona apenas caso já não esteja na lista
 	if (!_whitelist_questions.has(question_id)):
 		_whitelist_questions.append(question_id)
 		saveData()
 
 # Verifica se o player pode respondeu uma questão ou não
-func playerCanResponseQuestion(question_id: int):
+func playerCanResponseQuestion(question_id: String):
 	if _whitelist_questions.size() == 0:
 		return false
 	
 	return _whitelist_questions[-1] == question_id
 
 # Salva uma questão que o player já finalizou
-func addQuestionResolved(question_id: int):
+func addQuestionResolved(question_id: String):
 	# Adiciona apenas caso já não esteja na lista
 	if (!_questions_player_resolved.has(question_id)):
 		_questions_player_resolved.append(question_id)
 		saveData()
 
 # Função para verificar se o player já resolveu ou não uma questão
-func playerHasResolvedQuestion(question_id: int):
+func playerHasResolvedQuestion(question_id: String):
 	if (_questions_player_resolved.size() == 0):
 		return false
 	

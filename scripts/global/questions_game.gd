@@ -31,19 +31,30 @@ func load_questions_from_json(file_path: String):
 		return []
 
 # Função para verificar se o usuário está apto para responder ou não uma questão no momento
-func _can_go_to_question(question_id: int):
+func _can_go_to_question(question_id: String):
+	var message = "Quiz não acessível no momento"
+	var status = false
+	
 	# Verifica se o player já não resolveu a questão. Continua apenas enquanto não resolveu
 	if (!GameStats.playerHasResolvedQuestion(question_id)):
 		# Verifica se o player está apto a responder a questão
 		if (GameStats.playerCanResponseQuestion(question_id)):
-			return true # Player está apto a responder a questão
+			status = true # Player está apto a responder a questão
+	else:
+		message = "Questão já respondida"
 	
-	return false # Player não está apto a responder a questão
+	# Player não está apto a responder a questão
+	return {
+		"status": status,
+		"message": message,
+	} 
 
 # Função para mudar para a cena de quiz
-func changeSceneQuiz(question_id: int, background_path: String):	
+func changeSceneQuiz(question_id: String, background_path: String):	
+	var can_go = _can_go_to_question(question_id)
+	
 	# Verificação para ver se o usuário pode responder a questão selecionada
-	if !_can_go_to_question(question_id):
+	if !can_go["status"]:
 		# Instancia um snackbar
 		var snackbar = load("res://scenes/snackbar.tscn").instantiate() as Snackbar
 		get_tree().root.add_child(snackbar)
@@ -51,7 +62,7 @@ func changeSceneQuiz(question_id: int, background_path: String):
 		var tree = get_tree().root.get_child(0);
 		
 		# Exibe uma mensagem pro jogador
-		snackbar.show_message("Quiz ainda não acessível", GameStats.getCurrentPlayerPosition(), 1)
+		snackbar.show_message(can_go["message"], GameStats.getCurrentPlayerPosition(), 1)
 		return
 	
 	var scene = load("res://scenes/quiz.tscn").instantiate()
@@ -61,4 +72,4 @@ func changeSceneQuiz(question_id: int, background_path: String):
 	changeInQuizScene(true) # Marca que está na cena do quiz
 	
 	if scene.has_method("initQuiz"):
-		scene.call("initQuiz", _questions[question_id], background_path)
+		scene.call("initQuiz", _questions[question_id], question_id, background_path)

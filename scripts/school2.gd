@@ -1,6 +1,5 @@
 extends Node2D
 
-@onready var change_scene_detect = $change_scene_detect
 @onready var player = $player
 
 # Variável para armazenar se algumas das Area2D está acessada no momento
@@ -21,8 +20,8 @@ func _ready():
 	# Define até onde a câmera irá se movimentar no lado direito da tela	
 	player.setRigthCameraLimit(scene_width)
 	
-	# Jogando o collider para fora da cena, pois na direita há um static body
-	change_scene_detect.changeRigthEdgePosition(scene_width);
+	# TODO: remover depois
+	GameStats.onAddWhitelistQuestion("0")
 	
 	# Marca todas as labels como false
 	for label in bodyAreaEntered:
@@ -64,8 +63,7 @@ func _input(event):
 	# player pressionou "E" ao interagir com uma das portas
 	if event.is_action_pressed("interact"):
 		if bodyAreaEntered["door_101"]:
-			QuestionsGame.changeSceneQuiz(0, "res://assets/images/background_menu.jpg");
-			GameMovement.setNextPositionPlayer(Vector2(175, 0))
+			QuestionsGame.changeSceneQuiz("0", "res://assets/images/background_menu.jpg");
 		elif bodyAreaEntered["door_102"]:
 			GameMovement.setNextPositionPlayer(Vector2(466, 0))
 		elif bodyAreaEntered["door_103"]:
@@ -80,3 +78,8 @@ func _input(event):
 			GameMovement.setNextPositionPlayer(Vector2(1141, 0))
 			GameStats.onChangeScene(3)
 			get_tree().change_scene_to_file("res://scenes/school/school3.tscn");
+
+# Função quando irá voltar a cena
+func _on_left_area_body_entered(body):
+	GameStats.onChangeScene(1);
+	get_tree().change_scene_to_file("res://scenes/school/school1.tscn");

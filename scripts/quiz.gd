@@ -4,7 +4,10 @@ extends Node2D
 @onready var options = $options
 @onready var background = $background
 
-var current_quiz
+var quiz_general_id = "" # Armaneza o "id" geral do quiz (o ID "pai")
+var current_quiz # Armazena o quiz atual (todas as perguntas disponíveis)
+
+var index_current_pergunta: int = 0 # Armazena qual pergunta está sendo atualmente exibida
 
 # Armazena se a resposta certa foi selecionada
 # Usada para bloquear os clicks nas demais respostas, após acertar uma vez
@@ -17,14 +20,44 @@ func _ready():
 func _exit_tree():
 	$music.stop() # Para a música ao sair da cena
 
-func initQuiz(quiz, background_path: String):
+func initQuiz(quiz, quiz_id, background_path: String):
 	# Seta o background da cena
 	background.setTexture(background_path);
 	
 	current_quiz = quiz # Armazena globalmente qual o quiz atual
-	question.text = quiz['question'] # Seta a questão na label
+	quiz_general_id = quiz_id
 	
-	for option in quiz['options']:
+	_show_questions(0) # Começa sempre na pergunta 0
+
+func _show_questions(index: int):	
+	# Caso não tenha perguntas ou todas as perguntas já foram exibidas, fecha a cena atual
+	if current_quiz.size() == 0 or index >= current_quiz.size():
+		queue_free() # Descarta a cena atual do quiz e volta para a anterior
+		QuestionsGame.changeInQuizScene(false) # Marca que não está mais na cena do quiz
+		GameStats.addQuestionResolved(quiz_general_id) # Salva que o quiz foi completado por inteiro
+		return
+	
+	_reset_on_correct() # Reseta o quiz
+	
+	var _quiz = current_quiz[index]; # Obtém a pergunta atual
+	
+	question.text = _quiz['question'] # Seta a questão na label
+	
+	var options_question = _quiz['options'] # Obtém as opções de resposta
+	
+	# Obtém qual é a resposta correta
+	var correct_answer = options_question[_quiz['correct_index']]
+	
+	var question_id = _quiz['id']
+	
+	# Verifica se o player já não acertou a questão atual. Caso sim, pula para a próxima
+	if (GameStats.playerHasResolvedQuestion(question_id)):
+		index_current_pergunta += 1 # Incrementa o index atual da pergunta
+		_show_questions(index_current_pergunta); # Chama a própria função, passando o ID novo
+
+	options_question.shuffle() # Embaralha as opções, para sempre ser diferente
+	
+	for option in options_question:
 		# Cria um botão novo
 		var button = Button.new()
 		button.text = option
@@ -33,35 +66,49 @@ func initQuiz(quiz, background_path: String):
 		var on_pressed = func():
 			if (_correct_answer):
 				return
-			_on_pressed_answer(button, option)
+			_on_pressed_answer(button, option, correct_answer, question_id)
 		
 		# Registrando o conector do botão
 		button.pressed.connect(on_pressed)
 		
 		# Adiciona o botão na tela
 		options.add_child(button)
+	
+	# Ajusta a altura dos botões conforme o tamanho do texto
+	options.adjust_size()
+
+# Função para resetar o quiz após acertar uma resposta
+func _reset_on_correct():
+	_correct_answer = false
+	
+	# Remove todos os botões de perguntas setados atualmente
+	for child in options.get_children():
+		if child is Button:
+			options.remove_child(child)
+		
 
 # Função que é chamada sempre que uma das opções é pressionada
-func _on_pressed_answer(button: Button, option: String):
+func _on_pressed_answer(button: Button, option: String, correct_answer: String, question_id: String):
 	# Verificação se acertou a resposta
-	if option == current_quiz['answer']:
+	if option == correct_answer:
 		_correct_answer = true
-		_on_correct_answer(button)
+		_on_correct_answer(button, question_id)
 	else:
 		_on_error_answer(button)
 
-func _on_correct_answer(button: Button):
+func _on_correct_answer(button: Button, question_id: String):
 	_change_color_button(button, Color8(67, 160, 71, 255))
 	
 	button.disabled = true # Desabilita o botão ao errar
 	$correct_answer.play()
 	
-	GameStats.addQuestionResolved(current_quiz["id"])
+	GameStats.addQuestionResolved(question_id)
 	
-	await get_tree().create_timer(2).timeout
+	await get_tree().create_timer(2).timeout # Delay de 2 segundos
 	
-	queue_free() # Descarta a cena atual do quiz e volta para a anterior
-	QuestionsGame.changeInQuizScene(false) # Marca que não está mais na cena do quiz
+	index_current_pergunta += 1 # Incrementa o index atual da pergunta
+	
+	_show_questions(index_current_pergunta); # Verifica se tem próxima pergunta para exibir
 	
 
 func _on_error_answer(button: Button):

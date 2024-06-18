@@ -1,14 +1,52 @@
-[
-	{
-		"id": 0,
-		"question": "Qual é a capital da França?",
-		"options": ["Paris", "Londres", "Roma", "Berlim"],
-		"answer": "Paris"
-	},
-	{
-		"id": 1,
-		"question": "Qual é a capital da Espanha?",
-		"options": ["Lisboa", "Madri", "Barcelona", "Sevilha"],
-		"answer": "Madri"
-	}
-]
+{
+   "0": [
+	  {
+		 "id":"0.1",
+		 "question":"O que é o Novo Ensino Médio?",
+		 "options":[
+			"O novo ensino médio oferece um currículo mais flexível, promovendo uma educação integral e o desenvolvimento de várias dimensões humanas.",
+			"O novo ensino médio é definido pela unificação de novas formas de ensino onde o aluno segue uma trilha de matérias definidas pela escola.",
+			"Mais uma opção",
+			"Mais uma opção 2"
+		 ],
+		 "correct_index":0
+	  },
+   ],
+   "1":[
+	  {
+		 "id":"1.1",
+		 "question":"O que são os Itinerários Formativos?",
+		 "options":[
+			"Os Itinerários Formativos são aprofundamentos das áreas de conhecimento que enfatizam uma área focal e outra complementar.",
+			"Os Itinerários Formativos são novas formas que o aluno tem de estudar, onde ele deve seguir estudando todos conteúdos, independente de seu projeto de vida.",
+			"Mais uma opção",
+			"Mais uma opção 2"
+		 ],
+		 "correct_index":0
+	  }
+   ],
+   "2":[
+	  {
+		 "id":"2.1",
+		 "question":"O que são as Unidades Curriculares Eletivas?",
+		 "options":[
+			"As Unidades Curriculares Eletivas são componentes opcionais do currículo, permitindo que os estudantes escolham temas de interesse para aprofundar seu conhecimento.",
+			"As Unidades Curriculares Eletivas são componentes obrigatórios do currículo, onde os alunos devem cursar todos os temas para aprofundar seus conhecimentos.",
+			"Mais uma opção",
+			"Mais uma opção 2"
+		 ],
+		 "correct_index":0
+	  },
+	  {
+		 "id":"2.2",
+		 "question":"Quais são as Eletivas?",
+		 "options":[
+			"Eletivas Obrigatórias, Eletivas Pré-Itinerário e Eletivas Base.",
+			"Eletivas Humanas, Eletivas da Natureza e Eletivas Exatas.",
+			"Mais uma opção",
+			"Mais uma opção 2"
+		 ],
+		 "correct_index":0
+	  }
+   ]
+}

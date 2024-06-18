@@ -20,9 +20,6 @@ func _ready():
 	# Define até onde a câmera irá se movimentar no lado direito da tela	
 	player.setRigthCameraLimit(scene_width)
 	
-	# TODO: remover depois
-	GameStats.onAddWhitelistQuestion(0)
-	
 	# Marca todas as labels como false
 	for label in bodyAreaEntered:
 		if has_node("label_%s" % label):
