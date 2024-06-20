@@ -98,7 +98,16 @@ func onSelectPlayer(player: String):
 # Retorna o player atualmente selecionado
 func getSelectedPlayer():
 	return _selected_player
-	
+
+# Função utilizada para salvar o nome do jogador
+func onChangeNamePlayer(name: String):
+	_name_player = name
+	saveData()
+
+# Retorna o nome do player
+func getNamePlayer():
+	return _name_player
+
 # Função para verificar se há ou não algum jogo salvo
 func hasGameSaved():
 	return _has_game_saved
