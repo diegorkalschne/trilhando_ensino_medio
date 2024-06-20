@@ -21,7 +21,7 @@ func _ready():
 	player.setRigthCameraLimit(scene_width)
 	
 	# TODO: remover depois
-	GameStats.onAddWhitelistQuestion("0")
+	GameStats.onAddWhitelistQuestion("2")
 	
 	# Marca todas as labels como false
 	for label in bodyAreaEntered:
@@ -63,7 +63,7 @@ func _input(event):
 	# player pressionou "E" ao interagir com uma das portas
 	if event.is_action_pressed("interact"):
 		if bodyAreaEntered["door_101"]:
-			QuestionsGame.changeSceneQuiz("0", "res://assets/images/background_menu.jpg");
+			QuestionsGame.changeSceneQuiz("2", "res://assets/images/background_menu.jpg");
 		elif bodyAreaEntered["door_102"]:
 			GameMovement.setNextPositionPlayer(Vector2(466, 0))
 		elif bodyAreaEntered["door_103"]:

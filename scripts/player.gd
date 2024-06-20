@@ -212,9 +212,10 @@ func getPlayerPositionY(background_node: TileMap):
 			# Girl
 			adjust = 123
 	elif GameStats.getCurrentScene() == 4:
-		# Na cena 3 (top floor), é necessário fazer um ajuste apenas para a menina
 		if GameStats.getSelectedPlayer().find("girl") != -1:
 			adjust = 25
+		if GameStats.getSelectedPlayer().find("boy") != -1:
+			adjust = 85
 	else:
 		# Todas as outras cenas
 		if GameStats.getSelectedPlayer().find("boy") != -1:
