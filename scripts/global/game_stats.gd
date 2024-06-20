@@ -17,7 +17,9 @@ var save_path = "user://variable.save"
 var max_scences = 3
 
 # Qual personagem está atualmente selecionado
-var _selected_player = ''
+var _selected_player: String = ''
+
+var _name_player: String = ''
 
 var _current_player_position: Vector2 = Vector2(0,0)
 
@@ -112,6 +114,7 @@ func resetData():
 	_whitelist_questions = []
 	_questions_player_resolved = []
 	_has_game_saved = false
+	_name_player = ''
 	
 
 # Função para salvar os dados do usuário localmente
@@ -124,7 +127,8 @@ func saveData(data=null):
 		"current_scene": _current_scene,
 		"walk_direction_state": int(_walk_direction_state), # Salva a enum como index
 		"whitelist_questions": _whitelist_questions,
-		"questions_player_resolved": _questions_player_resolved
+		"questions_player_resolved": _questions_player_resolved,
+		"name_player": _name_player,
 	}
 	
 	if (data != null):
@@ -159,6 +163,8 @@ func loadData():
 			_whitelist_questions = dict["whitelist_questions"]
 		if dict.has("questions_player_resolved"):
 			_questions_player_resolved = dict["questions_player_resolved"]
+		if dict.has("name_player"):
+			_name_player = dict["name_player"]
 	else:
 		_has_game_saved = false
 

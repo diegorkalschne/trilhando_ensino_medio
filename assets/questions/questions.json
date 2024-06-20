@@ -1,52 +1,247 @@
 {
-   "0": [
-	  {
-		 "id":"0.1",
-		 "question":"O que é o Novo Ensino Médio?",
-		 "options":[
-			"O novo ensino médio oferece um currículo mais flexível, promovendo uma educação integral e o desenvolvimento de várias dimensões humanas.",
-			"O novo ensino médio é definido pela unificação de novas formas de ensino onde o aluno segue uma trilha de matérias definidas pela escola.",
-			"Mais uma opção",
-			"Mais uma opção 2"
-		 ],
-		 "correct_index":0
-	  },
-   ],
-   "1":[
-	  {
-		 "id":"1.1",
-		 "question":"O que são os Itinerários Formativos?",
-		 "options":[
-			"Os Itinerários Formativos são aprofundamentos das áreas de conhecimento que enfatizam uma área focal e outra complementar.",
-			"Os Itinerários Formativos são novas formas que o aluno tem de estudar, onde ele deve seguir estudando todos conteúdos, independente de seu projeto de vida.",
-			"Mais uma opção",
-			"Mais uma opção 2"
-		 ],
-		 "correct_index":0
-	  }
-   ],
-   "2":[
-	  {
-		 "id":"2.1",
-		 "question":"O que são as Unidades Curriculares Eletivas?",
-		 "options":[
-			"As Unidades Curriculares Eletivas são componentes opcionais do currículo, permitindo que os estudantes escolham temas de interesse para aprofundar seu conhecimento.",
-			"As Unidades Curriculares Eletivas são componentes obrigatórios do currículo, onde os alunos devem cursar todos os temas para aprofundar seus conhecimentos.",
-			"Mais uma opção",
-			"Mais uma opção 2"
-		 ],
-		 "correct_index":0
-	  },
-	  {
-		 "id":"2.2",
-		 "question":"Quais são as Eletivas?",
-		 "options":[
-			"Eletivas Obrigatórias, Eletivas Pré-Itinerário e Eletivas Base.",
-			"Eletivas Humanas, Eletivas da Natureza e Eletivas Exatas.",
-			"Mais uma opção",
-			"Mais uma opção 2"
-		 ],
-		 "correct_index":0
-	  }
-   ]
+	"0": [
+		{
+			"id": "0.1",
+			"question": "O que é o Novo Ensino Médio?",
+			"options": [
+				"O novo ensino médio oferece um currículo mais flexível, promovendo uma educação integral e o desenvolvimento de várias dimensões humanas.",
+				"O novo ensino médio é definido pela unificação de novas formas de ensino onde o aluno segue uma trilha de matérias definidas pela escola.",
+				"Mais uma opção",
+				"Mais uma opção 2"
+			],
+			"correct_index": 0
+		}
+	],
+	"1": [
+		{
+			"id": "1.1",
+			"question": "O que são os Itinerários Formativos?",
+			"options": [
+				"Os Itinerários Formativos são aprofundamentos das áreas de conhecimento que enfatizam uma área focal e outra complementar.",
+				"Os Itinerários Formativos são novas formas que o aluno tem de estudar, onde ele deve seguir estudando todos conteúdos, independente de seu projeto de vida.",
+				"Mais uma opção",
+				"Mais uma opção 2"
+			],
+			"correct_index": 0
+		}
+	],
+	"2": [
+		{
+			"id": "2.1",
+			"question": "O que são as Unidades Curriculares Eletivas?",
+			"options": [
+				"As Unidades Curriculares Eletivas são componentes opcionais do currículo, permitindo que os estudantes escolham temas de interesse para aprofundar seu conhecimento.",
+				"As Unidades Curriculares Eletivas são componentes obrigatórios do currículo, onde os alunos devem cursar todos os temas para aprofundar seus conhecimentos.",
+				"Mais uma opção",
+				"Mais uma opção 2"
+			],
+			"correct_index": 0
+		},
+		{
+			"id": "2.2",
+			"question": "Quais são as Eletivas?",
+			"options": [
+				"Eletivas Obrigatórias, Eletivas Pré-Itinerário e Eletivas Base.",
+				"Eletivas Humanas, Eletivas da Natureza e Eletivas Exatas.",
+				"Mais uma opção",
+				"Mais uma opção 2"
+			],
+			"correct_index": 0
+		}
+	],
+	"3": [
+		{
+			"id": "3.1",
+			"question": "Qual é o papel das hipóteses em uma investigação científica?",
+			"options": [
+				"Hipóteses são suposições que orientam a investigação, sendo testadas para determinar sua validade.",
+				"Hipóteses são conclusões finais de uma pesquisa científica.",
+				"Hipóteses são dados coletados durante um experimento.",
+				"Hipóteses são métodos estatísticos usados para analisar dados."
+			],
+			"correct_index": 0
+		}
+	],
+	"4": [
+		{
+			"id": "4.1",
+			"question": "Quais são alguns dos recursos que podem ser usados para a coleta de dados em uma pesquisa científica?",
+			"options": [
+				"Observações diretas, questionários, entrevistas e experimentos laboratoriais.",
+				"Leituras de livros de ficção e contos.",
+				"Somente entrevistas com especialistas.",
+				"Apenas observações em campo."
+			],
+			"correct_index": 0
+		}
+	],
+	"5": [
+		{
+			"id": "5.1",
+			"question": "Como a análise de dados é importante na investigação científica?",
+			"options": [
+				"Ajuda a interpretar os resultados coletados, identificando padrões, tendências e possíveis relações entre variáveis.",
+				"É usada exclusivamente para justificar os resultados de uma pesquisa.",
+				"Serve apenas para organizar os dados de forma visual.",
+				"Permite que os pesquisadores ignorem dados irrelevantes e apenas apresentem o que confirma suas hipóteses."
+			],
+			"correct_index": 0
+		}
+	],
+	"6": [
+		{
+			"id": "6.1",
+			"question": "Por que é importante analisar as relações de diferentes grupos, povos e sociedades com a natureza?",
+			"options": [
+				"Para entender os impactos econômicos da urbanização.",
+				"Para promover a industrialização em áreas rurais.",
+				"Para propor alternativas que promovam a consciência e a ética socioambiental.",
+				"Para estudar as políticas internacionais de direitos humanos."
+			],
+			"correct_index": 0
+		}
+	],
+	"7": [
+		{
+			"id": "7.1",
+			"question": "Qual é o foco principal da habilidade que problematiza as relações entre cultura e religiosidade?",
+			"options": [
+				"Compreender como diferentes culturas constroem sua história a partir de crenças e práticas religiosas.",
+				"Estudar as técnicas de arquitetura moderna.",
+				"Analisar a relação entre ciência e religião.",
+				"Entender as teorias da evolução humana."
+			],
+			"correct_index": 0
+		}
+	],
+	"8": [
+		{
+			"id": "8.1",
+			"question": "Qual é o objetivo principal da competência que analisa as relações de produção, capital e trabalho em diferentes territórios e culturas?",
+			"options": [
+				"Analisar a formação de territórios em diferentes épocas históricas.",
+				"Promover o desenvolvimento de técnicas de artesanato tradicional.",
+				"Discutir o papel das relações de produção na construção e transformação das sociedades.",
+				"Estudar a evolução das espécies na natureza."
+			],
+			"correct_index": 0
+		}
+	],
+	"9": [
+		{
+			"id": "9.1",
+			"question": "Por que é importante analisar os impactos sociais e socioambientais no contexto de saúde e sustentabilidade?",
+			"options": [
+				"Para compreender como as mudanças ambientais afetam as comunidades.",
+				"Para explorar a história da exploração espacial.",
+				"Para entender as tradições culturais das civilizações antigas.",
+				"Para estudar as teorias da física quântica."
+			],
+			"correct_index": 0
+		}
+	],
+	"10": [
+		{
+			"id": "10.1",
+			"question": "Por que é importante analisar os impactos socioambientais de práticas industriais e agrícolas?",
+			"options": [
+				"Para promover a conscientização sobre a conservação da biodiversidade.",
+				"Para entender a história da revolução industrial.",
+				"Para estudar a evolução dos sistemas de transporte urbano.",
+				"Para explorar novas técnicas de produção de energia nuclear."
+			],
+			"correct_index": 0
+		}
+	],
+	"11": [
+		{
+			"id": "11.1",
+			"question": "Qual é a importância da gestão e políticas públicas no contexto de saúde e sustentabilidade?",
+			"options": [
+				"Para implementar práticas sustentáveis e melhorar a qualidade de vida.",
+				"Para estudar a história da arquitetura moderna.",
+				"Para analisar a evolução das técnicas de produção de alimentos.",
+				"Para entender as teorias da psicologia comportamental."
+			],
+			"correct_index": 0
+		}
+	],
+	"12": [
+		{
+			"id": "12.1",
+			"question": "Qual é a importância da análise das políticas públicas nas Ciências Humanas e Sociais?",
+			"options": [
+				"Para avaliar como as decisões governamentais afetam a vida dos cidadãos.",
+				"Para estudar a história das guerras mundiais.",
+				"Para entender as tradições culturais de diferentes povos.",
+				"Para explorar a evolução das técnicas de construção de pontes."
+			],
+			"correct_index": 0
+		}
+	],
+	"13": [
+		{
+			"id": "13.1",
+			"question": "Por que é importante buscar um equilíbrio entre desenvolvimento econômico e sustentabilidade ambiental?",
+			"options": [
+				"Para garantir que as necessidades das gerações atuais sejam atendidas sem comprometer o futuro das próximas gerações.",
+				"Para estudar a evolução das teorias políticas modernas.",
+				"Para entender como as empresas podem maximizar seus lucros.",
+				"Para explorar as técnicas de construção de arranha-céus."
+			],
+			"correct_index": 0
+		}
+	],
+	"14": [
+		{
+			"id": "14.1",
+			"question": "Qual é o impacto positivo das políticas de inclusão social em uma sociedade?",
+			"options": [
+				"Promover a diversidade e a participação ativa na vida pública e econômica.",
+				"Reduzir a expectativa de vida das populações vulneráveis.",
+				"Aumentar a exclusão digital entre diferentes grupos sociais.",
+				"Explorar as teorias de expansão do universo na astronomia."
+			],
+			"correct_index": 0
+		}
+	],
+	"15": [
+		{
+			"id": "15.1",
+			"question": "Qual é a importância de preservar a biodiversidade para o equilíbrio dos ecossistemas?",
+			"options": [
+				"Para garantir a estabilidade dos serviços ecossistêmicos, como a polinização e o ciclo de nutrientes.",
+				"Para reduzir a competitividade entre espécies.",
+				"Para aumentar a homogeneidade dos ambientes naturais.",
+				"Para estudar a evolução das linguagens de programação."
+			],
+			"correct_index": 0
+		}
+	],
+	"16": [
+		{
+			"id": "16.1",
+			"question": "Por que é importante desenvolver tecnologias sustentáveis para preservar o meio ambiente?",
+			"options": [
+				"Para minimizar os impactos negativos das atividades humanas sobre os ecossistemas.",
+				"Para aumentar a produção industrial.",
+				"Para reduzir os custos de produção.",
+				"Para explorar novas formas de colonização espacial."
+			],
+			"correct_index": 0
+		}
+	],
+	"17": [
+		{
+			"id": "17.1",
+			"question": "Qual é a importância da gestão sustentável dos recursos naturais para o futuro das próximas gerações?",
+			"options": [
+				"Para garantir que as necessidades atuais sejam atendidas sem comprometer as futuras gerações.",
+				"Para explorar novas formas de extração mineral.",
+				"Para aumentar a exploração de recursos não renováveis.",
+				"Para estudar a evolução das espécies marinhas."
+			],
+			"correct_index": 0
+		}
+	]
 }
