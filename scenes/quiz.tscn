@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://ddnqng3fgtlh7"]
+[gd_scene load_steps=11 format=3 uid="uid://ddnqng3fgtlh7"]
 
 [ext_resource type="Script" path="res://scripts/quiz.gd" id="1_h2cl7"]
 [ext_resource type="Script" path="res://scripts/background_quiz.gd" id="2_s5wsq"]
@@ -19,6 +19,12 @@ expand_margin_right = 5.0
 
 [sub_resource type="LabelSettings" id="LabelSettings_jajjn"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_cubqm"]
+font_size = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_yo0vw"]
+font_size = 32
+
 [node name="Quiz" type="Node2D"]
 script = ExtResource("1_h2cl7")
 
@@ -27,9 +33,9 @@ script = ExtResource("2_s5wsq")
 
 [node name="question" type="Label" parent="."]
 offset_left = 40.0
-offset_top = 16.0
+offset_top = 54.0
 offset_right = 1016.0
-offset_bottom = 200.0
+offset_bottom = 128.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 16
 theme_override_styles/normal = SubResource("StyleBoxFlat_jeurr")
@@ -39,9 +45,9 @@ vertical_alignment = 1
 
 [node name="options" type="VBoxContainer" parent="."]
 offset_left = 32.0
-offset_top = 219.0
+offset_top = 141.0
 offset_right = 1024.0
-offset_bottom = 363.0
+offset_bottom = 285.0
 script = ExtResource("3_dwwht")
 
 [node name="music" type="AudioStreamPlayer2D" parent="."]
@@ -54,3 +60,52 @@ stream = ExtResource("4_f338n")
 [node name="incorrect_answer" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_8gw5o")
 volume_db = 20.0
+
+[node name="pontuacao" type="Label" parent="."]
+offset_left = 16.0
+offset_top = 480.0
+offset_right = 224.0
+offset_bottom = 583.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_jeurr")
+label_settings = SubResource("LabelSettings_cubqm")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="label_pontuacao" type="Label" parent="."]
+offset_left = 16.0
+offset_top = 432.0
+offset_right = 224.0
+offset_bottom = 472.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_jeurr")
+text = "Pontuação atual na área"
+label_settings = SubResource("LabelSettings_jajjn")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="pontuacao_ganha" type="Label" parent="."]
+offset_left = 248.0
+offset_top = 434.0
+offset_right = 360.0
+offset_bottom = 585.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_jeurr")
+label_settings = SubResource("LabelSettings_yo0vw")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="label_area" type="Label" parent="."]
+offset_left = 40.0
+offset_top = 12.0
+offset_right = 1016.0
+offset_bottom = 44.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_jeurr")
+label_settings = SubResource("LabelSettings_jajjn")
+horizontal_alignment = 1
+vertical_alignment = 1

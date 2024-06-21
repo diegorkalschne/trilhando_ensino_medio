@@ -49,8 +49,7 @@ func _can_go_to_question(question_id: String):
 		"message": message,
 	} 
 
-# Função para mudar para a cena de quiz
-func changeSceneQuiz(question_id: String, background_path: String):	
+func canGoQuestion(question_id: String):
 	var can_go = _can_go_to_question(question_id)
 	
 	# Verificação para ver se o usuário pode responder a questão selecionada
@@ -63,7 +62,18 @@ func changeSceneQuiz(question_id: String, background_path: String):
 		
 		# Exibe uma mensagem pro jogador
 		snackbar.show_message(can_go["message"], GameStats.getCurrentPlayerPosition(), 1)
-		return
+		return false
+	
+	return true
+
+# Função para mudar para a cena de quiz
+func changeSceneQuiz(question_id: String, background_path: String):	
+	var can_go = _can_go_to_question(question_id)
+	
+	# Verificação para ver se o usuário pode responder a questão selecionada
+	if !can_go["status"]:
+		canGoQuestion(question_id)
+		return false
 	
 	var scene = load("res://scenes/quiz.tscn").instantiate()
 	get_tree().root.add_child(scene)

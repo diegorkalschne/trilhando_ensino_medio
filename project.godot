@@ -29,7 +29,6 @@ directories/dch_directory={
 "girl1": "res://assets/characters/girl1.dch"
 }
 directories/dtl_directory={
-"scenes/timeline1": "res://scenes/timeline1.dtl",
 "timeline1": "res://assets/timelines/timeline1.dtl",
 "timeline2": "res://assets/timelines/timeline2.dtl"
 }

@@ -23,6 +23,9 @@ var _name_player: String = ''
 
 var _current_player_position: Vector2 = Vector2(0,0)
 
+# Guarda a pontuação do jogador, agrupando a pontuação por área
+var _pontuacao: Dictionary = {}
+
 # Cena 0 é da introdução da escola
 var _current_scene = 0
 
@@ -112,6 +115,33 @@ func getNamePlayer():
 func hasGameSaved():
 	return _has_game_saved
 
+# Função para adicionar uma pontuação a uma área
+func onAddPontuacao(pontos: int, area: String):
+	if (_pontuacao.has(area)):
+		var current_pontuacao = _pontuacao[area]
+		current_pontuacao += pontos
+		_pontuacao[area] = current_pontuacao
+	else:
+		_pontuacao[area] = pontos
+
+	saveData()
+
+# Obter a pontuação que o jogador já tem conforme uma área
+func getPontuacaoByArea(area: String):
+	if _pontuacao.has(area):
+		return _pontuacao[area]
+	
+	return 0
+	
+# Função que retorna todas as áreas e seus respectivos pontos
+func getPontuacaoAllAreas():
+	return _pontuacao
+
+# Função para obter a melhor pontuação do jogador, conforme a área
+func getMaxPontuacao():
+	var melhor_area = max(_pontuacao, _pontuacao.get)
+	return melhor_area
+
 # Função para resetar o jogo do usuário. Chamado sempre que um novo jogo é iniciado
 func resetData():
 	saveData({}) # Salva um dicionário vazio
@@ -124,6 +154,7 @@ func resetData():
 	_questions_player_resolved = []
 	_has_game_saved = false
 	_name_player = ''
+	_pontuacao = {}
 	
 
 # Função para salvar os dados do usuário localmente
@@ -138,6 +169,7 @@ func saveData(data=null):
 		"whitelist_questions": _whitelist_questions,
 		"questions_player_resolved": _questions_player_resolved,
 		"name_player": _name_player,
+		"pontuacao": _pontuacao,
 	}
 	
 	if (data != null):
@@ -174,6 +206,8 @@ func loadData():
 			_questions_player_resolved = dict["questions_player_resolved"]
 		if dict.has("name_player"):
 			_name_player = dict["name_player"]
+		if dict.has("pontuacao"):
+			_pontuacao = dict["pontuacao"]
 	else:
 		_has_game_saved = false
 

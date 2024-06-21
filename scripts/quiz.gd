@@ -3,17 +3,23 @@ extends Node2D
 @onready var question = $question
 @onready var options = $options
 @onready var background = $background
+@onready var pontuacao_ganha = $pontuacao_ganha
+@onready var pontuacao = $pontuacao
+@onready var label_area = $label_area
 
 var quiz_general_id = "" # Armaneza o "id" geral do quiz (o ID "pai")
 var current_quiz # Armazena o quiz atual (todas as perguntas disponíveis)
 
 var index_current_pergunta: int = 0 # Armazena qual pergunta está sendo atualmente exibida
 
+var _total_respostas_erradas = 0 # Armazena a quantidade de respostas erradas que o jogador teve por quiz
+
 # Armazena se a resposta certa foi selecionada
 # Usada para bloquear os clicks nas demais respostas, após acertar uma vez
 var _correct_answer = false
 
 func _ready():
+	pontuacao_ganha.visible = false
 	$music.play() # Inicia a música ao entrar na cena
 
 # Função executada ao sair da cena.
@@ -40,6 +46,9 @@ func _show_questions(index: int):
 	_reset_on_correct() # Reseta o quiz
 	
 	var _quiz = current_quiz[index]; # Obtém a pergunta atual
+	
+	# Seta a pontuação atual que o jogador tem na área da pergunta
+	retrievePontuacaoArea()
 	
 	question.text = _quiz['question'] # Seta a questão na label
 	
@@ -80,6 +89,7 @@ func _show_questions(index: int):
 # Função para resetar o quiz após acertar uma resposta
 func _reset_on_correct():
 	_correct_answer = false
+	_total_respostas_erradas = 0
 	
 	# Remove todos os botões de perguntas setados atualmente
 	for child in options.get_children():
@@ -104,6 +114,8 @@ func _on_correct_answer(button: Button, question_id: String):
 	
 	GameStats.addQuestionResolved(question_id)
 	
+	_show_pontos(1, false) # Jogador ganhou pontos
+	
 	await get_tree().create_timer(2).timeout # Delay de 2 segundos
 	
 	index_current_pergunta += 1 # Incrementa o index atual da pergunta
@@ -116,7 +128,44 @@ func _on_error_answer(button: Button):
 		
 	button.disabled = true # Desabilita o botão ao errar
 	$incorrect_answer.play()
-		
+	
+	# Jogador perdeu pontos
+	var pontos_perdidos = (_total_respostas_erradas * 1 + 1) * (-1) # Vezes -1 para deixar negativo
+	_show_pontos(pontos_perdidos, true)
+	
+	await get_tree().create_timer(2).timeout
+
+
+# Exibe a pontuação que o jogador ganhou/perdeu por cada resposta
+# e salva a pontuação
+func _show_pontos(pontuacao: int, isError: bool):
+	var signal_str = "+"
+	var color = Color8(67, 160, 71, 255) #verde
+	if pontuacao < 0:
+		signal_str = ""
+		color = Color(1, 0, 0) # vermelho
+	
+	$pontuacao_ganha.text = signal_str + str(pontuacao)
+	$pontuacao_ganha.label_settings.font_color = color
+	$pontuacao_ganha.visible = true
+	_total_respostas_erradas += 1
+	
+	# Salva a pontuacao do jogador
+	GameStats.onAddPontuacao(pontuacao, current_quiz[index_current_pergunta]["area"])
+	retrievePontuacaoArea()
+	
+	await get_tree().create_timer(2).timeout
+	
+	$pontuacao_ganha.visible = false
+
+# Atualiza a pontuação que o jogador tem na área atual
+func retrievePontuacaoArea():
+	var current_area = current_quiz[index_current_pergunta]["area"]
+	
+	var current_pontuacao = GameStats.getPontuacaoByArea(current_area)
+	
+	pontuacao.text = str(current_pontuacao)
+	label_area.text = current_area
 
 func _change_color_button(button: Button, color: Color):
 	# Altera a cor do botão

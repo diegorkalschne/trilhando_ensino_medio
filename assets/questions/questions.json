@@ -6,10 +6,11 @@
 			"options": [
 				"O novo ensino médio oferece um currículo mais flexível, promovendo uma educação integral e o desenvolvimento de várias dimensões humanas.",
 				"O novo ensino médio é definido pela unificação de novas formas de ensino onde o aluno segue uma trilha de matérias definidas pela escola.",
-				"Mais uma opção",
-				"Mais uma opção 2"
+				"O novo ensino médio é um sistema educacional que elimina completamente a divisão entre disciplinas acadêmicas e práticas, focando apenas em habilidades técnicas específicas.",
+				"O novo ensino médio é um modelo estritamente baseado em disciplinas obrigatórias, sem espaço para escolhas e personalização curricular por parte dos alunos."
 			],
-			"correct_index": 0
+			"correct_index": 0,
+			"area": ""
 		}
 	],
 	"1": [
@@ -19,10 +20,11 @@
 			"options": [
 				"Os Itinerários Formativos são aprofundamentos das áreas de conhecimento que enfatizam uma área focal e outra complementar.",
 				"Os Itinerários Formativos são novas formas que o aluno tem de estudar, onde ele deve seguir estudando todos conteúdos, independente de seu projeto de vida.",
-				"Mais uma opção",
-				"Mais uma opção 2"
+				"Os Itinerários Formativos são opções adicionais de lazer e entretenimento oferecidas aos alunos durante o período escolar, visando diversificar suas atividades extracurriculares.",
+				"Os Itinerários Formativos são atividades extracurriculares opcionais que os alunos podem escolher para diversificar seus interesses acadêmicos."
 			],
-			"correct_index": 0
+			"correct_index": 0,
+			"area": ""
 		}
 	],
 	"2": [
@@ -32,21 +34,11 @@
 			"options": [
 				"As Unidades Curriculares Eletivas são componentes opcionais do currículo, permitindo que os estudantes escolham temas de interesse para aprofundar seu conhecimento.",
 				"As Unidades Curriculares Eletivas são componentes obrigatórios do currículo, onde os alunos devem cursar todos os temas para aprofundar seus conhecimentos.",
-				"Mais uma opção",
-				"Mais uma opção 2"
+				"As Unidades Curriculares Eletivas são cursos específicos do currículo que todos os alunos devem obrigatoriamente cursar para obterem créditos adicionais.",
+				"As Unidades Curriculares Eletivas são cursos que não contribuem para o número total de créditos necessários para a conclusão do curso."
 			],
-			"correct_index": 0
-		},
-		{
-			"id": "2.2",
-			"question": "Quais são as Eletivas?",
-			"options": [
-				"Eletivas Obrigatórias, Eletivas Pré-Itinerário e Eletivas Base.",
-				"Eletivas Humanas, Eletivas da Natureza e Eletivas Exatas.",
-				"Mais uma opção",
-				"Mais uma opção 2"
-			],
-			"correct_index": 0
+			"correct_index": 0,
+			"area": "Eletivas"
 		}
 	],
 	"3": [
@@ -59,7 +51,8 @@
 				"Hipóteses são dados coletados durante um experimento.",
 				"Hipóteses são métodos estatísticos usados para analisar dados."
 			],
-			"correct_index": 0
+			"correct_index": 0,
+			"area": ""
 		}
 	],
 	"4": [
@@ -72,7 +65,8 @@
 				"Somente entrevistas com especialistas.",
 				"Apenas observações em campo."
 			],
-			"correct_index": 0
+			"correct_index": 0,
+			"area": ""
 		}
 	],
 	"5": [
@@ -85,7 +79,8 @@
 				"Serve apenas para organizar os dados de forma visual.",
 				"Permite que os pesquisadores ignorem dados irrelevantes e apenas apresentem o que confirma suas hipóteses."
 			],
-			"correct_index": 0
+			"correct_index": 0,
+			"area": ""
 		}
 	],
 	"6": [
@@ -98,7 +93,8 @@
 				"Para propor alternativas que promovam a consciência e a ética socioambiental.",
 				"Para estudar as políticas internacionais de direitos humanos."
 			],
-			"correct_index": 0
+			"correct_index": 0,
+			"area": ""
 		}
 	],
 	"7": [
@@ -111,7 +107,8 @@
 				"Analisar a relação entre ciência e religião.",
 				"Entender as teorias da evolução humana."
 			],
-			"correct_index": 0
+			"correct_index": 0,
+			"area": ""
 		}
 	],
 	"8": [
@@ -124,7 +121,8 @@
 				"Discutir o papel das relações de produção na construção e transformação das sociedades.",
 				"Estudar a evolução das espécies na natureza."
 			],
-			"correct_index": 0
+			"correct_index": 0,
+			"area": ""
 		}
 	],
 	"9": [
@@ -137,7 +135,8 @@
 				"Para entender as tradições culturais das civilizações antigas.",
 				"Para estudar as teorias da física quântica."
 			],
-			"correct_index": 0
+			"correct_index": 0,
+			"area": ""
 		}
 	],
 	"10": [
@@ -150,7 +149,8 @@
 				"Para estudar a evolução dos sistemas de transporte urbano.",
 				"Para explorar novas técnicas de produção de energia nuclear."
 			],
-			"correct_index": 0
+			"correct_index": 0,
+			"area": ""
 		}
 	],
 	"11": [
@@ -163,7 +163,8 @@
 				"Para analisar a evolução das técnicas de produção de alimentos.",
 				"Para entender as teorias da psicologia comportamental."
 			],
-			"correct_index": 0
+			"correct_index": 0,
+			"area": ""
 		}
 	],
 	"12": [
@@ -176,7 +177,8 @@
 				"Para entender as tradições culturais de diferentes povos.",
 				"Para explorar a evolução das técnicas de construção de pontes."
 			],
-			"correct_index": 0
+			"correct_index": 0,
+			"area": ""
 		}
 	],
 	"13": [
@@ -189,7 +191,8 @@
 				"Para entender como as empresas podem maximizar seus lucros.",
 				"Para explorar as técnicas de construção de arranha-céus."
 			],
-			"correct_index": 0
+			"correct_index": 0,
+			"area": ""
 		}
 	],
 	"14": [
@@ -202,7 +205,8 @@
 				"Aumentar a exclusão digital entre diferentes grupos sociais.",
 				"Explorar as teorias de expansão do universo na astronomia."
 			],
-			"correct_index": 0
+			"correct_index": 0,
+			"area": ""
 		}
 	],
 	"15": [
@@ -215,7 +219,8 @@
 				"Para aumentar a homogeneidade dos ambientes naturais.",
 				"Para estudar a evolução das linguagens de programação."
 			],
-			"correct_index": 0
+			"correct_index": 0,
+			"area": ""
 		}
 	],
 	"16": [
@@ -228,7 +233,8 @@
 				"Para reduzir os custos de produção.",
 				"Para explorar novas formas de colonização espacial."
 			],
-			"correct_index": 0
+			"correct_index": 0,
+			"area": ""
 		}
 	],
 	"17": [
@@ -241,7 +247,22 @@
 				"Para aumentar a exploração de recursos não renováveis.",
 				"Para estudar a evolução das espécies marinhas."
 			],
-			"correct_index": 0
+			"correct_index": 0,
+			"area": ""
+		}
+	],
+	"18": [
+		{
+			"id": "18.1",
+			"question": "Quais são as Eletivas?",
+			"options": [
+				"Eletivas Obrigatórias, Eletivas Pré-Itinerário e Eletivas Base.",
+				"Eletivas Humanas, Eletivas da Natureza e Eletivas Exatas.",
+				"Mais uma opção",
+				"Mais uma opção 2"
+			],
+			"correct_index": 0,
+			"area": ""
 		}
 	]
 }
