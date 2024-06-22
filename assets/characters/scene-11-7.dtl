@@ -1,0 +1,10 @@
+teacher1: Isso aí!!
+teacher1: Muito bem alunos. Vou chamar cada um de vocês para dar o resultado.
+narrator: Você espera pacientemente até a professora chamar você.
+teacher1: {player_name} é sua vez!
+narrator: Você anda até a professora.
+teacher1: Vendo seus resultados, é possível perceber que você teve uma maior quantidade de acertos em {area_with_most_points}.
+teacher1: Isso não quer dizer que você vai ter que seguir nessa área, isso é apenas um dado do qual eu gostaria que você ficasse ciente.
+teacher1: Ao fim do ano você terá a oportunidade de escolher uma trilha de conhecimento para seguir durante o resto do ensino médio, mas até lá você terá muito tempo para pensar nisso.
+narrator: Com isso chega ao fim o seu primeiro dia no Ensino Médio. Um longo ano vem por aí, com muitas escolhas a serem feitas e muito conhecimento a ser ganho.
+# fim :)
