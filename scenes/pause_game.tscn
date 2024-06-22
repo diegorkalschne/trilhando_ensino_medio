@@ -1,0 +1,67 @@
+[gd_scene load_steps=3 format=3 uid="uid://d4mqmmmrq7wxy"]
+
+[ext_resource type="Script" path="res://scripts/pause_game.gd" id="1_fxoq7"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_p680n"]
+
+[node name="pause_game" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_fxoq7")
+
+[node name="background" type="ColorRect" parent="."]
+material = SubResource("CanvasItemMaterial_p680n")
+layout_mode = 0
+offset_left = -24.0
+offset_top = -16.0
+offset_right = 1080.0
+offset_bottom = 608.0
+color = Color(0.133333, 0.133333, 0.133333, 0.929412)
+
+[node name="margin_container" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="vbox_container" type="VBoxContainer" parent="margin_container"]
+layout_mode = 2
+
+[node name="container" type="Control" parent="margin_container/vbox_container"]
+layout_mode = 2
+
+[node name="current_mission" type="Label" parent="margin_container/vbox_container/container"]
+layout_mode = 0
+offset_left = -16.0
+offset_top = 56.0
+offset_right = 1054.0
+offset_bottom = 79.0
+horizontal_alignment = 2
+
+[node name="label_missao_atual" type="Label" parent="margin_container/vbox_container/container"]
+layout_mode = 0
+offset_left = 952.0
+offset_top = 16.0
+offset_right = 1056.0
+offset_bottom = 40.0
+text = "Missão atual
+"
+
+[node name="voltar_button" type="Button" parent="margin_container/vbox_container/container"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 504.0
+offset_right = 71.0
+offset_bottom = 535.0
+text = "Voltar"
+
+[node name="close_game_button" type="Button" parent="margin_container/vbox_container/container"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 544.0
+offset_right = 128.0
+offset_bottom = 575.0
+text = "Fechar o jogo"
+
+[connection signal="visibility_changed" from="margin_container/vbox_container/container" to="." method="_on_container_visibility_changed"]
+[connection signal="pressed" from="margin_container/vbox_container/container/voltar_button" to="." method="_on_voltar_button_pressed"]
+[connection signal="pressed" from="margin_container/vbox_container/container/close_game_button" to="." method="_on_close_game_button_pressed"]

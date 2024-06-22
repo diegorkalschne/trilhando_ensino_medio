@@ -4,6 +4,10 @@ extends CharacterBody2D
 @onready var collision = $collision as CollisionShape2D
 @onready var camera = $camera as Camera2D
 
+@onready var pause_game = $canvas/pause_game
+var game_paused: bool = false
+var can_pause_game: bool = true
+
 # Velocidade de movimento
 const SPEED = 500 #200
 var scale_factor = 0.3 # Escala do tamanho do personagem
@@ -11,6 +15,8 @@ var animation_scale = 10 # Altera a velocidade dos frames da animação
 var y_position = 0
 
 func _ready():
+	resetPause() # Para esconder o menu de pause sempre que iniciar a cena
+	
 	var parent = get_parent() # Obtém a cena "pai" onde o player está
 	var background_node = getBackgroundNode()
 	var scene_width
@@ -69,7 +75,7 @@ func _ready():
 
 # Movimento do personagem
 func _physics_process(_delta):
-	if QuestionsGame.getInQuizScene():
+	if QuestionsGame.getInQuizScene() or game_paused:
 		# Caso o player esteja na cena do quiz, a movimentação é desabilitada
 		return
 	
@@ -200,8 +206,6 @@ func getPlayerPositionY(background_node: TileMap):
 	var texture = sprites.sprite_frames.get_frame_texture("idle", 0)
 	var texture_heigth = texture.get_height()
 	
-	print(GameStats.getCurrentScene())
-	
 	var adjust = 0
 	if GameStats.getCurrentScene() == 0:
 		# Na cena 0 ("intro_school"), há uma diferença no background
@@ -259,3 +263,27 @@ func setInitialPositionPlayer(position: Vector2):
 	
 	# Leva a câmera até a posição que o player está
 	camera.position = sprites.position
+
+# Função que detecta quando algum evento aconteceu
+func _input(event):
+	# Player pressionou "esc" para pausar o jogo
+	if event.is_action_pressed("pause"):
+		onPauseGame()
+
+func onPauseGame():
+	# Não pode pausar o jogo, não faz nada
+	if !can_pause_game:
+		return
+	
+	if game_paused:
+		pause_game.hide()
+		Engine.time_scale = 1
+	else:
+		pause_game.show()
+		Engine.time_scale = 0
+	
+	game_paused = !game_paused
+
+func resetPause():
+	game_paused = false
+	pause_game.hide()

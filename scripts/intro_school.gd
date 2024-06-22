@@ -8,6 +8,9 @@ var body_in_area_door = false
 
 # Função executa quando a cena é instanciada
 func _ready():	
+	# Seta a missão inicial
+	GameStats.onChangeCurrentMission("Entre na escola")
+	
 	# Obtém o tamanho total da cena, em pixels
 	var scene_width = GameStats.sceneWidth($background)
 

@@ -11,10 +11,11 @@ var _whitelist_questions = []
 # Lista de questões que o jogador já fez
 var _questions_player_resolved = []
 
+# Armazena a missão atual a ser feita pelo player
+var _current_mission: String = ''
+
 # Caminho onde serão salvos os dados do usuário
 var save_path = "user://variable.save"
-# Armazena o número máximo de cenas que o jogo terá
-var max_scences = 3
 
 # Qual personagem está atualmente selecionado
 var _selected_player: String = ''
@@ -111,6 +112,15 @@ func onChangeNamePlayer(name: String):
 func getNamePlayer():
 	return _name_player
 
+# Método utilizado para setar a missão atual do jogador
+func onChangeCurrentMission(mission: String):
+	_current_mission = mission
+	saveData()
+
+# Retorna qual a função atual
+func getCurrentMission():
+	return _current_mission
+
 # Função para verificar se há ou não algum jogo salvo
 func hasGameSaved():
 	return _has_game_saved
@@ -155,6 +165,7 @@ func resetData():
 	_has_game_saved = false
 	_name_player = ''
 	_pontuacao = {}
+	_current_mission = ''
 	
 
 # Função para salvar os dados do usuário localmente
@@ -170,6 +181,7 @@ func saveData(data=null):
 		"questions_player_resolved": _questions_player_resolved,
 		"name_player": _name_player,
 		"pontuacao": _pontuacao,
+		"current_mission": _current_mission,
 	}
 	
 	if (data != null):
@@ -208,6 +220,8 @@ func loadData():
 			_name_player = dict["name_player"]
 		if dict.has("pontuacao"):
 			_pontuacao = dict["pontuacao"]
+		if dict.has("current_mission"):
+			_current_mission = dict["current_mission"]
 	else:
 		_has_game_saved = false
 
