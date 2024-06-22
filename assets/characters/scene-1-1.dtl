@@ -1,4 +1,7 @@
 # Essa cena ocorre assim que o jogo começa (após a escolha do personagem)
-narrator: Hoje é seu primeiro dia na escola Pedro Meinerz. Você chega nos portões da escola, e para não se atrasar, decide entrar nela.
-narrator: ←, ↑, →, ↓ para se movimentar.
+narrator: Hoje é seu primeiro dia na escola. Você chega nos portões da escola, e para não se atrasar, decide entrar nela.
+narrator: Utilize ← (seta para a esquerda) e → (seta para a direita) para se movimentar.
+narrator: Pressione "ESC" para pausar o jogo e visualizar a missão atual
 Ande até a porta de entrada da escola.
+do GameStats.onChangeCurrentMission("Entre na escola")
+do GameStats.onChangePlayerInDialogic(false)

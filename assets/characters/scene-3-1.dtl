@@ -10,4 +10,6 @@ chairwoman: Olá {GameStats.getNamePlayer()}, bom dia!! Seja muito bem vindo a P
 chairwoman: Sei que deve estar cheio de perguntas, mas logo em seguida teremos uma apresentação de início de ano no auditório que fica na porta 303 no terceiro andar.
 chairwoman: Após isso, você pode ir para a sala 102, onde irei lá falar com vocês do 1º ano.
 leave chairwoman
-narrator: Você deveir para a sala 303 no terceiro andar
+narrator: Você deve ir para a sala 303 no terceiro andar
+do GameStats.onChangeCurrentMission("Suba os andares e vá até a sala 303")
+do GameStats.onChangePlayerInDialogic(false)

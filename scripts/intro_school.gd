@@ -7,10 +7,7 @@ extends Node2D
 var body_in_area_door = false
 
 # Função executa quando a cena é instanciada
-func _ready():	
-	# Seta a missão inicial
-	GameStats.onChangeCurrentMission("Entre na escola")
-	
+func _ready():		
 	# Obtém o tamanho total da cena, em pixels
 	var scene_width = GameStats.sceneWidth($background)
 
@@ -43,3 +40,8 @@ func _on_door_school_area_body_entered(_body):
 func _on_door_school_area_body_exited(_body):
 	label_door.visible = false
 	body_in_area_door = false
+
+# Função chamada quando o player passa pela área de introdução do mapa
+# Neste momento, irá tocar um diálogo passando algumas dicas iniciais
+func _on_intro_dialogic_body_entered(body):
+	GameStats.openDialogic("res://assets/characters/scene-1-1.dtl")

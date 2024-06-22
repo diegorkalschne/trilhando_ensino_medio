@@ -11,6 +11,12 @@ var _whitelist_questions = []
 # Lista de questões que o jogador já fez
 var _questions_player_resolved = []
 
+# Lista de diálogos que o player já visualizou
+var _dialogics_seen = []
+
+# Armazena se o player está ou não visualizando um diálogo
+var _player_in_dialogic: bool = false
+
 # Armazena a missão atual a ser feita pelo player
 var _current_mission: String = ''
 
@@ -68,7 +74,7 @@ func getCurrentScene():
 # Adiciona uma nova questão que estará disponível para o player fazer
 func onAddWhitelistQuestion(question_id: String):
 	# Adiciona apenas caso já não esteja na lista
-	if (!_whitelist_questions.has(question_id)):
+	if not _whitelist_questions.has(question_id):
 		_whitelist_questions.append(question_id)
 		saveData()
 
@@ -82,7 +88,7 @@ func playerCanResponseQuestion(question_id: String):
 # Salva uma questão que o player já finalizou
 func addQuestionResolved(question_id: String):
 	# Adiciona apenas caso já não esteja na lista
-	if (!_questions_player_resolved.has(question_id)):
+	if not _questions_player_resolved.has(question_id):
 		_questions_player_resolved.append(question_id)
 		saveData()
 
@@ -152,6 +158,31 @@ func getMaxPontuacao():
 	var melhor_area = max(_pontuacao, _pontuacao.get)
 	return melhor_area
 
+# Função para abrir um diálogo, já salva que o diálogo foi visualizado
+func openDialogic(dialogic: String):
+	if dialogicHasOpened(dialogic):
+		# Já visualizou o diálogo, não vê novamente
+		return
+	
+	_dialogics_seen.append(dialogic)
+	saveData()
+	_player_in_dialogic = true
+	
+	# Abre o diálogo
+	Dialogic.start(dialogic)
+
+# Função para verificar se um diálogo já foi visualizado ou não
+func dialogicHasOpened(dialogic: String):
+	return _dialogics_seen.has(dialogic)
+
+# Função para alterar se o player está visualizando um diálogo
+func onChangePlayerInDialogic(value: bool):
+	_player_in_dialogic = value
+
+# Obtém se o player está em um diálogo
+func getPlayerInDialogic():
+	return _player_in_dialogic
+	
 # Função para resetar o jogo do usuário. Chamado sempre que um novo jogo é iniciado
 func resetData():
 	saveData({}) # Salva um dicionário vazio
@@ -166,6 +197,7 @@ func resetData():
 	_name_player = ''
 	_pontuacao = {}
 	_current_mission = ''
+	_dialogics_seen = []
 	
 
 # Função para salvar os dados do usuário localmente
@@ -182,6 +214,7 @@ func saveData(data=null):
 		"name_player": _name_player,
 		"pontuacao": _pontuacao,
 		"current_mission": _current_mission,
+		"dialogics_seen": _dialogics_seen,
 	}
 	
 	if (data != null):
@@ -222,6 +255,8 @@ func loadData():
 			_pontuacao = dict["pontuacao"]
 		if dict.has("current_mission"):
 			_current_mission = dict["current_mission"]
+		if dict.has("dialogics_seen"):
+			_dialogics_seen = dict["dialogics_seen"]
 	else:
 		_has_game_saved = false
 

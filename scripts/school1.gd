@@ -19,3 +19,7 @@ func _on_left_area_body_entered(body):
 func _on_rigth_area_body_entered(body):
 	GameStats.onChangeScene(2);
 	get_tree().change_scene_to_file("res://scenes/school/school2.tscn");
+
+# Abertura do diálogo
+func _on_intro_dialogic_body_entered(body):
+	GameStats.openDialogic("res://assets/characters/scene-2-1.dtl")

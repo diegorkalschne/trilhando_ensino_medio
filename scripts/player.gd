@@ -72,7 +72,7 @@ func _ready():
 
 # Movimento do personagem
 func _physics_process(_delta):
-	if QuestionsGame.getInQuizScene() or $canvas/pause_game.game_paused:
+	if QuestionsGame.getInQuizScene() or $canvas/pause_game.game_paused or GameStats.getPlayerInDialogic():
 		# Caso o player esteja na cena do quiz, a movimentação é desabilitada
 		return
 	

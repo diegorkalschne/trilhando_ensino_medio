@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://c4obqq2wheggp"]
+[gd_scene load_steps=16 format=3 uid="uid://c4obqq2wheggp"]
 
 [ext_resource type="Texture2D" uid="uid://c1gwnmb7lw74j" path="res://assets/images/inside_lockers_background.png" id="1_5bvqm"]
 [ext_resource type="Script" path="res://scripts/school1.gd" id="1_voasy"]
@@ -14283,6 +14283,9 @@ sources/0 = SubResource("TileSetAtlasSource_n54qp")
 shader = ExtResource("4_ndtbh")
 shader_parameter/move_speed = 0.01
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8gslb"]
+size = Vector2(94.5, 245)
+
 [node name="school1" type="Node2D"]
 script = ExtResource("1_voasy")
 
@@ -14322,5 +14325,12 @@ position = Vector2(996.461, 545)
 scale = Vector2(0.901539, 0.901538)
 texture = ExtResource("5_cgyny")
 
+[node name="intro_dialogic" type="Area2D" parent="."]
+
+[node name="collision" type="CollisionShape2D" parent="intro_dialogic"]
+position = Vector2(488, 488)
+shape = SubResource("RectangleShape2D_8gslb")
+
 [connection signal="body_entered" from="left_area" to="." method="_on_left_area_body_entered"]
 [connection signal="body_entered" from="rigth_area" to="." method="_on_rigth_area_body_entered"]
+[connection signal="body_entered" from="intro_dialogic" to="." method="_on_intro_dialogic_body_entered"]

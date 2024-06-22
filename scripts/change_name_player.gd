@@ -2,6 +2,9 @@ extends Node2D
 
 @onready var name_textfield = $name_textfield
 
+func _ready():
+	name_textfield.grab_focus()
+
 # Ao clicar no botão de próximo
 func _on_proximo_button_pressed():
 	var name_player: String = name_textfield.text.strip_edges()

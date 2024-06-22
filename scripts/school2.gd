@@ -62,10 +62,11 @@ func _on_area_exited(area: Area2D):
 func _input(event):
 	# player pressionou "E" ao interagir com uma das portas
 	if event.is_action_pressed("interact"):
-		if bodyAreaEntered["door_101"]:		
-			if (QuestionsGame.canGoQuestion("2")):
-				QuestionsGame.changeInQuizScene(true)
-				Dialogic.start("res://assets/timelines/timeline1.dtl")
+		if bodyAreaEntered["door_101"]:
+			GameStats.openDialogic("res://assets/characters/scene-3-1.dtl")
+			#if (QuestionsGame.canGoQuestion("2")):
+				#QuestionsGame.changeInQuizScene(true)
+				#Dialogic.start("res://assets/timelines/timeline1.dtl")
 		elif bodyAreaEntered["door_102"]:
 			GameMovement.setNextPositionPlayer(Vector2(466, 0))
 		elif bodyAreaEntered["door_103"]:
