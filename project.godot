@@ -20,13 +20,14 @@ config/icon="res://icon.svg"
 GameStats="*res://scripts/global/game_stats.gd"
 QuestionsGame="*res://scripts/global/questions_game.gd"
 GameMovement="*res://scripts/global/game_movement.gd"
-Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 [dialogic]
 
 directories/dch_directory={
+"boy1": "res://assets/characters/boy1.dch",
 "chairwoman": "res://assets/characters/chairwoman.dch",
 "character": "res://assets/character.dch",
+"girl1": "res://assets/characters/girl1.dch",
 "narrator": "res://assets/characters/narrator.dch",
 "player": "res://assets/characters/player.dch",
 "player_b": "res://assets/characters/player_b.dch",
