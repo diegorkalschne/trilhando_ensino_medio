@@ -25,12 +25,39 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
-"boy1": "res://assets/characters/boy1.dch",
-"girl1": "res://assets/characters/girl1.dch"
+"chairwoman": "res://assets/characters/chairwoman.dch",
+"character": "res://assets/character.dch",
+"narrator": "res://assets/characters/narrator.dch",
+"player": "res://assets/characters/player.dch",
+"player_b": "res://assets/characters/player_b.dch",
+"player_g": "res://assets/characters/player_g.dch",
+"teacher1": "res://assets/characters/teacher1.dch",
+"teacher2": "res://assets/characters/teacher2.dch",
+"teacher3": "res://assets/characters/teacher3.dch",
+"teacher4": "res://assets/characters/teacher4.dch"
 }
 directories/dtl_directory={
-"timeline1": "res://assets/timelines/timeline1.dtl",
-"timeline2": "res://assets/timelines/timeline2.dtl"
+"scene-1-1": "res://assets/characters/scene-1-1.dtl",
+"scene-10-1": "res://assets/characters/scene-10-1.dtl",
+"scene-10-2": "res://assets/characters/scene-10-2.dtl",
+"scene-10-3": "res://assets/characters/scene-10-3.dtl",
+"scene-10-4": "res://assets/characters/scene-10-4.dtl",
+"scene-2-1": "res://assets/characters/scene-2-1.dtl",
+"scene-3-1": "res://assets/characters/scene-3-1.dtl",
+"scene-5-1": "res://assets/characters/scene-5-1.dtl",
+"scene-7-1": "res://assets/characters/scene-7-1.dtl",
+"scene-7-2": "res://assets/characters/scene-7-2.dtl",
+"scene-7-3": "res://assets/characters/scene-7-3.dtl",
+"scene-7-4": "res://assets/characters/scene-7-4.dtl",
+"scene-7-5": "res://assets/characters/scene-7-5.dtl",
+"scene-8-1": "res://assets/characters/scene-8-1.dtl",
+"scene-8-2": "res://assets/characters/scene-8-2.dtl",
+"scene-8-3": "res://assets/characters/scene-8-3.dtl",
+"scene-8-4": "res://assets/characters/scene-8-4.dtl",
+"scene-9-1": "res://assets/characters/scene-9-1.dtl",
+"scene-9-2": "res://assets/characters/scene-9-2.dtl",
+"scene-9-3": "res://assets/characters/scene-9-3.dtl",
+"scene-9-4": "res://assets/characters/scene-9-4.dtl"
 }
 layout/style_list=[]
 layout/default_style="Default"

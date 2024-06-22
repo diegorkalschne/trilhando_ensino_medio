@@ -1,0 +1,6 @@
+join teacher1 1
+teacher1: Isso mesmo!
+teacher1: Agora vocês devem estar bem mais por dentro de como o novo ensino médio funciona!! Mesmo assim, vocês ainda têm muito o que aprender.
+teacher1: O próximo passo que temos que fazer, é se familiarizar melhor com as matérias que vocês vão ter durante o ano. Por isso eu peço para vocês irem para a sala 202, onde o professor Will, vai falar com vocês sobre Iniciação Científica.
+leave --All--
+narrator: Vá até a sala 202 no segundo andar.
