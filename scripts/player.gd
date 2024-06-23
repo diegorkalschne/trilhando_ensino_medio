@@ -76,8 +76,13 @@ func _physics_process(_delta):
 		# Caso o player esteja na cena do quiz, a movimentação é desabilitada
 		sprites.play("idle") # Personagem parou de andar
 		return
+		
+	var direction = 0
+	if Input.is_action_pressed("ui_left") or Input.is_action_pressed("move_left"):
+		direction -= 1
+	if Input.is_action_pressed("ui_right") or Input.is_action_pressed("move_right"):
+		direction += 1
 	
-	var direction = Input.get_axis("ui_left", "ui_right")
 	if direction:
 		if direction > 0:
 			# Inverter horizontalmente o personagem para ele olhar para a 'direita'
