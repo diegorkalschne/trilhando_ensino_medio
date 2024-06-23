@@ -74,6 +74,7 @@ func _ready():
 func _physics_process(_delta):
 	if QuestionsGame.getInQuizScene() or $canvas/pause_game.game_paused or GameStats.getPlayerInDialogic():
 		# Caso o player esteja na cena do quiz, a movimentação é desabilitada
+		sprites.play("idle") # Personagem parou de andar
 		return
 	
 	var direction = Input.get_axis("ui_left", "ui_right")
