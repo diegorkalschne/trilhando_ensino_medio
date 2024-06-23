@@ -47,12 +47,19 @@ text = "Missão atual
 "
 
 [node name="voltar_button" type="Button" parent="margin_container/vbox_container/container"]
-layout_mode = 0
 offset_left = 16.0
 offset_top = 504.0
 offset_right = 71.0
 offset_bottom = 535.0
 text = "Voltar"
+
+[node name="voltar_main_menu_button" type="Button" parent="margin_container/vbox_container/container"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 207.0
+offset_bottom = 39.0
+text = "Voltar ao menu principal"
 
 [node name="close_game_button" type="Button" parent="margin_container/vbox_container/container"]
 layout_mode = 0
@@ -64,4 +71,5 @@ text = "Fechar o jogo"
 
 [connection signal="visibility_changed" from="margin_container/vbox_container/container" to="." method="_on_container_visibility_changed"]
 [connection signal="pressed" from="margin_container/vbox_container/container/voltar_button" to="." method="_on_voltar_button_pressed"]
+[connection signal="pressed" from="margin_container/vbox_container/container/voltar_main_menu_button" to="." method="_on_voltar_main_menu_button_pressed"]
 [connection signal="pressed" from="margin_container/vbox_container/container/close_game_button" to="." method="_on_close_game_button_pressed"]

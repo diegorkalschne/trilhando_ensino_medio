@@ -129,6 +129,9 @@ func getCurrentMission():
 
 # Função para verificar se há ou não algum jogo salvo
 func hasGameSaved():
+	if !_has_game_saved:
+		loadData()
+	
 	return _has_game_saved
 
 # Função para adicionar uma pontuação a uma área

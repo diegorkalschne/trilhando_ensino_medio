@@ -46,3 +46,9 @@ func onPauseGame():
 func resetPause():
 	game_paused = false
 	container.hide()
+
+# Função para voltar ao menu principal do jogo
+func _on_voltar_main_menu_button_pressed():
+	game_paused = false
+	Engine.time_scale = 1
+	get_tree().change_scene_to_file("res://scenes/menu.tscn")
