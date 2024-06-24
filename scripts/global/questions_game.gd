@@ -54,14 +54,7 @@ func canGoQuestion(question_id: String):
 	
 	# Verificação para ver se o usuário pode responder a questão selecionada
 	if !can_go["status"]:
-		# Instancia um snackbar
-		var snackbar = load("res://scenes/snackbar.tscn").instantiate() as Snackbar
-		get_tree().root.add_child(snackbar)
-		
-		var tree = get_tree().root.get_child(0);
-		
-		# Exibe uma mensagem pro jogador
-		snackbar.show_message(can_go["message"], GameStats.getCurrentPlayerPosition(), 1)
+		GameUtils.showSnackbar(can_go["message"])
 		return false
 	
 	return true

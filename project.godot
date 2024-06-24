@@ -21,6 +21,7 @@ GameStats="*res://scripts/global/game_stats.gd"
 QuestionsGame="*res://scripts/global/questions_game.gd"
 GameMovement="*res://scripts/global/game_movement.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
+GameUtils="*res://scripts/global/game_utils.gd"
 
 [dialogic]
 

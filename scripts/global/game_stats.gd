@@ -177,10 +177,20 @@ func getMaxPontuacao():
 	var melhor_area = max(_pontuacao, _pontuacao.get)
 	return melhor_area
 
+# Função para verificar se é possível visualizar ou não um dialogic
+func canOpenDialogic(dialogic: String):
+	var can_open = true
+	
+	if dialogicHasOpened(dialogic) or !playerCanSeeDialogic(dialogic):
+		can_open = false
+	
+	return can_open
+
 # Função para abrir um diálogo, já salva que o diálogo foi visualizado
 func openDialogic(dialogic: String):	
-	if dialogicHasOpened(dialogic) or !playerCanSeeDialogic(dialogic):
+	if !canOpenDialogic(dialogic):
 		# Já visualizou o diálogo, não vê novamente ou ainda não está liberado
+		GameUtils.showSnackbar("Diálogo não disponível")
 		return
 	
 	_dialogics_seen.append(dialogic)

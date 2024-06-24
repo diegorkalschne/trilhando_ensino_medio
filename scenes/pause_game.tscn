@@ -47,6 +47,7 @@ text = "Missão atual
 "
 
 [node name="voltar_button" type="Button" parent="margin_container/vbox_container/container"]
+layout_mode = 0
 offset_left = 16.0
 offset_top = 504.0
 offset_right = 71.0
