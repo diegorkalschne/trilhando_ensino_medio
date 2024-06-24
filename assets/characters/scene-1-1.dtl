@@ -5,3 +5,4 @@ narrator: Pressione "ESC" para pausar o jogo e visualizar a missão atual
 Ande até a porta de entrada da escola.
 do GameStats.onChangeCurrentMission("Entre na escola")
 do GameStats.onChangePlayerInDialogic(false)
+do GameStats.onAddWhitelistDialogic("res://assets/characters/scene-2-1.dtl")

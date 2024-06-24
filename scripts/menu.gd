@@ -1,16 +1,16 @@
 extends VBoxContainer
 
 func _ready():
-	$player.visible = false # Esconde o player. É utilizado apenas para setar as sprites do mesmo
-	$player.disableCamera() # Desabilita a câmera do player, no menu
-	$player/canvas/pause_game.can_pause_game = false # Não pode abrir o menu
+	$canvas/player.visible = false # Esconde o player. É utilizado apenas para setar as sprites do mesmo
+	$canvas/player.disableCamera() # Desabilita a câmera do player, no menu
+	$canvas/player/canvas/pause_game.can_pause_game = false # Não pode abrir o menu
 	
-	$carregar_jogo.grab_focus()
+	$canvas/carregar_jogo.grab_focus()
 	
 	# Caso não tenha jogo salvo, esconde o botão de "carregar jogo"
 	if (!GameStats.hasGameSaved()):
-		$carregar_jogo.visible = false
-		$comecar.grab_focus()
+		$canvas/carregar_jogo.visible = false
+		$canvas/comecar.grab_focus()
 
 # Função para ação de "Começar" o jogo
 func _on_comecar_pressed():
@@ -30,7 +30,7 @@ func _on_carregar_jogo_pressed():
 	var current_scene = GameStats.getCurrentScene()
 	
 	# Define os sprites do personagem
-	$player.setTextureSprite()
+	$canvas/player.setTextureSprite()
 	
 	# Volta cenas da escola caso seja maior que 0
 	if (current_scene > 0):

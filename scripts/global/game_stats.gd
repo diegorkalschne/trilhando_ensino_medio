@@ -14,6 +14,9 @@ var _questions_player_resolved = []
 # Lista de diálogos que o player já visualizou
 var _dialogics_seen = []
 
+# Lista de diálogos que o player está liberado para ver
+var _whitelist_dialogics = []
+
 # Armazena se o player está ou não visualizando um diálogo
 var _player_in_dialogic: bool = false
 
@@ -70,6 +73,19 @@ func onChangeScene(scene: int):
 # Retorna a cena atual que o usuário está
 func getCurrentScene():
 	return _current_scene
+
+# Fução para adicionar que o player pode visualizar um novo dialogic
+func onAddWhitelistDialogic(dialogic: String):
+	if not _whitelist_dialogics.has(dialogic):
+		_whitelist_dialogics.append(dialogic)
+		saveData()
+
+# Verifica se o player pode visualizar um diálogo ou não
+func playerCanSeeDialogic(dialogic):
+	if _whitelist_dialogics.size() == 0:
+		return false
+	
+	return _whitelist_dialogics[-1] == dialogic
 
 # Adiciona uma nova questão que estará disponível para o player fazer
 func onAddWhitelistQuestion(question_id: String):
@@ -162,9 +178,9 @@ func getMaxPontuacao():
 	return melhor_area
 
 # Função para abrir um diálogo, já salva que o diálogo foi visualizado
-func openDialogic(dialogic: String):
-	if dialogicHasOpened(dialogic):
-		# Já visualizou o diálogo, não vê novamente
+func openDialogic(dialogic: String):	
+	if dialogicHasOpened(dialogic) or !playerCanSeeDialogic(dialogic):
+		# Já visualizou o diálogo, não vê novamente ou ainda não está liberado
 		return
 	
 	_dialogics_seen.append(dialogic)
@@ -201,6 +217,7 @@ func resetData():
 	_pontuacao = {}
 	_current_mission = ''
 	_dialogics_seen = []
+	_whitelist_dialogics = []
 	
 
 # Função para salvar os dados do usuário localmente
@@ -218,6 +235,7 @@ func saveData(data=null):
 		"pontuacao": _pontuacao,
 		"current_mission": _current_mission,
 		"dialogics_seen": _dialogics_seen,
+		"whitelist_dialogics": _whitelist_dialogics,
 	}
 	
 	if (data != null):
@@ -260,6 +278,8 @@ func loadData():
 			_current_mission = dict["current_mission"]
 		if dict.has("dialogics_seen"):
 			_dialogics_seen = dict["dialogics_seen"]
+		if dict.has("whitelist_dialogics"):
+			_whitelist_dialogics = dict["whitelist_dialogics"]
 	else:
 		_has_game_saved = false
 

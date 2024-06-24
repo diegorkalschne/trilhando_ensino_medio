@@ -6,3 +6,6 @@ teacher1: Essas unidades ajudam a diversificar e dinamizar o aprendizado, tornan
 teacher1: Além disso, ao escolher eletivas alinhadas aos seus objetivos futuros, você pode se preparar melhor para o mercado de trabalho ou para os estudos superiores, aumentando seu engajamento e motivação.
 narrator: A professora olha para você novamente e pergunta.
 # pergunta3
+do GameStats.onAddWhitelistDialogic("res://assets/characters/scene-7-4.dtl")
+do GameStats.onAddWhitelistQuestion("2")
+do QuestionsGame.changeSceneQuiz("2", "res://assets/images/background_menu.jpg", "res://assets/characters/scene-7-4.dtl")

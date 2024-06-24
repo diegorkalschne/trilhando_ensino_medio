@@ -1,11 +1,11 @@
 extends Node2D
 
-@onready var question = $question
-@onready var options = $options
-@onready var background = $background
-@onready var pontuacao_ganha = $pontuacao_ganha
-@onready var pontuacao = $pontuacao
-@onready var label_area = $label_area
+@onready var question = $canvas/question
+@onready var options = $canvas/options
+@onready var background = $canvas/background
+@onready var pontuacao_ganha = $canvas/pontuacao_ganha
+@onready var pontuacao = $canvas/pontuacao
+@onready var label_area = $canvas/label_area
 
 var quiz_general_id = "" # Armaneza o "id" geral do quiz (o ID "pai")
 var current_quiz # Armazena o quiz atual (todas as perguntas disponíveis)
@@ -18,15 +18,17 @@ var _total_respostas_erradas = 0 # Armazena a quantidade de respostas erradas qu
 # Usada para bloquear os clicks nas demais respostas, após acertar uma vez
 var _correct_answer = false
 
+var _callback_dialogic
+
 func _ready():
 	pontuacao_ganha.visible = false
-	$music.play() # Inicia a música ao entrar na cena
+	$canvas/music.play() # Inicia a música ao entrar na cena
 
 # Função executada ao sair da cena.
 func _exit_tree():
-	$music.stop() # Para a música ao sair da cena
+	$canvas/music.stop() # Para a música ao sair da cena
 
-func initQuiz(quiz, quiz_id, background_path: String):
+func initQuiz(quiz, quiz_id, background_path: String, callbackDialogic: String):
 	# Seta o background da cena
 	background.setTexture(background_path);
 	
@@ -34,6 +36,10 @@ func initQuiz(quiz, quiz_id, background_path: String):
 	quiz_general_id = quiz_id
 	
 	_show_questions(0) # Começa sempre na pergunta 0
+	
+	# Armazena qual é o dialógico de callback que deve abrir após finalização do quiz, caso houver
+	if callbackDialogic != null:
+		_callback_dialogic = callbackDialogic
 
 func _show_questions(index: int):	
 	# Caso não tenha perguntas ou todas as perguntas já foram exibidas, fecha a cena atual
@@ -41,6 +47,10 @@ func _show_questions(index: int):
 		queue_free() # Descarta a cena atual do quiz e volta para a anterior
 		QuestionsGame.changeInQuizScene(false) # Marca que não está mais na cena do quiz
 		GameStats.addQuestionResolved(quiz_general_id) # Salva que o quiz foi completado por inteiro
+		
+		# Executa o diálogo de callback
+		if _callback_dialogic != null:
+			GameStats.openDialogic(_callback_dialogic)
 		return
 	
 	_reset_on_correct() # Reseta o quiz
@@ -110,7 +120,7 @@ func _on_correct_answer(button: Button, question_id: String):
 	_change_color_button(button, Color8(67, 160, 71, 255))
 	
 	button.disabled = true # Desabilita o botão ao errar
-	$correct_answer.play()
+	$canvas/correct_answer.play()
 	
 	GameStats.addQuestionResolved(question_id)
 	
@@ -127,7 +137,7 @@ func _on_error_answer(button: Button):
 	_change_color_button(button, Color(1, 0, 0))
 		
 	button.disabled = true # Desabilita o botão ao errar
-	$incorrect_answer.play()
+	$canvas/incorrect_answer.play()
 	
 	# Jogador perdeu pontos
 	var pontos_perdidos = (_total_respostas_erradas * 1 + 1) * (-1) # Vezes -1 para deixar negativo
@@ -145,9 +155,9 @@ func _show_pontos(pontuacao: int, isError: bool):
 		signal_str = ""
 		color = Color(1, 0, 0) # vermelho
 	
-	$pontuacao_ganha.text = signal_str + str(pontuacao)
-	$pontuacao_ganha.label_settings.font_color = color
-	$pontuacao_ganha.visible = true
+	$canvas/pontuacao_ganha.text = signal_str + str(pontuacao)
+	$canvas/pontuacao_ganha.label_settings.font_color = color
+	$canvas/pontuacao_ganha.visible = true
 	_total_respostas_erradas += 1
 	
 	# Salva a pontuacao do jogador
@@ -156,7 +166,7 @@ func _show_pontos(pontuacao: int, isError: bool):
 	
 	await get_tree().create_timer(2).timeout
 	
-	$pontuacao_ganha.visible = false
+	$canvas/pontuacao_ganha.visible = false
 
 # Atualiza a pontuação que o jogador tem na área atual
 func retrievePontuacaoArea():

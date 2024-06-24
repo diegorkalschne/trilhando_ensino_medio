@@ -86,7 +86,7 @@ func _input(event):
 		elif bodyAreaEntered["door_302"]:
 			pass
 		elif bodyAreaEntered["door_303"]:
-			pass
+			GameStats.openDialogic("res://assets/characters/scene-5-1.dtl")
 		elif bodyAreaEntered["door_304"]:
 			pass
 		elif bodyAreaEntered["door_305"]:

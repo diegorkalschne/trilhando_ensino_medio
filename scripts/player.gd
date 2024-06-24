@@ -105,7 +105,7 @@ func _physics_process(_delta):
 
 	move_and_slide()
 	
-	print(position)
+	#print(position)
 	var playerPosition = Vector2(position.x, y_position)
 	GameStats.onChangePlayerPosition(playerPosition)
 

@@ -3,3 +3,4 @@ narrator: Você é novo na escola e está entrando no Novo Ensino Médio pela pr
 narrator: Ande até achar a sala da diretora, número 101.
 do GameStats.onChangeCurrentMission("Vá até a sala da diretora (sala 101)")
 do GameStats.onChangePlayerInDialogic(false)
+do GameStats.onAddWhitelistDialogic("res://assets/characters/scene-3-1.dtl")

@@ -10,6 +10,9 @@ var body_in_area_door = false
 func _ready():		
 	# Obtém o tamanho total da cena, em pixels
 	var scene_width = GameStats.sceneWidth($background)
+	
+	# Libera o primeiro diálogo para o player
+	GameStats.onAddWhitelistDialogic("res://assets/characters/scene-1-1.dtl")
 
 	# Define até onde a câmera irá se movimentar no lado direito da tela	
 	player.setRigthCameraLimit(scene_width)

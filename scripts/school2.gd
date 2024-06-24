@@ -20,9 +20,6 @@ func _ready():
 	# Define até onde a câmera irá se movimentar no lado direito da tela	
 	player.setRigthCameraLimit(scene_width)
 	
-	# TODO: remover depois
-	GameStats.onAddWhitelistQuestion("2")
-	
 	# Marca todas as labels como false
 	for label in bodyAreaEntered:
 		if has_node("label_%s" % label):
@@ -68,7 +65,7 @@ func _input(event):
 				#QuestionsGame.changeInQuizScene(true)
 				#Dialogic.start("res://assets/timelines/timeline1.dtl")
 		elif bodyAreaEntered["door_102"]:
-			GameMovement.setNextPositionPlayer(Vector2(466, 0))
+			GameStats.openDialogic("res://assets/characters/scene-7-1.dtl")
 		elif bodyAreaEntered["door_103"]:
 			GameMovement.setNextPositionPlayer(Vector2(816, 0))
 		elif bodyAreaEntered["door_104"]:

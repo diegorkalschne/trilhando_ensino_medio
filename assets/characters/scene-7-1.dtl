@@ -10,5 +10,8 @@ teacher1: Assim, a escola se torna um espaço não só de aprendizado teórico, 
 teacher1: Galera, consegui me deixar clara com essa explicação? Por favor, se alguém não entendeu diga algo.
 narrator: A sala fica em silêncio.
 narrator: A professora se vira para você e fala.
-teacher1: {player_name} entendeu a diferença do novo para o antigo ensino médio?
+teacher1: {GameStats.getNamePlayer()} entendeu a diferença do novo para o antigo Ensino Médio?
 # pergunta1
+do GameStats.onAddWhitelistQuestion("0")
+do GameStats.onAddWhitelistDialogic("res://assets/characters/scene-7-2.dtl")
+do QuestionsGame.changeSceneQuiz("0", "res://assets/images/background_menu.jpg", "res://assets/characters/scene-7-2.dtl")

@@ -67,7 +67,7 @@ func canGoQuestion(question_id: String):
 	return true
 
 # Função para mudar para a cena de quiz
-func changeSceneQuiz(question_id: String, background_path: String):	
+func changeSceneQuiz(question_id: String, background_path: String, dialogicCallback: String):	
 	var can_go = _can_go_to_question(question_id)
 	
 	# Verificação para ver se o usuário pode responder a questão selecionada
@@ -81,4 +81,4 @@ func changeSceneQuiz(question_id: String, background_path: String):
 	changeInQuizScene(true) # Marca que está na cena do quiz
 	
 	if scene.has_method("initQuiz"):
-		scene.call("initQuiz", _questions[question_id], question_id, background_path)
+		scene.call("initQuiz", _questions[question_id], question_id, background_path, dialogicCallback)

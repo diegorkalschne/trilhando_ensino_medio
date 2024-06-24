@@ -12,3 +12,6 @@ teacher1: Teremos várias atividades e projetos ao longo do ano que irão ajudá
 teacher1: Além de tudo, este ano os nossos alunos do ensino médio, vão iniciar um novo formato de ensino chamado de Novo Ensino Médio. Quando voltarem para as salas, vou explicá-los sobre esse novo processo.
 leave --All--
 narrator: Você deve ir para a sala 102 no primeiro andar.
+do GameStats.onChangeCurrentMission("Vá para a sala de aula (sala 102)")
+do GameStats.onChangePlayerInDialogic(false)
+do GameStats.onAddWhitelistDialogic("res://assets/characters/scene-7-1.dtl")
