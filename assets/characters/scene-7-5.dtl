@@ -7,3 +7,4 @@ narrator: Vá até a sala 202 no segundo andar.
 do GameStats.onChangeCurrentMission("Vá até a sala 202 no segundo andar.")
 do GameStats.onChangePlayerInDialogic(false)
 do GameStats.onAddWhitelistDialogic("res://assets/characters/scene-8-1.dtl")
+do GameStats.addDialogicSeen("res://assets/characters/scene-7-5.dtl")

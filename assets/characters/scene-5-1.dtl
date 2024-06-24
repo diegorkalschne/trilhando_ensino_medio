@@ -15,3 +15,4 @@ narrator: Você deve ir para a sala 102 no primeiro andar.
 do GameStats.onChangeCurrentMission("Vá para a sala de aula (sala 102)")
 do GameStats.onChangePlayerInDialogic(false)
 do GameStats.onAddWhitelistDialogic("res://assets/characters/scene-7-1.dtl")
+do GameStats.addDialogicSeen("res://assets/characters/scene-5-1.dtl")

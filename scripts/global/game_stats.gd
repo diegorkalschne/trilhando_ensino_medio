@@ -187,14 +187,13 @@ func canOpenDialogic(dialogic: String):
 	return can_open
 
 # Função para abrir um diálogo, já salva que o diálogo foi visualizado
-func openDialogic(dialogic: String):	
+func openDialogic(dialogic: String, show_message: bool = true):
 	if !canOpenDialogic(dialogic):
 		# Já visualizou o diálogo, não vê novamente ou ainda não está liberado
-		GameUtils.showSnackbar("Diálogo não disponível")
+		if show_message:
+			GameUtils.showSnackbar("Diálogo não disponível")
 		return
 	
-	_dialogics_seen.append(dialogic)
-	saveData()
 	_player_in_dialogic = true
 	
 	# Abre o diálogo
@@ -203,6 +202,11 @@ func openDialogic(dialogic: String):
 # Função para verificar se um diálogo já foi visualizado ou não
 func dialogicHasOpened(dialogic: String):
 	return _dialogics_seen.has(dialogic)
+
+# Sinaliza que visualizou um diálogo
+func addDialogicSeen(dialogic: String):
+	_dialogics_seen.append(dialogic)
+	saveData()
 
 # Função para alterar se o player está visualizando um diálogo
 func onChangePlayerInDialogic(value: bool):

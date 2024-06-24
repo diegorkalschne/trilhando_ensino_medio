@@ -22,4 +22,4 @@ func _on_rigth_area_body_entered(body):
 
 # Abertura do diálogo
 func _on_intro_dialogic_body_entered(body):
-	GameStats.openDialogic("res://assets/characters/scene-2-1.dtl")
+	GameStats.openDialogic("res://assets/characters/scene-2-1.dtl", false)

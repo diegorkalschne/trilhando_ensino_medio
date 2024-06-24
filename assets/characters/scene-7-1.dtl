@@ -15,3 +15,4 @@ teacher1: {GameStats.getNamePlayer()} entendeu a diferença do novo para o antig
 do GameStats.onAddWhitelistQuestion("0")
 do GameStats.onAddWhitelistDialogic("res://assets/characters/scene-7-2.dtl")
 do QuestionsGame.changeSceneQuiz("0", "res://assets/images/background_menu.jpg", "res://assets/characters/scene-7-2.dtl")
+do GameStats.addDialogicSeen("res://assets/characters/scene-7-1.dtl")

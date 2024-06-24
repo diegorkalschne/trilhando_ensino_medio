@@ -47,4 +47,4 @@ func _on_door_school_area_body_exited(_body):
 # Função chamada quando o player passa pela área de introdução do mapa
 # Neste momento, irá tocar um diálogo passando algumas dicas iniciais
 func _on_intro_dialogic_body_entered(body):
-	GameStats.openDialogic("res://assets/characters/scene-1-1.dtl")
+	GameStats.openDialogic("res://assets/characters/scene-1-1.dtl", false)

@@ -14,3 +14,4 @@ narrator: Você deve ir para a sala 303 no terceiro andar
 do GameStats.onChangeCurrentMission("Suba os andares e vá até a sala 303")
 do GameStats.onChangePlayerInDialogic(false)
 do GameStats.onAddWhitelistDialogic("res://assets/characters/scene-5-1.dtl")
+do GameStats.addDialogicSeen("res://assets/characters/scene-3-1.dtl")

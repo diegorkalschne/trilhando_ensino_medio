@@ -7,3 +7,4 @@ narrator: A professora olha para você novamente e pergunta.
 do GameStats.onAddWhitelistQuestion("1")
 do GameStats.onAddWhitelistDialogic("res://assets/characters/scene-7-3.dtl")
 do QuestionsGame.changeSceneQuiz("1", "res://assets/images/background_menu.jpg", "res://assets/characters/scene-7-3.dtl")
+do GameStats.addDialogicSeen("res://assets/characters/scene-7-2.dtl")

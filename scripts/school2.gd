@@ -65,7 +65,19 @@ func _input(event):
 				#QuestionsGame.changeInQuizScene(true)
 				#Dialogic.start("res://assets/timelines/timeline1.dtl")
 		elif bodyAreaEntered["door_102"]:
-			GameStats.openDialogic("res://assets/characters/scene-7-1.dtl")
+			if GameStats.canOpenDialogic("res://assets/characters/scene-7-1.dtl"):
+				GameStats.openDialogic("res://assets/characters/scene-7-1.dtl")
+			elif GameStats.canOpenDialogic("res://assets/characters/scene-7-2.dtl"):
+				GameStats.openDialogic("res://assets/characters/scene-7-2.dtl")
+			elif GameStats.canOpenDialogic("res://assets/characters/scene-7-3.dtl"):
+				GameStats.openDialogic("res://assets/characters/scene-7-3.dtl")
+			elif GameStats.canOpenDialogic("res://assets/characters/scene-7-4.dtl"):
+				GameStats.openDialogic("res://assets/characters/scene-7-4.dtl")
+			elif GameStats.canOpenDialogic("res://assets/characters/scene-7-5.dtl"):
+				GameStats.openDialogic("res://assets/characters/scene-7-5.dtl")
+			else:
+				GameUtils.showSnackbar("Não disponível")
+			
 		elif bodyAreaEntered["door_103"]:
 			GameMovement.setNextPositionPlayer(Vector2(816, 0))
 		elif bodyAreaEntered["door_104"]:

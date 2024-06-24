@@ -11,3 +11,4 @@ narrator: A professora olha para você novamente e pergunta.
 do GameStats.onAddWhitelistDialogic("res://assets/characters/scene-7-5.dtl")
 do GameStats.onAddWhitelistQuestion("18")
 do QuestionsGame.changeSceneQuiz("18", "res://assets/images/background_menu.jpg", "res://assets/characters/scene-7-5.dtl")
+do GameStats.addDialogicSeen("res://assets/characters/scene-7-4.dtl")
