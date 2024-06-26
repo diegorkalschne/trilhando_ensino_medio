@@ -4,10 +4,10 @@
 			"id": "0.1",
 			"question": "O que é o Novo Ensino Médio?",
 			"options": [
-				"O novo ensino médio oferece um currículo mais flexível, promovendo uma educação integral e o desenvolvimento de várias dimensões humanas.",
-				"O novo ensino médio é definido pela unificação de novas formas de ensino onde o aluno segue uma trilha de matérias definidas pela escola.",
-				"O novo ensino médio é um sistema educacional que elimina completamente a divisão entre disciplinas acadêmicas e práticas, focando apenas em habilidades técnicas específicas.",
-				"O novo ensino médio é um modelo estritamente baseado em disciplinas obrigatórias, sem espaço para escolhas e personalização curricular por parte dos alunos."
+				"O novo ensino médio oferece um currículo mais flexível, promovendo uma \neducação integral e o desenvolvimento de várias dimensões humanas.",
+				"O novo ensino médio é definido pela unificação de novas formas de ensino \nonde o aluno segue uma trilha de matérias definidas pela escola.",
+				"O novo ensino médio é um sistema educacional que elimina completamente a \ndivisão entre disciplinas acadêmicas e práticas, focando apenas em habilidades técnicas específicas.",
+				"O novo ensino médio é um modelo estritamente baseado em disciplinas \nobrigatórias, sem espaço para escolhas e personalização curricular por parte dos alunos."
 			],
 			"correct_index": 0,
 			"area": "Geral"
@@ -18,10 +18,10 @@
 			"id": "1.1",
 			"question": "O que são os Itinerários Formativos?",
 			"options": [
-				"Os Itinerários Formativos são aprofundamentos das áreas de conhecimento que enfatizam uma área focal e outra complementar.",
-				"Os Itinerários Formativos são novas formas que o aluno tem de estudar, onde ele deve seguir estudando todos conteúdos, independente de seu projeto de vida.",
-				"Os Itinerários Formativos são opções adicionais de lazer e entretenimento oferecidas aos alunos durante o período escolar, visando diversificar suas atividades extracurriculares.",
-				"Os Itinerários Formativos são atividades extracurriculares opcionais que os alunos podem escolher para diversificar seus interesses acadêmicos."
+				"Os Itinerários Formativos são aprofundamentos das áreas de conhecimento \nque enfatizam uma área focal e outra complementar.",
+				"Os Itinerários Formativos são novas formas que o aluno tem de estudar, \nonde ele deve seguir estudando todos conteúdos, independente de seu projeto de vida.",
+				"Os Itinerários Formativos são opções adicionais de lazer e entretenimento \noferecidas aos alunos durante o período escolar, visando diversificar suas atividades extracurriculares.",
+				"Os Itinerários Formativos são atividades extracurriculares opcionais que os \nalunos podem escolher para diversificar seus interesses acadêmicos."
 			],
 			"correct_index": 0,
 			"area": "Geral"
@@ -32,10 +32,10 @@
 			"id": "2.1",
 			"question": "O que são as Unidades Curriculares Eletivas?",
 			"options": [
-				"As Unidades Curriculares Eletivas são componentes opcionais do currículo, permitindo que os estudantes escolham temas de interesse para aprofundar seu conhecimento.",
-				"As Unidades Curriculares Eletivas são componentes obrigatórios do currículo, onde os alunos devem cursar todos os temas para aprofundar seus conhecimentos.",
-				"As Unidades Curriculares Eletivas são cursos específicos do currículo que todos os alunos devem obrigatoriamente cursar para obterem créditos adicionais.",
-				"As Unidades Curriculares Eletivas são cursos que não contribuem para o número total de créditos necessários para a conclusão do curso."
+				"As Unidades Curriculares Eletivas são componentes opcionais do currículo, \npermitindo que os estudantes escolham temas de interesse para aprofundar seu conhecimento.",
+				"As Unidades Curriculares Eletivas são componentes obrigatórios do currículo, \nonde os alunos devem cursar todos os temas para aprofundar seus conhecimentos.",
+				"As Unidades Curriculares Eletivas são cursos específicos do currículo que todos \nos alunos devem obrigatoriamente cursar para obterem créditos adicionais.",
+				"As Unidades Curriculares Eletivas são cursos que não contribuem para o número \ntotal de créditos necessários para a conclusão do curso."
 			],
 			"correct_index": 0,
 			"area": "Geral"

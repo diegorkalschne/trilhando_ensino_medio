@@ -4,3 +4,7 @@ teacher1: Isso!!
 teacher1: Em Ciências Humanas e Sociais, discute-se frequentemente sobre a relação entre desenvolvimento econômico e sustentabilidade ambiental.
 teacher1: Isso envolve avaliar como as atividades econômicas podem ser realizadas de maneira a preservar os recursos naturais para as futuras gerações.
 # pergunta15
+do GameStats.onAddWhitelistDialogic("res://assets/characters/scene-11-3.dtl")
+do GameStats.onAddWhitelistQuestion("13")
+do QuestionsGame.changeSceneQuiz("13", "res://assets/images/background_menu.jpg", "res://assets/characters/scene-11-3.dtl")
+do GameStats.addDialogicSeen("res://assets/characters/scene-11-2.dtl")

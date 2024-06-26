@@ -4,6 +4,11 @@ extends Node2D
 
 func _ready():
 	name_textfield.grab_focus()
+	name_textfield.text_changed.connect(_on_text_changed)
+
+func _on_text_changed():
+	if Input.is_action_just_pressed("Enter"):
+		_on_proximo_button_pressed()
 
 # Ao clicar no botão de próximo
 func _on_proximo_button_pressed():

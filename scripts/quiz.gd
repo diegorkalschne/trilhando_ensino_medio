@@ -79,6 +79,9 @@ func _show_questions(index: int):
 	for option in options_question:
 		# Cria um botão novo
 		var button = Button.new()
+		var label = Label.new()
+		label.text = ''
+		button.add_child(label)
 		button.text = option
 		
 		# Função que será chamada quando clicar no botão

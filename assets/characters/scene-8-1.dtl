@@ -9,3 +9,7 @@ teacher2: Quantos de vocês já ouviram falar de Iniciação Científica? Vamos 
 teacher2: As hipóteses desempenham um papel crucial em uma investigação científica, pois são suposições que orientam a pesquisa. Uma hipótese é uma afirmação que pode ser testada através de experimentos ou observações.
 teacher2: Ela serve como um ponto de partida para a investigação, ajudando a direcionar os métodos de coleta de dados e a análise. Testar hipóteses permite aos cientistas validar ou refutar suas suposições, contribuindo para o avanço do conhecimento científico.
 # pergunta5
+do GameStats.onAddWhitelistDialogic("res://assets/characters/scene-8-2.dtl")
+do GameStats.onAddWhitelistQuestion("3")
+do QuestionsGame.changeSceneQuiz("3", "res://assets/images/background_menu.jpg", "res://assets/characters/scene-8-2.dtl")
+do GameStats.addDialogicSeen("res://assets/characters/scene-8-1.dtl")

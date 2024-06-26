@@ -6466,9 +6466,9 @@ layer_0/tile_data = PackedInt32Array(65536, 1, 0, 131072, 1, 1, 196608, 1, 2, 26
 
 [node name="label_door" type="Label" parent="."]
 offset_left = 242.0
-offset_top = 280.0
+offset_top = 268.0
 offset_right = 882.0
-offset_bottom = 328.0
+offset_bottom = 316.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 16
 theme_override_styles/normal = SubResource("StyleBoxFlat_6dxj8")
@@ -6479,18 +6479,18 @@ vertical_alignment = 1
 
 [node name="name_textfield" type="TextEdit" parent="."]
 offset_left = 234.0
-offset_top = 352.0
+offset_top = 340.0
 offset_right = 890.0
-offset_bottom = 392.0
+offset_bottom = 380.0
 placeholder_text = "Digite seu nome..."
 context_menu_enabled = false
 selecting_enabled = false
 
 [node name="proximo_button" type="Button" parent="."]
 offset_left = 234.0
-offset_top = 416.0
+offset_top = 404.0
 offset_right = 890.0
-offset_bottom = 456.0
+offset_bottom = 444.0
 text = "Próximo"
 
 [connection signal="pressed" from="proximo_button" to="." method="_on_proximo_button_pressed"]

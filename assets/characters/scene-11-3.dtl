@@ -4,3 +4,7 @@ teacher1: Perfeito!!
 teacher1: Um tema relevante nas Ciências Humanas e Sociais é a análise das políticas de inclusão social.
 teacher1: Isso envolve entender como programas e ações podem promover a igualdade de oportunidades para grupos historicamente marginalizados.
 # pergunta16
+do GameStats.onAddWhitelistDialogic("res://assets/characters/scene-11-4.dtl")
+do GameStats.onAddWhitelistQuestion("14")
+do QuestionsGame.changeSceneQuiz("14", "res://assets/images/background_menu.jpg", "res://assets/characters/scene-11-4.dtl")
+do GameStats.addDialogicSeen("res://assets/characters/scene-11-3.dtl")
