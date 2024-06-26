@@ -1,4 +1,5 @@
 # ocorre ao entrar na sala 303
+[background arg="res://assets/images/auditorium_background.jpg" fade="0.0"]
 narrator: Você entra no auditório e senta em uma das cadeiras disponíveis. O local está repleto de outros alunos, todos parecendo tão ansiosos quanto você. A diretora sobe ao palco e começa a falar.
 join chairwoman 1
 chairwoman: Bom dia a todos! Sejam muito bem-vindos a um novo ano letivo. Meu nome é Maria e sou a diretora desta instituição.

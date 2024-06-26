@@ -1,7 +1,4 @@
+[background arg="res://assets/images/classroom_background.jpg" fade="0.0"]
 join teacher4 1
 teacher4: Correto!
 teacher4: Muito bem! Foi um prazer conhecer vocês mas por fim, voltem para a sala 102. A professora Elaine quer ter umas palavras finais com vocês.
-do GameStats.onChangeCurrentMission("Vá para a sala 102")
-do GameStats.onChangePlayerInDialogic(false)
-do GameStats.onAddWhitelistDialogic("res://assets/characters/scene-11-1.dtl")
-do GameStats.addDialogicSeen("res://assets/characters/scene-10-4.dtl")

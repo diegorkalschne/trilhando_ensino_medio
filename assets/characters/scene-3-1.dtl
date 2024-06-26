@@ -1,4 +1,5 @@
 # Ocorre ao entrar na sala 101 pela primeira vez
+[background arg="res://assets/images/classroom_background.jpg" fade="0.0"]
 set 
 narrator: Você entra na sala
 [wait time="1.0"]

@@ -1,3 +1,4 @@
+[background arg="res://assets/images/classroom_background.jpg" fade="0.0"]
 join teacher1 1
 teacher1: Perfeito!
 teacher1: Unidades Curriculares Eletivas no Novo Ensino Médio são disciplinas opcionais que você pode escolher conforme seus interesses, além das matérias obrigatórias e dos Itinerários Formativos.

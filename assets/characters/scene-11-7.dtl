@@ -1,3 +1,4 @@
+[background arg="res://assets/images/classroom_background.jpg" fade="0.0"]
 teacher1: Isso aí!!
 teacher1: Muito bem alunos. Vou chamar cada um de vocês para dar o resultado.
 narrator: Você espera pacientemente até a professora chamar você.
@@ -9,6 +10,3 @@ teacher1: Ao fim do ano você terá a oportunidade de escolher uma trilha de con
 leave --All--
 narrator: Com isso chega ao fim o seu primeiro dia no Ensino Médio. Um longo ano vem por aí, com muitas escolhas a serem feitas e muito conhecimento a ser ganho.
 # fim :)
-do GameStats.onChangeCurrentMission("")
-do GameStats.onChangePlayerInDialogic(false)
-do GameStats.addDialogicSeen("res://assets/characters/scene-11-7.dtl")

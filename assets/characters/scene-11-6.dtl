@@ -1,9 +1,6 @@
+[background arg="res://assets/images/classroom_background.jpg" fade="0.0"]
 join teacher1 1
 teacher1: Isso!!
 teacher1: Outro tema central em Ciências da Natureza são os recursos naturais e sua exploração sustentável.
 teacher1: Isso inclui a análise de como os recursos são utilizados, renovados ou esgotados ao longo do tempo.
 # pergunta19
-do GameStats.onAddWhitelistDialogic("res://assets/characters/scene-11-7.dtl")
-do GameStats.onAddWhitelistQuestion("17")
-do QuestionsGame.changeSceneQuiz("17", "res://assets/images/background_menu.jpg", "res://assets/characters/scene-11-7.dtl")
-do GameStats.addDialogicSeen("res://assets/characters/scene-11-6.dtl")

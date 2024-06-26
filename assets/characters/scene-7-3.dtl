@@ -1,3 +1,4 @@
+[background arg="res://assets/images/classroom_background.jpg" fade="0.0"]
 join teacher1 1
 teacher1: Exato!
 teacher1: Falando sobre Itinerários Formativos, é importante que vocês também conheçam as Unidades Curriculares Eletivas. Elas são disciplinas opcionais do Novo Ensino Médio que poderão ser escolhidas conforme interesses e necessidades, complementando a Base Nacional Comum Curricular (BNCC) e os Itinerários Formativos.

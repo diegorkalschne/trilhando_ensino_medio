@@ -1,8 +1,5 @@
+[background arg="res://assets/images/classroom_background.jpg" fade="0.0"]
 join teacher3 1
 teacher3: Correto!
 teacher3: A habilidade que problematiza as relações entre cultura e religiosidade busca compreender como diferentes culturas constroem sua história a partir de crenças e práticas religiosas. Isso permite uma análise mais profunda da diversidade cultural e das influências das religiões nas sociedades.
 # pergunta9
-do GameStats.onAddWhitelistDialogic("res://assets/characters/scene-9-3.dtl")
-do GameStats.onAddWhitelistQuestion("7")
-do QuestionsGame.changeSceneQuiz("7", "res://assets/images/background_menu.jpg", "res://assets/characters/scene-9-3.dtl")
-do GameStats.addDialogicSeen("res://assets/characters/scene-9-2.dtl")

@@ -1,4 +1,5 @@
 # ocorre ao entrar na sala 102 pela primeira vez
+[background arg="res://assets/images/classroom_background.jpg" fade="0.0"]
 narrator: Você espera a professora chegar na sala.
 join teacher1 1
 teacher1: Bom dia, pessoal! Já me apresentei a vocês no auditório.

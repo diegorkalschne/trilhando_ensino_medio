@@ -1,4 +1,5 @@
 # ao entrar na sala 104
+[background arg="res://assets/images/classroom_background.jpg" fade="0.0"]
 join teacher4 1
 teacher4: Bem-vindos meus alunos!! Eu sou o professor Chris e sou o responsável pelo Pré-Itinerário de Ciências da Natureza e Suas Tecnologias. Este Itinerário tem como objetivo introduzir vocês aos conceitos fundamentais das Ciências da Natureza, abrangendo áreas como Física, Química, Biologia e suas respectivas tecnologias.\
 teacher4: Vamos explorar como o conhecimento científico é aplicado para compreender e solucionar problemas do mundo natural, desde os fenômenos físicos e químicos até os processos biológicos que sustentam a vida.
@@ -8,7 +9,3 @@ teacher4: Vamos embarcar juntos nessa exploração fascinante das Ciências da N
 teacher4: Essa análise ajuda na formulação de políticas e estratégias que promovam o desenvolvimento sustentável e a resiliência das comunidades diante dos desafios ambientais contemporâneos.
 teacher4: Analisar os impactos sociais e socioambientais é crucial no contexto de saúde e sustentabilidade para entender como as mudanças ambientais afetam as comunidades locais e globais, e vice-versa.
 # pergunta11
-do GameStats.onAddWhitelistDialogic("res://assets/characters/scene-10-2.dtl")
-do GameStats.onAddWhitelistQuestion("9")
-do QuestionsGame.changeSceneQuiz("9", "res://assets/images/background_menu.jpg", "res://assets/characters/scene-10-2.dtl")
-do GameStats.addDialogicSeen("res://assets/characters/scene-10-1.dtl")

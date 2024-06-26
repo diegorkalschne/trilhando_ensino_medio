@@ -1,7 +1,4 @@
+[background arg="res://assets/images/classroom_background.jpg" fade="0.0"]
 join teacher3 1
 teacher3: Isso mesmo!
 teacher3: Muito bem, agora vão para a sala número 104 onde o professor Chris quer ver vocês.
-do GameStats.onChangeCurrentMission("Vá para a sala 104")
-do GameStats.onChangePlayerInDialogic(false)
-do GameStats.onAddWhitelistDialogic("res://assets/characters/scene-10-1.dtl")
-do GameStats.addDialogicSeen("res://assets/characters/scene-9-4.dtl")
