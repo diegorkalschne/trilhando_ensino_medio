@@ -1,3 +1,4 @@
+leave chairwoman
 # ocorre ao entrar na sala 303
 [background arg="res://assets/images/auditorium_background.jpg" fade="0.0"]
 narrator: Você entra no auditório e senta em uma das cadeiras disponíveis. O local está repleto de outros alunos, todos parecendo tão ansiosos quanto você. A diretora sobe ao palco e começa a falar.
@@ -5,9 +6,8 @@ join chairwoman 1
 chairwoman: Bom dia a todos! Sejam muito bem-vindos a um novo ano letivo. Meu nome é Maria e sou a diretora desta instituição.
 chairwoman: Este ano marca uma nova fase em suas vidas, e nós estamos aqui para garantir que vocês tenham a melhor experiência possível.
 narrator: Uma professora, responsável pelo 1º ano, entra no palco.
-join teacher1 3 [ mirrored="true"]
+join teacher1 4 [ mirrored="true"]
 chairwoman: Esta é a professora Flávia, uma das responsáveis por guiá-los durante este ano letivo. Ela irá ajudá-los a se adaptarem ao Novo Ensino Médio e estará disponível para quaisquer dúvidas ou problemas que possam surgir.
-leave chairwoman
 teacher1: Olá a todos! Estou muito feliz por estar aqui e mal posso esperar para conhecê-los melhor. Nosso objetivo é proporcionar um ambiente acolhedor e propício para o aprendizado.
 teacher1: Teremos várias atividades e projetos ao longo do ano que irão ajudá-los a desenvolver novas habilidades e a se prepararem para o futuro.
 teacher1: Além de tudo, neste ano, os nossos alunos do ensino médio, iniciarão um novo modelo de ensino - o Novo Ensino Médio. Quando voltarem às salas, explicarei esse novo processo.

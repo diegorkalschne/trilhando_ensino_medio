@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/school2.gd" id="1_xdl8o"]
 [ext_resource type="Texture2D" uid="uid://be383xlogsrdc" path="res://assets/images/inside_background.png" id="2_8c1r8"]
 [ext_resource type="PackedScene" uid="uid://pttkd3w45ndi" path="res://scenes/player.tscn" id="2_801jt"]
-[ext_resource type="Texture2D" uid="uid://jqjsir1wqdh1" path="res://assets/images/inside_background_windows.png" id="3_oapar"]
+[ext_resource type="Texture2D" uid="uid://cu4sgvxqij6q7" path="res://assets/images/inside_background_windows.png" id="3_oapar"]
 [ext_resource type="Shader" path="res://scenes/intro_school.gdshader" id="4_qex3h"]
 [ext_resource type="Texture2D" uid="uid://bmg3b5lxh8pwi" path="res://assets/images/paralax_cloud_formation.png" id="5_pf8sq"]
 

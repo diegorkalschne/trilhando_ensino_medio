@@ -17,6 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
+GameStats="*res://scripts/global/game_stats.gd"
 QuestionsGame="*res://scripts/global/questions_game.gd"
 GameMovement="*res://scripts/global/game_movement.gd"
 GameUtils="*res://scripts/global/game_utils.gd"
@@ -33,6 +34,7 @@ directories/dch_directory={
 "player_b": "res://assets/characters/player_b.dch",
 "player_g": "res://assets/characters/player_g.dch",
 "teacher1": "res://assets/characters/teacher1.dch",
+"teacher1.1": "res://assets/characters/teacher1.1.dch",
 "teacher2": "res://assets/characters/teacher2.dch",
 "teacher3": "res://assets/characters/teacher3.dch",
 "teacher4": "res://assets/characters/teacher4.dch"
