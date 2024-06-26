@@ -82,17 +82,26 @@ func _input(event):
 	# player pressionou "E" ao interagir com uma das portas
 	if event.is_action_pressed("interact"):
 		if bodyAreaEntered["door_301"]:
-			pass
+			GameUtils.showSnackbar("Não disponível")
 		elif bodyAreaEntered["door_302"]:
-			pass
+			GameUtils.showSnackbar("Não disponível")
 		elif bodyAreaEntered["door_303"]:
 			GameStats.openDialogic("res://assets/characters/scene-5-1.dtl")
 		elif bodyAreaEntered["door_304"]:
-			pass
+			GameUtils.showSnackbar("Não disponível")
 		elif bodyAreaEntered["door_305"]:
-			pass
+			if GameStats.canOpenDialogic("res://assets/characters/scene-9-1.dtl"):
+				GameStats.openDialogic("res://assets/characters/scene-9-1.dtl")
+			elif GameStats.canOpenDialogic("res://assets/characters/scene-9-2.dtl"):
+				GameStats.openDialogic("res://assets/characters/scene-9-2.dtl")
+			elif GameStats.canOpenDialogic("res://assets/characters/scene-9-3.dtl"):
+				GameStats.openDialogic("res://assets/characters/scene-9-3.dtl")
+			elif GameStats.canOpenDialogic("res://assets/characters/scene-9-4.dtl"):
+				GameStats.openDialogic("res://assets/characters/scene-9-4.dtl")
+			else:
+				GameUtils.showSnackbar("Não disponível")	
 		elif bodyAreaEntered["door_306"]:
-			pass
+			GameUtils.showSnackbar("Não disponível")
 		elif bodyAreaEntered["downstair"]:
 			GameMovement.setNextPositionPlayer(Vector2(833, 0))
 			GameStats.onChangeScene(3)

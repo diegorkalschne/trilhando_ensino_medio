@@ -3,3 +3,7 @@ teacher2: Perfeito!
 teacher2: A análise de dados é uma etapa essencial na investigação científica, pois permite interpretar os resultados coletados. Durante a análise, os pesquisadores identificam padrões, tendências e possíveis relações entre variáveis.
 teacher2: Isso ajuda a entender melhor os fenômenos estudados e a tirar conclusões baseadas em evidências. A análise de dados pode confirmar ou refutar hipóteses, levando a descobertas importantes e a um entendimento mais profundo do assunto investigado.
 # pergunta7
+do GameStats.onAddWhitelistDialogic("res://assets/characters/scene-8-4.dtl")
+do GameStats.onAddWhitelistQuestion("5")
+do QuestionsGame.changeSceneQuiz("5", "res://assets/images/background_menu.jpg", "res://assets/characters/scene-8-4.dtl")
+do GameStats.addDialogicSeen("res://assets/characters/scene-8-3.dtl")

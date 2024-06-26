@@ -3,3 +3,7 @@ teacher4: Isso ai, boa!
 teacher4: No contexto de saúde e sustentabilidade, é crucial entender como as ações humanas afetam o meio ambiente e a biodiversidade. Isso inclui a análise dos impactos socioambientais de práticas industriais e agrícolas.
 teacher4: Compreender esses impactos permite tomar decisões informadas para mitigar danos ambientais e promover práticas que conservem a biodiversidade e os ecossistemas naturais.
 # pergunta12
+do GameStats.onAddWhitelistDialogic("res://assets/characters/scene-10-3.dtl")
+do GameStats.onAddWhitelistQuestion("10")
+do QuestionsGame.changeSceneQuiz("10", "res://assets/images/background_menu.jpg", "res://assets/characters/scene-10-3.dtl")
+do GameStats.addDialogicSeen("res://assets/characters/scene-10-2.dtl")

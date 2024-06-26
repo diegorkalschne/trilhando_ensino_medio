@@ -6,6 +6,9 @@ teacher3: O objetivo é proporcionar uma compreensão das dinâmicas sociais, cu
 teacher3: Ao longo do ano, vocês serão incentivados a desenvolver um pensamento crítico e reflexivo, analisando diferentes perspectivas e contextos históricos e sociais. As disciplinas terão uma abordagem interdisciplinar, mostrando como as várias áreas das Ciências Humanas e Sociais se inter-relacionam e contribuem para uma compreensão mais ampla do mundo em que vivemos.
 teacher3: Além disso, serão realizadas atividades práticas, debates e projetos que permitirão aplicar os conhecimentos adquiridos e desenvolver habilidades como a argumentação, a análise crítica e a capacidade de trabalhar em equipe. Preparem-se para uma jornada de descobertas e reflexões sobre a sociedade e a condição humana!
 teacher3: Assim como o professor Will deve ter feito com vocês, eu também quero testar o conhecimento de vocês nessa área. Não se preocupem se errarem alguma questão, mas para os que não conhecem muito o assunto, eu vou dar uma breve explicação antes de cada pergunta.\
-
 teacher3: É fundamental analisar as relações de diferentes grupos, povos e sociedades com a natureza para identificar como essas relações impactam o meio ambiente e a sociedade. Isso inclui a proposição de alternativas que promovam uma consciência e ética socioambiental.
 # pergunta8
+do GameStats.onAddWhitelistDialogic("res://assets/characters/scene-9-2.dtl")
+do GameStats.onAddWhitelistQuestion("6")
+do QuestionsGame.changeSceneQuiz("6", "res://assets/images/background_menu.jpg", "res://assets/characters/scene-9-2.dtl")
+do GameStats.addDialogicSeen("res://assets/characters/scene-9-1.dtl")

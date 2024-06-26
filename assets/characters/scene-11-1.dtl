@@ -5,3 +5,7 @@ teacher1: Mas isso não é nada definitivo, é apenas uma observação baseada n
 teacher1: Então, com isso, vou fazer algumas últimas perguntas sobre esses temas para vocês, e depois vamos conversar sobre os resultados. A análise das políticas públicas permite compreender como decisões governamentais influenciam a vida dos cidadãos em áreas como educação, saúde, meio ambiente e segurança.
 teacher1: Essa análise ajuda na avaliação da eficácia das políticas existentes e na formulação de novas estratégias para resolver problemas sociais.
 # pergunta14
+do GameStats.onAddWhitelistDialogic("res://assets/characters/scene-11-2.dtl")
+do GameStats.onAddWhitelistQuestion("12")
+do QuestionsGame.changeSceneQuiz("12", "res://assets/images/background_menu.jpg", "res://assets/characters/scene-11-2.dtl")
+do GameStats.addDialogicSeen("res://assets/characters/scene-11-1.dtl")

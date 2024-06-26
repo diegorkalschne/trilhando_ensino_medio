@@ -1,3 +1,7 @@
 join teacher2 1
 teacher2: Isso mesmo!
 teacher2: Muito bem alunos, não se preocupem se não acertaram muitas respostas, vocês terão o ano todo para aprenderem sobre esses conteúdos. Agora, se puderem, vão até a sala 305, lá a professora Josi vai querer falar com vocês.
+do GameStats.onChangeCurrentMission("Vá para a sala 305")
+do GameStats.onChangePlayerInDialogic(false)
+do GameStats.onAddWhitelistDialogic("res://assets/characters/scene-9-1.dtl")
+do GameStats.addDialogicSeen("res://assets/characters/scene-8-4.dtl")
