@@ -6,9 +6,9 @@ narrator: Você entra na sala
 - Olá!
 join chairwoman 1
 [wait time="1.5"]
-chairwoman: Olá {GameStats.getNamePlayer()}, bom dia!! Seja muito bem vindo a Pedro Meinerz.
-chairwoman: Sei que deve estar cheio de perguntas, mas logo em seguida teremos uma apresentação de início de ano no auditório que fica na porta 303 no terceiro andar.
-chairwoman: Após isso, você pode ir para a sala 102, onde irei lá falar com vocês do 1º ano.
+chairwoman: Olá {GameStats.getNamePlayer()}, bem-vindo à Escola.
+chairwoman: Sabemos que há muitas perguntas, mas logo faremos uma apresentação no auditório localizado na Sala 303, no terceiro andar.
+chairwoman: Após, você poderá ir para a Sala 102, onde conversaremos com os alunos do 1º ano.
 leave chairwoman
 narrator: Você deve ir para a sala 303 no terceiro andar
 do GameStats.onChangeCurrentMission("Suba os andares e vá até a sala 303")

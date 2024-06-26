@@ -1,16 +1,16 @@
 # ocorre ao entrar na sala 102 pela primeira vez
-narrator: Você espera professora chegar na sala.
+narrator: Você espera a professora chegar na sala.
 join teacher1 1
-teacher1: Bom dia pessoal! Já me apresentei para vocês mais cedo no auditório então vou pular as apresentações.
-teacher1: Eu sei que muitos de vocês devem estar cheios de dúvida sobre como vai funcionar essa nova etapa da vida escolar de vocês. Todos vocês estão entrando pela primeira vez no primeiro ano do ensino médio.
-teacher1: Contudo, como a maioria de vocês já deve saber, nos últimos anos, a educação brasileira tem passado por diversas mudanças, principalmente no ensino médio. Vocês estão no que é chamado de Novo Ensino Médio de forma resumida, ele é uma reforma na educação para deixar o ensino mais interessante e útil para os alunos.
-teacher1: Ele tem algumas mudanças importantes em comparação com o modelo antigo. Dividido em duas partes\: a Base Nacional Comum Curricular (BNCC), que inclui disciplinas obrigatórias como Português e Matemática, e os Itinerários Formativos, onde os alunos podem escolher áreas de interesse como Ciências, Matemática, Linguagens, Humanas ou Formação Técnica e Profissional.
-teacher1: A ideia é tornar o ensino mais interessante e relevante para os alunos, permitindo uma personalização maior do aprendizado conforme os interesses e planos futuros de cada um. Além disso, o Novo Ensino Médio inclui o Projeto de Vida, que ajuda os alunos a planejar suas carreiras e identificar suas paixões.
+teacher1: Bom dia, pessoal! Já me apresentei a vocês no auditório.
+teacher1: Eu sei que muitos têm dúvidas sobre como funcionará essa nova etapa da vida escolar. Todos vocês estão entrando pela primeira vez no primeiro ano do ensino médio.
+teacher1: Contudo, como a maioria já deve saber que, nos últimos anos, a educação brasileira tem passado por diversas mudanças, principalmente no ensino médio. Vocês estão no que é chamado de Novo Ensino Médio. Resumidamente, essa reforma na educação visa tornar o ensino mais interessante para os alunos.
+teacher1: Ocorreram algumas mudanças importantes em comparação com o modelo antigo, que foi dividido em duas partes\: a Base Nacional Comum Curricular (BNCC), que inclui disciplinas obrigatórias como Português e Matemática, e os Itinerários Formativos, onde os alunos podem escolher áreas de interesse como Ciências, Matemática, Linguagens, Humanas ou Formação Técnica e Profissional.
+teacher1: A ideia é tornar o ensino mais atraente e relevante para os alunos, permitindo a personalização do aprendizado conforme os interesses e planos futuros de cada um. Além disso, o Novo Ensino Médio inclui o Projeto de Vida, que ajuda os alunos a planejarem suas carreiras e a identificarem suas paixões.
 teacher1: Assim, a escola se torna um espaço não só de aprendizado teórico, mas também de preparação prática para o mercado de trabalho ou ensino superior, incentivando os estudantes a explorarem suas habilidades e interesses de forma mais direcionada.
-teacher1: Galera, consegui me deixar clara com essa explicação? Por favor, se alguém não entendeu diga algo.
+teacher1: Pessoal, fui clara? Por favor, caso alguém não tenha entendido, diga.
 narrator: A sala fica em silêncio.
 narrator: A professora se vira para você e fala.
-teacher1: {GameStats.getNamePlayer()} entendeu a diferença do novo para o antigo Ensino Médio?
+teacher1: {GameStats.getNamePlayer()} entendeu a diferença do antigo para o novo ensino médio?
 # pergunta1
 do GameStats.onAddWhitelistQuestion("0")
 do GameStats.onAddWhitelistDialogic("res://assets/characters/scene-7-2.dtl")

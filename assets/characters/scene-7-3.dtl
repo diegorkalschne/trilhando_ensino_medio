@@ -1,9 +1,9 @@
 join teacher1 1
 teacher1: Exato!
-teacher1: Falando sobre Itinerários Formativos, é importante que vocês também conheçam sobre as Unidades Curriculares Eletivas elas são são disciplinas opcionais do Novo Ensino Médio que você pode escolher conforme seus interesses e necessidades, complementando a Base Nacional Comum Curricular (BNCC) e os Itinerários Formativos.
-teacher1: Essas eletivas permitem uma personalização maior do seu percurso escolar, oferecendo a oportunidade de explorar áreas específicas como artes, esportes, tecnologia, línguas estrangeiras, entre outras.
-teacher1: Essas unidades ajudam a diversificar e dinamizar o aprendizado, tornando a escola mais interessante e relevante para você.
-teacher1: Além disso, ao escolher eletivas alinhadas aos seus objetivos futuros, você pode se preparar melhor para o mercado de trabalho ou para os estudos superiores, aumentando seu engajamento e motivação.
+teacher1: Falando sobre Itinerários Formativos, é importante que vocês também conheçam as Unidades Curriculares Eletivas. Elas são disciplinas opcionais do Novo Ensino Médio que poderão ser escolhidas conforme interesses e necessidades, complementando a Base Nacional Comum Curricular (BNCC) e os Itinerários Formativos.
+teacher1: Essas eletivas permitem a personalização do percurso escolar, oferecendo a oportunidade de explorar áreas específicas como artes, esportes, tecnologia, línguas estrangeiras, entre outras.
+teacher1: Essas unidades ajudam a diversificar e dinamizar o aprendizado, tornando a escola mais interessante e relevante para os alunos.
+teacher1: Além disso, ao escolherem eletivas alinhadas aos seus objetivos futuros, vocês poderão se preparar melhor para o mercado de trabalho ou para os estudos superiores, aumentando o engajamento e a motivação.
 narrator: A professora olha para você novamente e pergunta.
 # pergunta3
 do GameStats.onAddWhitelistDialogic("res://assets/characters/scene-7-4.dtl")
