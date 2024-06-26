@@ -8,13 +8,13 @@ func _ready():
 	$canvas/carregar_jogo.grab_focus()
 	
 	# Caso não tenha jogo salvo, esconde o botão de "carregar jogo"
-	if (!GameStats.hasGameSaved()):
+	if (!GameCore.hasGameSaved()):
 		$canvas/carregar_jogo.visible = false
 		$canvas/comecar.grab_focus()
 
 # Função para ação de "Começar" o jogo
 func _on_comecar_pressed():
-	GameStats.resetData() # Sempre que inicia um novo jogo, reinicia todas as stats
+	GameCore.resetData() # Sempre que inicia um novo jogo, reinicia todas as stats
 	get_tree().change_scene_to_file("res://scenes/select_character.tscn")
 	
 # Função para ir para a cena de "Ajuda"
@@ -27,7 +27,7 @@ func _on_sair_pressed():
 
 # Função para recomeçar o jogo, da última cena carregada
 func _on_carregar_jogo_pressed():
-	var current_scene = GameStats.getCurrentScene()
+	var current_scene = GameCore.getCurrentScene()
 	
 	# Define os sprites do personagem
 	$canvas/player.setTextureSprite()

@@ -15,7 +15,7 @@ var bodyAreaEntered = {
 
 func _ready():
 	# Obtém o tamanho total da cena, em pixels
-	var scene_width = GameStats.sceneWidth($background)
+	var scene_width = GameCore.sceneWidth($background)
 
 	# Define até onde a câmera irá se movimentar no lado direito da tela	
 	player.setRigthCameraLimit(scene_width)
@@ -60,47 +60,47 @@ func _input(event):
 	# player pressionou "E" ao interagir com uma das portas
 	if event.is_action_pressed("interact"):
 		if bodyAreaEntered["door_101"]:
-			GameStats.openDialogic("res://assets/characters/scene-3-1.dtl")
+			GameCore.openDialogic("res://assets/characters/scene-3-1.dtl")
 		elif bodyAreaEntered["door_102"]:
 			# Cena 7
-			if GameStats.canOpenDialogic("res://assets/characters/scene-7-1.dtl"):
-				GameStats.openDialogic("res://assets/characters/scene-7-1.dtl")
-			elif GameStats.canOpenDialogic("res://assets/characters/scene-7-2.dtl"):
-				GameStats.openDialogic("res://assets/characters/scene-7-2.dtl")
-			elif GameStats.canOpenDialogic("res://assets/characters/scene-7-3.dtl"):
-				GameStats.openDialogic("res://assets/characters/scene-7-3.dtl")
-			elif GameStats.canOpenDialogic("res://assets/characters/scene-7-4.dtl"):
-				GameStats.openDialogic("res://assets/characters/scene-7-4.dtl")
-			elif GameStats.canOpenDialogic("res://assets/characters/scene-7-5.dtl"):
-				GameStats.openDialogic("res://assets/characters/scene-7-5.dtl")
+			if GameCore.canOpenDialogic("res://assets/characters/scene-7-1.dtl"):
+				GameCore.openDialogic("res://assets/characters/scene-7-1.dtl")
+			elif GameCore.canOpenDialogic("res://assets/characters/scene-7-2.dtl"):
+				GameCore.openDialogic("res://assets/characters/scene-7-2.dtl")
+			elif GameCore.canOpenDialogic("res://assets/characters/scene-7-3.dtl"):
+				GameCore.openDialogic("res://assets/characters/scene-7-3.dtl")
+			elif GameCore.canOpenDialogic("res://assets/characters/scene-7-4.dtl"):
+				GameCore.openDialogic("res://assets/characters/scene-7-4.dtl")
+			elif GameCore.canOpenDialogic("res://assets/characters/scene-7-5.dtl"):
+				GameCore.openDialogic("res://assets/characters/scene-7-5.dtl")
 			# Cena 11
-			elif GameStats.canOpenDialogic("res://assets/characters/scene-11-1.dtl"):
-				GameStats.openDialogic("res://assets/characters/scene-11-1.dtl")
-			elif GameStats.canOpenDialogic("res://assets/characters/scene-11-2.dtl"):
-				GameStats.openDialogic("res://assets/characters/scene-11-2.dtl")
-			elif GameStats.canOpenDialogic("res://assets/characters/scene-11-3.dtl"):
-				GameStats.openDialogic("res://assets/characters/scene-11-3.dtl")
-			elif GameStats.canOpenDialogic("res://assets/characters/scene-11-4.dtl"):
-				GameStats.openDialogic("res://assets/characters/scene-11-4.dtl")
-			elif GameStats.canOpenDialogic("res://assets/characters/scene-11-5.dtl"):
-				GameStats.openDialogic("res://assets/characters/scene-11-5.dtl")
-			elif GameStats.canOpenDialogic("res://assets/characters/scene-11-6.dtl"):
-				GameStats.openDialogic("res://assets/characters/scene-11-6.dtl")
-			elif GameStats.canOpenDialogic("res://assets/characters/scene-11-7.dtl"):
-				GameStats.openDialogic("res://assets/characters/scene-11-7.dtl")
+			elif GameCore.canOpenDialogic("res://assets/characters/scene-11-1.dtl"):
+				GameCore.openDialogic("res://assets/characters/scene-11-1.dtl")
+			elif GameCore.canOpenDialogic("res://assets/characters/scene-11-2.dtl"):
+				GameCore.openDialogic("res://assets/characters/scene-11-2.dtl")
+			elif GameCore.canOpenDialogic("res://assets/characters/scene-11-3.dtl"):
+				GameCore.openDialogic("res://assets/characters/scene-11-3.dtl")
+			elif GameCore.canOpenDialogic("res://assets/characters/scene-11-4.dtl"):
+				GameCore.openDialogic("res://assets/characters/scene-11-4.dtl")
+			elif GameCore.canOpenDialogic("res://assets/characters/scene-11-5.dtl"):
+				GameCore.openDialogic("res://assets/characters/scene-11-5.dtl")
+			elif GameCore.canOpenDialogic("res://assets/characters/scene-11-6.dtl"):
+				GameCore.openDialogic("res://assets/characters/scene-11-6.dtl")
+			elif GameCore.canOpenDialogic("res://assets/characters/scene-11-7.dtl"):
+				GameCore.openDialogic("res://assets/characters/scene-11-7.dtl")
 			else:
 				GameUtils.showSnackbar("Não disponível")
 		elif bodyAreaEntered["door_103"]:
 			GameUtils.showSnackbar("Não disponível")
 		elif bodyAreaEntered["door_104"]:
-			if GameStats.canOpenDialogic("res://assets/characters/scene-10-1.dtl"):
-				GameStats.openDialogic("res://assets/characters/scene-10-1.dtl")
-			elif GameStats.canOpenDialogic("res://assets/characters/scene-10-2.dtl"):
-				GameStats.openDialogic("res://assets/characters/scene-10-2.dtl")
-			elif GameStats.canOpenDialogic("res://assets/characters/scene-10-3.dtl"):
-				GameStats.openDialogic("res://assets/characters/scene-10-3.dtl")
-			elif GameStats.canOpenDialogic("res://assets/characters/scene-10-4.dtl"):
-				GameStats.openDialogic("res://assets/characters/scene-10-4.dtl")
+			if GameCore.canOpenDialogic("res://assets/characters/scene-10-1.dtl"):
+				GameCore.openDialogic("res://assets/characters/scene-10-1.dtl")
+			elif GameCore.canOpenDialogic("res://assets/characters/scene-10-2.dtl"):
+				GameCore.openDialogic("res://assets/characters/scene-10-2.dtl")
+			elif GameCore.canOpenDialogic("res://assets/characters/scene-10-3.dtl"):
+				GameCore.openDialogic("res://assets/characters/scene-10-3.dtl")
+			elif GameCore.canOpenDialogic("res://assets/characters/scene-10-4.dtl"):
+				GameCore.openDialogic("res://assets/characters/scene-10-4.dtl")
 			else:
 				GameUtils.showSnackbar("Não disponível")
 		elif bodyAreaEntered["bathroom_boy"]:
@@ -109,10 +109,10 @@ func _input(event):
 			GameMovement.setNextPositionPlayer(Vector2(1790, 0))
 		elif bodyAreaEntered["upstair"]:
 			GameMovement.setNextPositionPlayer(Vector2(1141, 0))
-			GameStats.onChangeScene(3)
+			GameCore.onChangeScene(3)
 			get_tree().change_scene_to_file("res://scenes/school/school3.tscn");
 
 # Função quando irá voltar a cena
 func _on_left_area_body_entered(body):
-	GameStats.onChangeScene(1);
+	GameCore.onChangeScene(1);
 	get_tree().change_scene_to_file("res://scenes/school/school1.tscn");

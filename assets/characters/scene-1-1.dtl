@@ -3,7 +3,7 @@ narrator: Hoje é seu primeiro dia na escola. Você chega nos portões da escola
 narrator: Utilize ← (seta para a esquerda) e → (seta para a direita) para se movimentar.
 narrator: Pressione "ESC" para pausar o jogo e visualizar a missão atual
 Ande até a porta de entrada da escola.
-do GameStats.onChangeCurrentMission("Entre na escola")
-do GameStats.onChangePlayerInDialogic(false)
-do GameStats.onAddWhitelistDialogic("res://assets/characters/scene-2-1.dtl")
-do GameStats.addDialogicSeen("res://assets/characters/scene-1-1.dtl")
+do GameCore.onChangeCurrentMission("Entre na escola")
+do GameCore.onChangePlayerInDialogic(false)
+do GameCore.onAddWhitelistDialogic("res://assets/characters/scene-2-1.dtl")
+do GameCore.addDialogicSeen("res://assets/characters/scene-1-1.dtl")

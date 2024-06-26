@@ -36,9 +36,9 @@ func _can_go_to_question(question_id: String):
 	var status = false
 	
 	# Verifica se o player já não resolveu a questão. Continua apenas enquanto não resolveu
-	if (!GameStats.playerHasResolvedQuestion(question_id)):
+	if (!GameCore.playerHasResolvedQuestion(question_id)):
 		# Verifica se o player está apto a responder a questão
-		if (GameStats.playerCanResponseQuestion(question_id)):
+		if (GameCore.playerCanResponseQuestion(question_id)):
 			status = true # Player está apto a responder a questão
 	else:
 		message = "Questão já respondida"

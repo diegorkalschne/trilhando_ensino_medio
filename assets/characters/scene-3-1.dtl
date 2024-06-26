@@ -7,12 +7,12 @@ narrator: Você entra na sala
 - Olá!
 join chairwoman 1
 [wait time="1.5"]
-chairwoman: Olá {GameStats.getNamePlayer()}, bem-vindo à Escola.
+chairwoman: Olá {GameCore.getNamePlayer()}, bem-vindo à Escola.
 chairwoman: Sabemos que há muitas perguntas, mas logo faremos uma apresentação no auditório localizado na Sala 303, no terceiro andar.
 chairwoman: Após, você poderá ir para a Sala 102, onde conversaremos com os alunos do 1º ano.
 leave chairwoman
 narrator: Você deve ir para a sala 303 no terceiro andar
-do GameStats.onChangeCurrentMission("Suba os andares e vá até a sala 303")
-do GameStats.onChangePlayerInDialogic(false)
-do GameStats.onAddWhitelistDialogic("res://assets/characters/scene-5-1.dtl")
-do GameStats.addDialogicSeen("res://assets/characters/scene-3-1.dtl")
+do GameCore.onChangeCurrentMission("Suba os andares e vá até a sala 303")
+do GameCore.onChangePlayerInDialogic(false)
+do GameCore.onAddWhitelistDialogic("res://assets/characters/scene-5-1.dtl")
+do GameCore.addDialogicSeen("res://assets/characters/scene-3-1.dtl")

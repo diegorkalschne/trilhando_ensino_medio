@@ -46,11 +46,11 @@ func _show_questions(index: int):
 	if current_quiz.size() == 0 or index >= current_quiz.size():
 		queue_free() # Descarta a cena atual do quiz e volta para a anterior
 		QuestionsGame.changeInQuizScene(false) # Marca que não está mais na cena do quiz
-		GameStats.addQuestionResolved(quiz_general_id) # Salva que o quiz foi completado por inteiro
+		GameCore.addQuestionResolved(quiz_general_id) # Salva que o quiz foi completado por inteiro
 		
 		# Executa o diálogo de callback
 		if _callback_dialogic != null:
-			GameStats.openDialogic(_callback_dialogic)
+			GameCore.openDialogic(_callback_dialogic)
 		return
 	
 	_reset_on_correct() # Reseta o quiz
@@ -70,7 +70,7 @@ func _show_questions(index: int):
 	var question_id = _quiz['id']
 	
 	# Verifica se o player já não acertou a questão atual. Caso sim, pula para a próxima
-	if (GameStats.playerHasResolvedQuestion(question_id)):
+	if (GameCore.playerHasResolvedQuestion(question_id)):
 		index_current_pergunta += 1 # Incrementa o index atual da pergunta
 		_show_questions(index_current_pergunta); # Chama a própria função, passando o ID novo
 
@@ -125,7 +125,7 @@ func _on_correct_answer(button: Button, question_id: String):
 	button.disabled = true # Desabilita o botão ao errar
 	$canvas/correct_answer.play()
 	
-	GameStats.addQuestionResolved(question_id)
+	GameCore.addQuestionResolved(question_id)
 	
 	_show_pontos(1, false) # Jogador ganhou pontos
 	
@@ -164,7 +164,7 @@ func _show_pontos(pontuacao: int, isError: bool):
 	_total_respostas_erradas += 1
 	
 	# Salva a pontuacao do jogador
-	GameStats.onAddPontuacao(pontuacao, current_quiz[index_current_pergunta]["area"])
+	GameCore.onAddPontuacao(pontuacao, current_quiz[index_current_pergunta]["area"])
 	retrievePontuacaoArea()
 	
 	await get_tree().create_timer(2).timeout
@@ -175,7 +175,7 @@ func _show_pontos(pontuacao: int, isError: bool):
 func retrievePontuacaoArea():
 	var current_area = current_quiz[index_current_pergunta]["area"]
 	
-	var current_pontuacao = GameStats.getPontuacaoByArea(current_area)
+	var current_pontuacao = GameCore.getPontuacaoByArea(current_area)
 	
 	pontuacao.text = str(current_pontuacao)
 	label_area.text = current_area

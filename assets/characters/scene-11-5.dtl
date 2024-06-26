@@ -4,7 +4,7 @@ teacher1: Certo!!
 teacher1: Em Ciências da Natureza e suas Tecnologias, um tema relevante é a sustentabilidade ambiental.
 teacher1: Isso envolve a análise de como as atividades humanas impactam os ecossistemas e como tecnologias podem ser utilizadas para mitigar esses impactos.
 # pergunta18
-do GameStats.onAddWhitelistDialogic("res://assets/characters/scene-11-6.dtl")
-do GameStats.onAddWhitelistQuestion("16")
+do GameCore.onAddWhitelistDialogic("res://assets/characters/scene-11-6.dtl")
+do GameCore.onAddWhitelistQuestion("16")
 do QuestionsGame.changeSceneQuiz("16", "res://assets/images/background_menu.jpg", "res://assets/characters/scene-11-6.dtl")
-do GameStats.addDialogicSeen("res://assets/characters/scene-11-5.dtl")
+do GameCore.addDialogicSeen("res://assets/characters/scene-11-5.dtl")

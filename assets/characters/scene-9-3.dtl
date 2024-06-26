@@ -3,7 +3,7 @@ join teacher3 1
 teacher3: Exato!
 teacher3: No currículo de "Pré-Itinerário de Ciências Humanas e Sociais", uma das competências principais é a análise crítica dos processos políticos, econômicos, sociais, ambientais e culturais. Essa competência visa capacitar os estudantes a compreender e posicionar-se criticamente em relação a esses aspectos, utilizando argumentos embasados em fontes científicas.
 # pergunta10
-do GameStats.onAddWhitelistDialogic("res://assets/characters/scene-9-4.dtl")
-do GameStats.onAddWhitelistQuestion("8")
+do GameCore.onAddWhitelistDialogic("res://assets/characters/scene-9-4.dtl")
+do GameCore.onAddWhitelistQuestion("8")
 do QuestionsGame.changeSceneQuiz("8", "res://assets/images/background_menu.jpg", "res://assets/characters/scene-9-4.dtl")
-do GameStats.addDialogicSeen("res://assets/characters/scene-9-3.dtl")
+do GameCore.addDialogicSeen("res://assets/characters/scene-9-3.dtl")

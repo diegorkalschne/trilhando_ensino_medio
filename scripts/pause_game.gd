@@ -21,7 +21,7 @@ func _on_voltar_button_pressed():
 func _on_container_visibility_changed():
 	if visible and current_mission != null:
 		# Quando visível, atualiza o texto da missão atual
-		current_mission.text = GameStats.getCurrentMission()
+		current_mission.text = GameCore.getCurrentMission()
 
 # Função que detecta quando algum evento aconteceu
 func _input(event):

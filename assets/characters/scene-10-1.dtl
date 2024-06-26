@@ -9,7 +9,7 @@ teacher4: Vamos embarcar juntos nessa exploração fascinante das Ciências da N
 teacher4: Essa análise ajuda na formulação de políticas e estratégias que promovam o desenvolvimento sustentável e a resiliência das comunidades diante dos desafios ambientais contemporâneos.
 teacher4: Analisar os impactos sociais e socioambientais é crucial no contexto de saúde e sustentabilidade para entender como as mudanças ambientais afetam as comunidades locais e globais, e vice-versa.
 # pergunta11
-do GameStats.onAddWhitelistDialogic("res://assets/characters/scene-10-2.dtl")
-do GameStats.onAddWhitelistQuestion("9")
+do GameCore.onAddWhitelistDialogic("res://assets/characters/scene-10-2.dtl")
+do GameCore.onAddWhitelistQuestion("9")
 do QuestionsGame.changeSceneQuiz("9", "res://assets/images/background_menu.jpg", "res://assets/characters/scene-10-2.dtl")
-do GameStats.addDialogicSeen("res://assets/characters/scene-10-1.dtl")
+do GameCore.addDialogicSeen("res://assets/characters/scene-10-1.dtl")

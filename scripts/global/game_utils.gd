@@ -9,4 +9,4 @@ func showSnackbar(message: String):
 	var tree = get_tree().root.get_child(0);
 		
 	# Exibe uma mensagem pro jogador
-	snackbar.show_message("Não disponível", GameStats.getCurrentPlayerPosition(), 1)
+	snackbar.show_message("Não disponível", GameCore.getCurrentPlayerPosition(), 1)

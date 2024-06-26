@@ -9,10 +9,10 @@ var body_in_area_door = false
 # Função executa quando a cena é instanciada
 func _ready():		
 	# Obtém o tamanho total da cena, em pixels
-	var scene_width = GameStats.sceneWidth($background)
+	var scene_width = GameCore.sceneWidth($background)
 	
 	# Libera o primeiro diálogo para o player
-	GameStats.onAddWhitelistDialogic("res://assets/characters/scene-1-1.dtl")
+	GameCore.onAddWhitelistDialogic("res://assets/characters/scene-1-1.dtl")
 
 	# Define até onde a câmera irá se movimentar no lado direito da tela	
 	player.setRigthCameraLimit(scene_width)
@@ -29,8 +29,8 @@ func _exit_tree():
 func _input(event):
 	# player pressionou "E" ao interagir com a porta da escola
 	if event.is_action_pressed("interact") and body_in_area_door:
-		GameStats.onChangeScene(1) # Foi para a cena 1
-		GameStats.onChangeWalkDirectionState(GameStats.WalkState.FORWARD)
+		GameCore.onChangeScene(1) # Foi para a cena 1
+		GameCore.onChangeWalkDirectionState(GameCore.WalkState.FORWARD)
 		get_tree().change_scene_to_file("res://scenes/school/school1.tscn")
 
 
@@ -47,4 +47,4 @@ func _on_door_school_area_body_exited(_body):
 # Função chamada quando o player passa pela área de introdução do mapa
 # Neste momento, irá tocar um diálogo passando algumas dicas iniciais
 func _on_intro_dialogic_body_entered(body):
-	GameStats.openDialogic("res://assets/characters/scene-1-1.dtl", false)
+	GameCore.openDialogic("res://assets/characters/scene-1-1.dtl", false)

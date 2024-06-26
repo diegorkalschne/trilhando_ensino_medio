@@ -5,7 +5,7 @@ teacher1: Agora vocês estão mais por dentro de como o novo ensino médio funci
 teacher1: O próximo passo é se familiarizar com as disciplinas que vocês estudarão durante o ano. Por isso, eu peço a vocês para irem para a Sala 202, onde o professor Will falará sobre Iniciação Científica.
 leave --All--
 narrator: Vá até a sala 202 no segundo andar.
-do GameStats.onChangeCurrentMission("Vá até a sala 202 no segundo andar.")
-do GameStats.onChangePlayerInDialogic(false)
-do GameStats.onAddWhitelistDialogic("res://assets/characters/scene-8-1.dtl")
-do GameStats.addDialogicSeen("res://assets/characters/scene-7-5.dtl")
+do GameCore.onChangeCurrentMission("Vá até a sala 202 no segundo andar.")
+do GameCore.onChangePlayerInDialogic(false)
+do GameCore.onAddWhitelistDialogic("res://assets/characters/scene-8-1.dtl")
+do GameCore.addDialogicSeen("res://assets/characters/scene-7-5.dtl")

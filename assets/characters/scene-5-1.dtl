@@ -13,7 +13,7 @@ teacher1: Teremos várias atividades e projetos ao longo do ano que irão ajudá
 teacher1: Além de tudo, neste ano, os nossos alunos do ensino médio, iniciarão um novo modelo de ensino - o Novo Ensino Médio. Quando voltarem às salas, explicarei esse novo processo.
 leave --All--
 narrator: Você deve ir para a sala 102 no primeiro andar.
-do GameStats.onChangeCurrentMission("Vá para a sala de aula (sala 102)")
-do GameStats.onChangePlayerInDialogic(false)
-do GameStats.onAddWhitelistDialogic("res://assets/characters/scene-7-1.dtl")
-do GameStats.addDialogicSeen("res://assets/characters/scene-5-1.dtl")
+do GameCore.onChangeCurrentMission("Vá para a sala de aula (sala 102)")
+do GameCore.onChangePlayerInDialogic(false)
+do GameCore.onAddWhitelistDialogic("res://assets/characters/scene-7-1.dtl")
+do GameCore.addDialogicSeen("res://assets/characters/scene-5-1.dtl")

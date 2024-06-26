@@ -5,7 +5,7 @@ teacher1: Um conceito importante que vocês deverão conhecer são os Itinerári
 teacher1: Eles complementam a Base Nacional Comum Curricular (BNCC) e oferecem mais flexibilidade e personalização no aprendizado. Esses itinerários permitem que você se concentre nas áreas que mais gosta ou que são mais importantes para a carreira que deseja seguir, tornando o ensino mais interessante e relevante para cada aluno.
 narrator: A professora olha para você novamente e pergunta.
 # pergunta2
-do GameStats.onAddWhitelistQuestion("1")
-do GameStats.onAddWhitelistDialogic("res://assets/characters/scene-7-3.dtl")
+do GameCore.onAddWhitelistQuestion("1")
+do GameCore.onAddWhitelistDialogic("res://assets/characters/scene-7-3.dtl")
 do QuestionsGame.changeSceneQuiz("1", "res://assets/images/background_menu.jpg", "res://assets/characters/scene-7-3.dtl")
-do GameStats.addDialogicSeen("res://assets/characters/scene-7-2.dtl")
+do GameCore.addDialogicSeen("res://assets/characters/scene-7-2.dtl")

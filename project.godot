@@ -17,10 +17,10 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-GameStats="*res://scripts/global/game_stats.gd"
 QuestionsGame="*res://scripts/global/questions_game.gd"
 GameMovement="*res://scripts/global/game_movement.gd"
 GameUtils="*res://scripts/global/game_utils.gd"
+GameCore="*res://scripts/global/game_core.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 [dialogic]

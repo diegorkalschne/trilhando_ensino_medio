@@ -15,7 +15,7 @@ var bodyAreaEntered = {
 
 func _ready():
 	# Obtém o tamanho total da cena, em pixels
-	var scene_width = GameStats.sceneWidth($background)
+	var scene_width = GameCore.sceneWidth($background)
 
 	# Define até onde a câmera irá se movimentar no lado direito da tela	
 	player.setRigthCameraLimit(scene_width)
@@ -61,14 +61,14 @@ func _input(event):
 		if bodyAreaEntered["door_201"]:
 			GameUtils.showSnackbar("Não disponível")
 		elif bodyAreaEntered["door_202"]:
-			if GameStats.canOpenDialogic("res://assets/characters/scene-8-1.dtl"):
-				GameStats.openDialogic("res://assets/characters/scene-8-1.dtl")
-			elif GameStats.canOpenDialogic("res://assets/characters/scene-8-2.dtl"):
-				GameStats.openDialogic("res://assets/characters/scene-8-2.dtl")
-			elif GameStats.canOpenDialogic("res://assets/characters/scene-8-3.dtl"):
-				GameStats.openDialogic("res://assets/characters/scene-8-3.dtl")
-			elif GameStats.canOpenDialogic("res://assets/characters/scene-8-4.dtl"):
-				GameStats.openDialogic("res://assets/characters/scene-8-4.dtl")
+			if GameCore.canOpenDialogic("res://assets/characters/scene-8-1.dtl"):
+				GameCore.openDialogic("res://assets/characters/scene-8-1.dtl")
+			elif GameCore.canOpenDialogic("res://assets/characters/scene-8-2.dtl"):
+				GameCore.openDialogic("res://assets/characters/scene-8-2.dtl")
+			elif GameCore.canOpenDialogic("res://assets/characters/scene-8-3.dtl"):
+				GameCore.openDialogic("res://assets/characters/scene-8-3.dtl")
+			elif GameCore.canOpenDialogic("res://assets/characters/scene-8-4.dtl"):
+				GameCore.openDialogic("res://assets/characters/scene-8-4.dtl")
 			else:
 				GameUtils.showSnackbar("Não disponível")	
 		elif bodyAreaEntered["door_203"]:
@@ -79,9 +79,9 @@ func _input(event):
 			GameUtils.showSnackbar("Não disponível")
 		elif bodyAreaEntered["upstair"]:
 			GameMovement.setNextPositionPlayer(Vector2(899, 0))
-			GameStats.onChangeScene(4)
+			GameCore.onChangeScene(4)
 			get_tree().change_scene_to_file("res://scenes/school/school4.tscn")
 		elif bodyAreaEntered["downstair"]:
 			GameMovement.setNextPositionPlayer(Vector2(1116, 0))
-			GameStats.onChangeScene(2)
+			GameCore.onChangeScene(2)
 			get_tree().change_scene_to_file("res://scenes/school/school2.tscn")

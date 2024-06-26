@@ -9,7 +9,7 @@ teacher3: Além disso, serão realizadas atividades práticas, debates e projeto
 teacher3: Assim como o professor Will deve ter feito com vocês, eu também quero testar o conhecimento de vocês nessa área. Não se preocupem se errarem alguma questão, mas para os que não conhecem muito o assunto, eu vou dar uma breve explicação antes de cada pergunta.\
 teacher3: É fundamental analisar as relações de diferentes grupos, povos e sociedades com a natureza para identificar como essas relações impactam o meio ambiente e a sociedade. Isso inclui a proposição de alternativas que promovam uma consciência e ética socioambiental.
 # pergunta8
-do GameStats.onAddWhitelistDialogic("res://assets/characters/scene-9-2.dtl")
-do GameStats.onAddWhitelistQuestion("6")
+do GameCore.onAddWhitelistDialogic("res://assets/characters/scene-9-2.dtl")
+do GameCore.onAddWhitelistQuestion("6")
 do QuestionsGame.changeSceneQuiz("6", "res://assets/images/background_menu.jpg", "res://assets/characters/scene-9-2.dtl")
-do GameStats.addDialogicSeen("res://assets/characters/scene-9-1.dtl")
+do GameCore.addDialogicSeen("res://assets/characters/scene-9-1.dtl")

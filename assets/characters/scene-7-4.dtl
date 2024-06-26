@@ -9,7 +9,7 @@ teacher1: Elas permitem uma personalização maior do seu aprendizado, oferecend
 teacher1: Essas eletivas ajudam a tornar a escola mais interessante e relevante, aumentando seu engajamento e motivação. Elas também permitem que você se prepare melhor para o futuro, desenvolvendo habilidades e conhecimentos específicos que podem ser úteis para sua carreira ou estudos superiores.
 narrator: A professora olha para você novamente e pergunta.
 # pergunta4
-do GameStats.onAddWhitelistDialogic("res://assets/characters/scene-7-5.dtl")
-do GameStats.onAddWhitelistQuestion("18")
+do GameCore.onAddWhitelistDialogic("res://assets/characters/scene-7-5.dtl")
+do GameCore.onAddWhitelistQuestion("18")
 do QuestionsGame.changeSceneQuiz("18", "res://assets/images/background_menu.jpg", "res://assets/characters/scene-7-5.dtl")
-do GameStats.addDialogicSeen("res://assets/characters/scene-7-4.dtl")
+do GameCore.addDialogicSeen("res://assets/characters/scene-7-4.dtl")
