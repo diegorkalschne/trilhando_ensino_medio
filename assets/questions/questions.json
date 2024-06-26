@@ -10,7 +10,7 @@
 				"O novo ensino médio é um modelo estritamente baseado em disciplinas obrigatórias, sem espaço para escolhas e personalização curricular por parte dos alunos."
 			],
 			"correct_index": 0,
-			"area": ""
+			"area": "Geral"
 		}
 	],
 	"1": [
@@ -24,7 +24,7 @@
 				"Os Itinerários Formativos são atividades extracurriculares opcionais que os alunos podem escolher para diversificar seus interesses acadêmicos."
 			],
 			"correct_index": 0,
-			"area": ""
+			"area": "Geral"
 		}
 	],
 	"2": [
@@ -38,7 +38,7 @@
 				"As Unidades Curriculares Eletivas são cursos que não contribuem para o número total de créditos necessários para a conclusão do curso."
 			],
 			"correct_index": 0,
-			"area": "Eletivas"
+			"area": "Geral"
 		}
 	],
 	"3": [
@@ -52,7 +52,7 @@
 				"Hipóteses são métodos estatísticos usados para analisar dados."
 			],
 			"correct_index": 0,
-			"area": ""
+			"area": "Ciências da Natureza"
 		}
 	],
 	"4": [
@@ -66,7 +66,7 @@
 				"Apenas observações em campo."
 			],
 			"correct_index": 0,
-			"area": ""
+			"area": "Ciências da Natureza"
 		}
 	],
 	"5": [
@@ -80,7 +80,7 @@
 				"Permite que os pesquisadores ignorem dados irrelevantes e apenas apresentem o que confirma suas hipóteses."
 			],
 			"correct_index": 0,
-			"area": ""
+			"area": "Ciências da Natureza"
 		}
 	],
 	"6": [
@@ -94,7 +94,7 @@
 				"Para estudar as políticas internacionais de direitos humanos."
 			],
 			"correct_index": 0,
-			"area": ""
+			"area": "Ciências Humanas"
 		}
 	],
 	"7": [
@@ -108,7 +108,7 @@
 				"Entender as teorias da evolução humana."
 			],
 			"correct_index": 0,
-			"area": ""
+			"area": "Ciências Humanas"
 		}
 	],
 	"8": [
@@ -122,7 +122,7 @@
 				"Estudar a evolução das espécies na natureza."
 			],
 			"correct_index": 0,
-			"area": ""
+			"area": "Ciências Humanas"
 		}
 	],
 	"9": [
@@ -136,7 +136,7 @@
 				"Para estudar as teorias da física quântica."
 			],
 			"correct_index": 0,
-			"area": ""
+			"area": "Ciências Humanas"
 		}
 	],
 	"10": [
@@ -150,7 +150,7 @@
 				"Para explorar novas técnicas de produção de energia nuclear."
 			],
 			"correct_index": 0,
-			"area": ""
+			"area": "Ciências Humanas"
 		}
 	],
 	"11": [
@@ -164,7 +164,7 @@
 				"Para entender as teorias da psicologia comportamental."
 			],
 			"correct_index": 0,
-			"area": ""
+			"area": "Ciências Humanas"
 		}
 	],
 	"12": [
@@ -178,7 +178,7 @@
 				"Para explorar a evolução das técnicas de construção de pontes."
 			],
 			"correct_index": 0,
-			"area": ""
+			"area": "Ciências Humanas"
 		}
 	],
 	"13": [
@@ -192,7 +192,7 @@
 				"Para explorar as técnicas de construção de arranha-céus."
 			],
 			"correct_index": 0,
-			"area": ""
+			"area": "Ciências Humanas"
 		}
 	],
 	"14": [
@@ -206,7 +206,7 @@
 				"Explorar as teorias de expansão do universo na astronomia."
 			],
 			"correct_index": 0,
-			"area": ""
+			"area": "Ciências Humanas"
 		}
 	],
 	"15": [
@@ -220,7 +220,7 @@
 				"Para estudar a evolução das linguagens de programação."
 			],
 			"correct_index": 0,
-			"area": ""
+			"area": "Ciências da Natureza"
 		}
 	],
 	"16": [
@@ -234,7 +234,7 @@
 				"Para explorar novas formas de colonização espacial."
 			],
 			"correct_index": 0,
-			"area": ""
+			"area": "Ciências da Natureza"
 		}
 	],
 	"17": [
@@ -248,7 +248,7 @@
 				"Para estudar a evolução das espécies marinhas."
 			],
 			"correct_index": 0,
-			"area": ""
+			"area": "Ciências da Natureza"
 		}
 	],
 	"18": [
@@ -262,7 +262,7 @@
 				"Mais uma opção 2"
 			],
 			"correct_index": 0,
-			"area": ""
+			"area": "Geral"
 		}
 	]
 }
