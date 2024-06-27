@@ -13,6 +13,8 @@ func _ready():
 	if (!GameCore.hasGameSaved()):
 		$canvas/carregar_jogo.visible = false
 		$canvas/comecar.grab_focus()
+	
+	animatedLogo()
 
 # Função para ação de "Começar" o jogo
 func _on_comecar_pressed():
@@ -51,3 +53,11 @@ func _on_carregar_jogo_pressed():
 # Ir para a tela de créditos
 func _on_creditos_pressed():
 	get_tree().change_scene_to_file("res://scenes/creditos.tscn")
+
+func animatedLogo():
+	var tween = get_tree().create_tween().bind_node(self).set_loops().set_trans(Tween.TRANS_LINEAR)
+	
+	var sprite = $canvas/logo
+	
+	tween.tween_property(sprite, "scale", Vector2(1, 1), 1).set_trans(Tween.TRANS_LINEAR)
+	tween.tween_property(sprite, "scale", Vector2(1.1, 1.1), 1).set_trans(Tween.TRANS_LINEAR)
