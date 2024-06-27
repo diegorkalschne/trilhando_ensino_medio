@@ -174,8 +174,23 @@ func getPontuacaoAllAreas():
 
 # Função para obter a melhor pontuação do jogador, conforme a área
 func getMaxPontuacao():
-	var melhor_area = max(_pontuacao, _pontuacao.get)
-	return melhor_area
+	var max_key = ""
+	var max_value = -1000000
+	
+	for key in _pontuacao.keys():
+		if key.to_upper() == "GERAL":
+			continue
+		
+		var value = _pontuacao[key]
+		if value > max_value:
+			max_value = value
+			max_key = key
+			
+	return max_key
+
+# Função para ir para a tela de resultado do jogador
+func goToSceneResultPlayer():
+	get_tree().change_scene_to_file("res://scenes/result_player.tscn")
 
 # Função para verificar se é possível visualizar ou não um dialogic
 func canOpenDialogic(dialogic: String):

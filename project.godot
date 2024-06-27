@@ -22,6 +22,7 @@ QuestionsGame="*res://scripts/global/questions_game.gd"
 GameMovement="*res://scripts/global/game_movement.gd"
 GameUtils="*res://scripts/global/game_utils.gd"
 GameCore="*res://scripts/global/game_core.gd"
+GameMusic="*res://scripts/global/game_music.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 [dialogic]

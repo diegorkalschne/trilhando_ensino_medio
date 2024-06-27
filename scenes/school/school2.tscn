@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/school2.gd" id="1_xdl8o"]
 [ext_resource type="Texture2D" uid="uid://be383xlogsrdc" path="res://assets/images/inside_background.png" id="2_8c1r8"]
 [ext_resource type="PackedScene" uid="uid://pttkd3w45ndi" path="res://scenes/player.tscn" id="2_801jt"]
-[ext_resource type="Texture2D" uid="uid://cu4sgvxqij6q7" path="res://assets/images/inside_background_windows.png" id="3_oapar"]
+[ext_resource type="Texture2D" uid="uid://jqjsir1wqdh1" path="res://assets/images/inside_background_windows.png" id="3_oapar"]
 [ext_resource type="Shader" path="res://scenes/intro_school.gdshader" id="4_qex3h"]
 [ext_resource type="Texture2D" uid="uid://bmg3b5lxh8pwi" path="res://assets/images/paralax_cloud_formation.png" id="5_pf8sq"]
 
@@ -9843,5 +9843,23 @@ vertical_alignment = 1
 [node name="left_edge_collision" type="CollisionShape2D" parent="left_area"]
 position = Vector2(-9, 322)
 shape = SubResource("RectangleShape2D_37ufj")
+
+[node name="marker_101" type="Marker2D" parent="."]
+position = Vector2(320, 560)
+
+[node name="marker_102" type="Marker2D" parent="."]
+position = Vector2(592, 560)
+
+[node name="marker_103" type="Marker2D" parent="."]
+position = Vector2(936, 552)
+
+[node name="marker_104" type="Marker2D" parent="."]
+position = Vector2(1512, 560)
+
+[node name="marker_bathroom_boy" type="Marker2D" parent="."]
+position = Vector2(1784, 552)
+
+[node name="marker_bathroom_girl" type="Marker2D" parent="."]
+position = Vector2(1816, 552)
 
 [connection signal="body_entered" from="left_area" to="." method="_on_left_area_body_entered"]

@@ -6466,42 +6466,51 @@ layer_0/tile_data = PackedInt32Array(-2818049, 1, 0, -2752513, 1, 1, -2686977, 1
 
 [node name="carregar_jogo" type="Button" parent="canvas"]
 offset_left = 10.0
-offset_top = 444.0
+offset_top = 412.0
 offset_right = 310.0
-offset_bottom = 475.0
+offset_bottom = 443.0
 text = "Carregar Jogo"
 
 [node name="comecar" type="Button" parent="canvas"]
 offset_left = 10.0
-offset_top = 479.0
+offset_top = 447.0
 offset_right = 310.0
-offset_bottom = 510.0
+offset_bottom = 478.0
 tooltip_text = "Começar"
 text = "Começar"
 language = "pt_BR"
 
 [node name="ajuda" type="Button" parent="canvas"]
 offset_left = 10.0
-offset_top = 514.0
+offset_top = 482.0
 offset_right = 310.0
-offset_bottom = 545.0
+offset_bottom = 513.0
 tooltip_text = "Ajuda"
 text = "Ajuda"
 language = "pt_BR"
 
+[node name="creditos" type="Button" parent="canvas"]
+offset_left = 10.0
+offset_top = 516.0
+offset_right = 310.0
+offset_bottom = 547.0
+tooltip_text = "Ajuda"
+text = "Créditos"
+language = "pt_BR"
+
 [node name="sair" type="Button" parent="canvas"]
 offset_left = 10.0
-offset_top = 549.0
+offset_top = 551.0
 offset_right = 310.0
-offset_bottom = 580.0
+offset_bottom = 582.0
 tooltip_text = "Sair"
 text = "Sair"
 language = "pt_BR"
 
 [node name="player" parent="canvas" instance=ExtResource("3_hcf6x")]
-position = Vector2(10, 444)
 
 [connection signal="pressed" from="canvas/carregar_jogo" to="." method="_on_carregar_jogo_pressed"]
 [connection signal="pressed" from="canvas/comecar" to="." method="_on_comecar_pressed"]
 [connection signal="pressed" from="canvas/ajuda" to="." method="_on_ajuda_pressed"]
+[connection signal="pressed" from="canvas/creditos" to="." method="_on_creditos_pressed"]
 [connection signal="pressed" from="canvas/sair" to="." method="_on_sair_pressed"]

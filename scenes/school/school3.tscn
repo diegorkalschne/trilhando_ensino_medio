@@ -9843,3 +9843,18 @@ text = "Pressione \"E\" para entrar"
 label_settings = SubResource("LabelSettings_pfyir")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="marker_201" type="Marker2D" parent="."]
+position = Vector2(144, 552)
+
+[node name="marker_202" type="Marker2D" parent="."]
+position = Vector2(424, 544)
+
+[node name="marker_203" type="Marker2D" parent="."]
+position = Vector2(736, 544)
+
+[node name="marker_204" type="Marker2D" parent="."]
+position = Vector2(1528, 560)
+
+[node name="marker_205" type="Marker2D" parent="."]
+position = Vector2(1856, 552)

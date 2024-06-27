@@ -1,6 +1,8 @@
 extends VBoxContainer
 
 func _ready():
+	GameMusic.playMusicMenu()
+	
 	$canvas/player.visible = false # Esconde o player. É utilizado apenas para setar as sprites do mesmo
 	$canvas/player.disableCamera() # Desabilita a câmera do player, no menu
 	$canvas/player/canvas/pause_game.can_pause_game = false # Não pode abrir o menu
@@ -27,10 +29,16 @@ func _on_sair_pressed():
 
 # Função para recomeçar o jogo, da última cena carregada
 func _on_carregar_jogo_pressed():
+	GameMusic.stopMusicMenu()
+	
 	var current_scene = GameCore.getCurrentScene()
 	
 	# Define os sprites do personagem
 	$canvas/player.setTextureSprite()
+	
+	# Redefinição de variáveis
+	GameCore.onChangePlayerInDialogic(false)
+	QuestionsGame.changeInQuizScene(false)
 	
 	# Volta cenas da escola caso seja maior que 0
 	if (current_scene > 0):
@@ -39,3 +47,7 @@ func _on_carregar_jogo_pressed():
 	elif (current_scene == 0):
 		# Cena zero volta para a introdução da escola (parte de fora)
 		get_tree().change_scene_to_file("res://scenes/intro_school.tscn");
+
+# Ir para a tela de créditos
+func _on_creditos_pressed():
+	get_tree().change_scene_to_file("res://scenes/creditos.tscn")

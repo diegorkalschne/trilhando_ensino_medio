@@ -14,6 +14,8 @@ var bodyAreaEntered = {
 }
 
 func _ready():
+	GameMusic.playMusic()
+	
 	# Obtém o tamanho total da cena, em pixels
 	var scene_width = GameCore.sceneWidth($background)
 
@@ -41,7 +43,6 @@ func _ready():
 				
 			area.body_entered.connect(onBodyEntered)
 			area.body_exited.connect(onBodyExited)
-
 
 # Marca todas as labels como false
 	for label in bodyAreaEntered:
@@ -81,14 +82,20 @@ func _on_area_exited(area: Area2D):
 func _input(event):
 	# player pressionou "E" ao interagir com uma das portas
 	if event.is_action_pressed("interact"):
+		if GameCore.getPlayerInDialogic():
+			return
+		
 		if bodyAreaEntered["door_301"]:
-			GameUtils.showSnackbar("Não disponível")
+			GameUtils.showSnackbarWithMarker("Não disponível", $marker_301)
 		elif bodyAreaEntered["door_302"]:
-			GameUtils.showSnackbar("Não disponível")
+			GameUtils.showSnackbarWithMarker("Não disponível", $marker_302)
 		elif bodyAreaEntered["door_303"]:
-			GameCore.openDialogic("res://assets/characters/scene-5-1.dtl")
+			if GameCore.canOpenDialogic("res://assets/characters/scene-5-1.dtl"):
+				GameCore.openDialogic("res://assets/characters/scene-5-1.dtl")
+			else:
+				GameUtils.showSnackbarWithMarker("Não disponível", $marker_303)
 		elif bodyAreaEntered["door_304"]:
-			GameUtils.showSnackbar("Não disponível")
+			GameUtils.showSnackbarWithMarker("Não disponível", $marker_304)
 		elif bodyAreaEntered["door_305"]:
 			if GameCore.canOpenDialogic("res://assets/characters/scene-9-1.dtl"):
 				GameCore.openDialogic("res://assets/characters/scene-9-1.dtl")
@@ -99,9 +106,9 @@ func _input(event):
 			elif GameCore.canOpenDialogic("res://assets/characters/scene-9-4.dtl"):
 				GameCore.openDialogic("res://assets/characters/scene-9-4.dtl")
 			else:
-				GameUtils.showSnackbar("Não disponível")	
+				GameUtils.showSnackbarWithMarker("Não disponível", $marker_305)
 		elif bodyAreaEntered["door_306"]:
-			GameUtils.showSnackbar("Não disponível")
+			GameUtils.showSnackbarWithMarker("Não disponível", $marker_306)
 		elif bodyAreaEntered["downstair"]:
 			GameMovement.setNextPositionPlayer(Vector2(833, 0))
 			GameCore.onChangeScene(3)

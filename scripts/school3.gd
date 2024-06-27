@@ -14,6 +14,8 @@ var bodyAreaEntered = {
 }
 
 func _ready():
+	GameMusic.playMusic()
+	
 	# Obtém o tamanho total da cena, em pixels
 	var scene_width = GameCore.sceneWidth($background)
 
@@ -58,8 +60,11 @@ func _on_area_exited(area: Area2D):
 func _input(event):
 	# player pressionou "E" ao interagir com uma das portas
 	if event.is_action_pressed("interact"):
+		if GameCore.getPlayerInDialogic():
+			return
+		
 		if bodyAreaEntered["door_201"]:
-			GameUtils.showSnackbar("Não disponível")
+			GameUtils.showSnackbarWithMarker("Não disponível", $marker_201)
 		elif bodyAreaEntered["door_202"]:
 			if GameCore.canOpenDialogic("res://assets/characters/scene-8-1.dtl"):
 				GameCore.openDialogic("res://assets/characters/scene-8-1.dtl")
@@ -70,13 +75,13 @@ func _input(event):
 			elif GameCore.canOpenDialogic("res://assets/characters/scene-8-4.dtl"):
 				GameCore.openDialogic("res://assets/characters/scene-8-4.dtl")
 			else:
-				GameUtils.showSnackbar("Não disponível")	
+				GameUtils.showSnackbarWithMarker("Não disponível", $marker_202)
 		elif bodyAreaEntered["door_203"]:
-			GameUtils.showSnackbar("Não disponível")
+			GameUtils.showSnackbarWithMarker("Não disponível", $marker_203)
 		elif bodyAreaEntered["door_204"]:
-			GameUtils.showSnackbar("Não disponível")
+			GameUtils.showSnackbarWithMarker("Não disponível", $marker_204)
 		elif bodyAreaEntered["door_205"]:
-			GameUtils.showSnackbar("Não disponível")
+			GameUtils.showSnackbarWithMarker("Não disponível", $marker_205)
 		elif bodyAreaEntered["upstair"]:
 			GameMovement.setNextPositionPlayer(Vector2(899, 0))
 			GameCore.onChangeScene(4)

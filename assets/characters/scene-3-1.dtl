@@ -6,7 +6,6 @@ narrator: Você entra na sala
 - Bom dia!
 - Olá!
 join chairwoman 1
-[wait time="1.5"]
 chairwoman: Olá {GameCore.getNamePlayer()}, bem-vindo à Escola.
 chairwoman: Sabemos que há muitas perguntas, mas logo faremos uma apresentação no auditório localizado na Sala 303, no terceiro andar.
 chairwoman: Após, você poderá ir para a Sala 102, onde conversaremos com os alunos do 1º ano.

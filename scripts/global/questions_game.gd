@@ -70,7 +70,6 @@ func changeSceneQuiz(question_id: String, background_path: String, dialogicCallb
 	
 	var scene = load("res://scenes/quiz.tscn").instantiate()
 	get_tree().root.add_child(scene)
-	#get_tree().current_scene = scene
 	changeInQuizScene(true) # Marca que está na cena do quiz
 	
 	if scene.has_method("initQuiz"):

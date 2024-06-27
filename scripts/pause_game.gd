@@ -27,6 +27,10 @@ func _on_container_visibility_changed():
 func _input(event):
 	# Player pressionou "esc" para pausar o jogo
 	if event.is_action_pressed("pause"):
+		# Menu não é aberto se está em diálogo ou no quiz
+		if GameCore.getPlayerInDialogic() or QuestionsGame.getInQuizScene():
+			return
+		
 		onPauseGame()
 
 func onPauseGame():

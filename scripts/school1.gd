@@ -3,6 +3,8 @@ extends Node2D
 @onready var player = $player
 
 func _ready():
+	GameMusic.playMusic()
+	
 	# Obtém o tamanho total da cena, em pixels
 	var scene_width = GameCore.sceneWidth($background)
 

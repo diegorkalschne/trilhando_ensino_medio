@@ -1,5 +1,4 @@
 # Essa cena ocorre assim que entrar na escola pela primeira vez
-[background arg="res://assets/images/classroom_background.jpg" fade="0.0"]
 narrator: Você é novo na escola e está entrando no Novo Ensino Médio pela primeira vez. Sem saber onde fica a sua sala de aula, você visualiza a sala da diretora e decide ir até lá solicitar informações.
 narrator: Ande até achar a sala da diretora, número 101.
 do GameCore.onChangeCurrentMission("Vá até a sala da diretora (sala 101)")

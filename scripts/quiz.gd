@@ -127,7 +127,10 @@ func _on_correct_answer(button: Button, question_id: String):
 	
 	GameCore.addQuestionResolved(question_id)
 	
-	_show_pontos(1, false) # Jogador ganhou pontos
+	# Pontuação que o jogador ganha por acertar uma questão
+	var pontuacao_ganha: int = 5
+	
+	_show_pontos(pontuacao_ganha, false) # Jogador ganhou pontos
 	
 	await get_tree().create_timer(2).timeout # Delay de 2 segundos
 	

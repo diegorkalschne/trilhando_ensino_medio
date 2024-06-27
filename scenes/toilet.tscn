@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cnaksl61e864r"]
+
+[ext_resource type="Script" path="res://scripts/toilet.gd" id="1_mclfy"]
+[ext_resource type="AudioStream" uid="uid://dfe6hdx5v3nhs" path="res://songs/effects/toilet_flush.mp3" id="2_3p3l8"]
+
+[node name="toilet" type="Node2D"]
+script = ExtResource("1_mclfy")
+
+[node name="canvas" type="CanvasLayer" parent="."]
+
+[node name="color" type="ColorRect" parent="canvas"]
+offset_left = -40.0
+offset_top = -24.0
+offset_right = 1088.0
+offset_bottom = 632.0
+color = Color(0, 0, 0, 1)
+
+[node name="audio" type="AudioStreamPlayer2D" parent="canvas"]
+stream = ExtResource("2_3p3l8")

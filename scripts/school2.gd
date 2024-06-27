@@ -14,6 +14,8 @@ var bodyAreaEntered = {
 }
 
 func _ready():
+	GameMusic.playMusic()
+	
 	# Obtém o tamanho total da cena, em pixels
 	var scene_width = GameCore.sceneWidth($background)
 
@@ -42,7 +44,7 @@ func _ready():
 			area.body_entered.connect(onBodyEntered)
 			area.body_exited.connect(onBodyExited)
 			
-		
+
 # Quando uma das áreas foi acessada
 func _on_area_entered(area: Area2D):
 	bodyAreaEntered[area.name] = true
@@ -59,8 +61,14 @@ func _on_area_exited(area: Area2D):
 func _input(event):
 	# player pressionou "E" ao interagir com uma das portas
 	if event.is_action_pressed("interact"):
+		if GameCore.getPlayerInDialogic():
+			return
+		
 		if bodyAreaEntered["door_101"]:
-			GameCore.openDialogic("res://assets/characters/scene-3-1.dtl")
+			if GameCore.canOpenDialogic("res://assets/characters/scene-3-1.dtl"):
+				GameCore.openDialogic("res://assets/characters/scene-3-1.dtl")
+			else:
+				GameUtils.showSnackbarWithMarker("Não disponível", $marker_101)
 		elif bodyAreaEntered["door_102"]:
 			# Cena 7
 			if GameCore.canOpenDialogic("res://assets/characters/scene-7-1.dtl"):
@@ -89,9 +97,9 @@ func _input(event):
 			elif GameCore.canOpenDialogic("res://assets/characters/scene-11-7.dtl"):
 				GameCore.openDialogic("res://assets/characters/scene-11-7.dtl")
 			else:
-				GameUtils.showSnackbar("Não disponível")
+				GameUtils.showSnackbarWithMarker("Não disponível", $marker_102)
 		elif bodyAreaEntered["door_103"]:
-			GameUtils.showSnackbar("Não disponível")
+			GameUtils.showSnackbarWithMarker("Não disponível", $marker_103)
 		elif bodyAreaEntered["door_104"]:
 			if GameCore.canOpenDialogic("res://assets/characters/scene-10-1.dtl"):
 				GameCore.openDialogic("res://assets/characters/scene-10-1.dtl")
@@ -102,11 +110,17 @@ func _input(event):
 			elif GameCore.canOpenDialogic("res://assets/characters/scene-10-4.dtl"):
 				GameCore.openDialogic("res://assets/characters/scene-10-4.dtl")
 			else:
-				GameUtils.showSnackbar("Não disponível")
+				GameUtils.showSnackbarWithMarker("Não disponível", $marker_104)
 		elif bodyAreaEntered["bathroom_boy"]:
-			GameMovement.setNextPositionPlayer(Vector2(1641, 0))
+			if GameCore.getSelectedPlayer().find("boy") != -1:
+				goToToilet()
+			else:
+				GameUtils.showSnackbarWithMarker("Banheiro masculino!", $marker_bathroom_boy)
 		elif bodyAreaEntered["bathroom_girl"]:
-			GameMovement.setNextPositionPlayer(Vector2(1790, 0))
+			if GameCore.getSelectedPlayer().find("girl") != -1:
+				goToToilet()
+			else:
+				GameUtils.showSnackbarWithMarker("Banheiro feminino!", $marker_bathroom_girl)
 		elif bodyAreaEntered["upstair"]:
 			GameMovement.setNextPositionPlayer(Vector2(1141, 0))
 			GameCore.onChangeScene(3)
@@ -116,3 +130,9 @@ func _input(event):
 func _on_left_area_body_entered(body):
 	GameCore.onChangeScene(1);
 	get_tree().change_scene_to_file("res://scenes/school/school1.tscn");
+
+# Função para ir ao "banheiro"
+func goToToilet():
+	var scene = load("res://scenes/toilet.tscn").instantiate()
+	get_tree().root.add_child(scene)
+	QuestionsGame.changeInQuizScene(true)
