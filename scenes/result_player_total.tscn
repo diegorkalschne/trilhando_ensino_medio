@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://cgfgh6m3jdxja"]
+[gd_scene load_steps=9 format=3 uid="uid://cgfgh6m3jdxja"]
 
 [ext_resource type="Script" path="res://scripts/result_player_total.gd" id="1_ruvua"]
 [ext_resource type="Texture2D" uid="uid://c2rq6np2nrxpb" path="res://assets/images/background_menu.jpg" id="2_cio28"]
+[ext_resource type="Texture2D" uid="uid://d14ujtgeg0kto" path="res://assets/images/logo.png" id="3_egupb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ixhpv"]
 texture = ExtResource("2_cio28")
@@ -6477,9 +6478,9 @@ color = Color(0.133333, 0.133333, 0.133333, 0.929412)
 
 [node name="label_melhor_area" type="Label" parent="canvas"]
 offset_left = 40.0
-offset_top = 110.0
+offset_top = 190.0
 offset_right = 1016.0
-offset_bottom = 184.0
+offset_bottom = 264.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 16
 theme_override_styles/normal = SubResource("StyleBoxFlat_6ef5t")
@@ -6490,9 +6491,9 @@ vertical_alignment = 1
 
 [node name="container" type="VBoxContainer" parent="canvas"]
 offset_left = 32.0
-offset_top = 216.0
+offset_top = 283.0
 offset_right = 1024.0
-offset_bottom = 256.0
+offset_bottom = 323.0
 
 [node name="finalizar_button" type="Button" parent="canvas"]
 offset_left = 312.0
@@ -6501,5 +6502,10 @@ offset_right = 744.0
 offset_bottom = 541.0
 theme = SubResource("Theme_ctbib")
 text = "Finalizar"
+
+[node name="logo" type="Sprite2D" parent="canvas"]
+position = Vector2(552, 90)
+scale = Vector2(0.641111, 0.563694)
+texture = ExtResource("3_egupb")
 
 [connection signal="pressed" from="canvas/finalizar_button" to="." method="_on_finalizar_button_pressed"]

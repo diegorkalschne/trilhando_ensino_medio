@@ -55,5 +55,5 @@ func resetPause():
 func _on_voltar_main_menu_button_pressed():
 	game_paused = false
 	Engine.time_scale = 1
-	get_tree().change_scene_to_file("res://scenes/menu.tscn")
 	GameMusic.pauseMusic()
+	get_tree().change_scene_to_file("res://scenes/menu.tscn")

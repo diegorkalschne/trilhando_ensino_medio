@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://cejm6lp61t7hj"]
+[gd_scene load_steps=8 format=3 uid="uid://cejm6lp61t7hj"]
 
 [ext_resource type="Script" path="res://scripts/ajuda.gd" id="1_nx4xa"]
 [ext_resource type="Texture2D" uid="uid://c2rq6np2nrxpb" path="res://assets/images/background_menu.jpg" id="2_rk3j3"]
+[ext_resource type="Texture2D" uid="uid://d14ujtgeg0kto" path="res://assets/images/logo.png" id="3_bym84"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eixck"]
 texture = ExtResource("2_rk3j3")
@@ -6509,5 +6510,10 @@ da Unijuí, pelos os alunos:
 O desenvolvimento do jogo contou também com orientação da professora Me. Simone Lehnhart Vargas."
 label_settings = SubResource("LabelSettings_md4bw")
 vertical_alignment = 1
+
+[node name="logo" type="Sprite2D" parent="canvas"]
+position = Vector2(912, 480)
+scale = Vector2(0.65, 0.595542)
+texture = ExtResource("3_bym84")
 
 [connection signal="pressed" from="canvas/button_voltar" to="." method="_on_button_voltar_pressed"]
