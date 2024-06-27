@@ -85,6 +85,11 @@ func playerCanSeeDialogic(dialogic):
 	if _whitelist_dialogics.size() == 0:
 		return false
 	
+	# Caso o diálogo não tenha sido aberto ainda, ele pode estar na lista mesmo assim e não ser o último elemento
+	# Esses casos acontecem quando o jogador sai do jogo no meio de um quiz
+	if !dialogicHasOpened(dialogic):
+		return _whitelist_dialogics.has(dialogic)
+	
 	return _whitelist_dialogics[-1] == dialogic
 
 # Adiciona uma nova questão que estará disponível para o player fazer

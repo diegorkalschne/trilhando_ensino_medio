@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Trilhando o Ensino Médio"
-config/description="O jogo \"Trilhando o Ensino Médio\" busca mostrar, de forma lúdica, a vida de um estudade durante o primeiro ano do Novo Ensino Médio brasileiro, explorando conceitos que abordam o novo formato da educação brasileira."
+config/description="O jogo \"Trilhando o Ensino Médio\" busca mostrar, de forma lúdica, a vida de um estudante durante o primeiro ano do Novo Ensino Médio brasileiro, explorando conceitos que abordam o novo formato da educação brasileira."
 config/version="1.0.0"
 run/main_scene="res://scenes/menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")

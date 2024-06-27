@@ -1,3 +1,4 @@
+do GameCore.addDialogicSeen("res://assets/characters/scene-9-2.dtl")
 [background arg="res://assets/images/classroom_background.jpg" fade="0.0"]
 join teacher3 1
 teacher3: Exato!
@@ -6,4 +7,3 @@ teacher3: No currículo de "Pré-Itinerário de Ciências Humanas e Sociais", um
 do GameCore.onAddWhitelistDialogic("res://assets/characters/scene-9-4.dtl")
 do GameCore.onAddWhitelistQuestion("8")
 do QuestionsGame.changeSceneQuiz("8", "res://assets/images/background_menu.jpg", "res://assets/characters/scene-9-4.dtl")
-do GameCore.addDialogicSeen("res://assets/characters/scene-9-3.dtl")

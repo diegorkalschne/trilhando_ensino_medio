@@ -12,5 +12,4 @@ teacher2: Ela serve como um ponto de partida para a investigação, ajudando a d
 do GameCore.onAddWhitelistDialogic("res://assets/characters/scene-8-2.dtl")
 do GameCore.onAddWhitelistQuestion("3")
 do QuestionsGame.changeSceneQuiz("3", "res://assets/images/background_menu.jpg", "res://assets/characters/scene-8-2.dtl")
-do GameCore.addDialogicSeen("res://assets/characters/scene-8-1.dtl")
 do GameMusic.pauseMusic()

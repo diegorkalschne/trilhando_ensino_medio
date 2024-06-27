@@ -12,5 +12,4 @@ teacher4: Analisar os impactos sociais e socioambientais é crucial no contexto 
 do GameCore.onAddWhitelistDialogic("res://assets/characters/scene-10-2.dtl")
 do GameCore.onAddWhitelistQuestion("9")
 do QuestionsGame.changeSceneQuiz("9", "res://assets/images/background_menu.jpg", "res://assets/characters/scene-10-2.dtl")
-do GameCore.addDialogicSeen("res://assets/characters/scene-10-1.dtl")
 do GameMusic.pauseMusic()

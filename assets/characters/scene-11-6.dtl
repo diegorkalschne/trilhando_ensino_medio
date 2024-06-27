@@ -1,3 +1,4 @@
+do GameCore.addDialogicSeen("res://assets/characters/scene-11-5.dtl")
 [background arg="res://assets/images/classroom_background.jpg" fade="0.0"]
 join teacher1 1
 teacher1: Isso!
@@ -7,4 +8,3 @@ teacher1: Isso inclui a análise de como os recursos são utilizados, renovados 
 do GameCore.onAddWhitelistDialogic("res://assets/characters/scene-11-7.dtl")
 do GameCore.onAddWhitelistQuestion("17")
 do QuestionsGame.changeSceneQuiz("17", "res://assets/images/background_menu.jpg", "res://assets/characters/scene-11-7.dtl")
-do GameCore.addDialogicSeen("res://assets/characters/scene-11-6.dtl")

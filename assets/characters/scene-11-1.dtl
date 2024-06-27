@@ -9,5 +9,4 @@ teacher1: Essa análise ajuda na avaliação da eficácia das políticas existen
 do GameCore.onAddWhitelistDialogic("res://assets/characters/scene-11-2.dtl")
 do GameCore.onAddWhitelistQuestion("12")
 do QuestionsGame.changeSceneQuiz("12", "res://assets/images/background_menu.jpg", "res://assets/characters/scene-11-2.dtl")
-do GameCore.addDialogicSeen("res://assets/characters/scene-11-1.dtl")
 do GameMusic.pauseMusic()

@@ -5,7 +5,7 @@ join teacher1 1
 teacher1: Bom dia, pessoal! Já me apresentei a vocês no auditório.
 teacher1: Eu sei que muitos têm dúvidas sobre como funcionará essa nova etapa da vida escolar. Todos vocês estão entrando pela primeira vez no primeiro ano do Ensino Médio.
 teacher1: Contudo, como a maioria já deve saber que, nos últimos anos, a educação brasileira tem passado por diversas mudanças, principalmente no Ensino Médio. Vocês estão no que é chamado de Novo Ensino Médio. Resumidamente, essa reforma na educação visa tornar o ensino mais interessante para os alunos.
-teacher1: Ocorreram algumas mudanças importantes em comparação com o modelo antigo, que foi dividido em duas partes: a Base Nacional Comum Curricular (BNCC), que inclui disciplinas obrigatórias como Português e Matemática, e os Itinerários Formativos, onde os alunos podem escolher áreas de interesse como Ciências, Matemática, Linguagens, Humanas ou Formação Técnica e Profissional.
+teacher1: Ocorreram algumas mudanças importantes em comparação com o modelo antigo, que foi dividido em duas partes\: a Base Nacional Comum Curricular (BNCC), que inclui disciplinas obrigatórias como Português e Matemática, e os Itinerários Formativos, onde os alunos podem escolher áreas de interesse como Ciências, Matemática, Linguagens, Humanas ou Formação Técnica e Profissional.
 teacher1: A ideia é tornar o ensino mais atraente e relevante para os alunos, permitindo a personalização do aprendizado conforme os interesses e planos futuros de cada um. Além disso, o Novo Ensino Médio inclui o Projeto de Vida, que ajuda os alunos a planejarem suas carreiras e a identificarem suas paixões.
 teacher1: Assim, a escola se torna um espaço não só de aprendizado teórico, mas também de preparação prática para o mercado de trabalho ou ensino superior, incentivando os estudantes a explorarem suas habilidades e interesses de forma mais direcionada.
 teacher1: Pessoal, fui clara? Por favor, caso alguém não tenha entendido, diga.
@@ -16,5 +16,4 @@ teacher1: {GameCore.getNamePlayer()} entendeu a diferença do antigo para o Novo
 do GameCore.onAddWhitelistQuestion("0")
 do GameCore.onAddWhitelistDialogic("res://assets/characters/scene-7-2.dtl")
 do QuestionsGame.changeSceneQuiz("0", "res://assets/images/background_menu.jpg", "res://assets/characters/scene-7-2.dtl")
-do GameCore.addDialogicSeen("res://assets/characters/scene-7-1.dtl")
 do GameMusic.pauseMusic()

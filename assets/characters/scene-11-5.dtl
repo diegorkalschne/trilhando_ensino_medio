@@ -1,3 +1,4 @@
+do GameCore.addDialogicSeen("res://assets/characters/scene-11-4.dtl")
 [background arg="res://assets/images/classroom_background.jpg" fade="0.0"]
 join teacher1 1
 teacher1: Certo!
@@ -7,4 +8,3 @@ teacher1: Isso envolve a análise de como as atividades humanas impactam os ecos
 do GameCore.onAddWhitelistDialogic("res://assets/characters/scene-11-6.dtl")
 do GameCore.onAddWhitelistQuestion("16")
 do QuestionsGame.changeSceneQuiz("16", "res://assets/images/background_menu.jpg", "res://assets/characters/scene-11-6.dtl")
-do GameCore.addDialogicSeen("res://assets/characters/scene-11-5.dtl")

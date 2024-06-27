@@ -1,3 +1,4 @@
+do GameCore.addDialogicSeen("res://assets/characters/scene-8-2.dtl")
 [background arg="res://assets/images/classroom_background.jpg" fade="0.0"]
 join teacher2 1
 teacher2: Perfeito!
@@ -7,4 +8,3 @@ teacher2: Isso ajuda a entender melhor os fenômenos estudados e a tirar conclus
 do GameCore.onAddWhitelistDialogic("res://assets/characters/scene-8-4.dtl")
 do GameCore.onAddWhitelistQuestion("5")
 do QuestionsGame.changeSceneQuiz("5", "res://assets/images/background_menu.jpg", "res://assets/characters/scene-8-4.dtl")
-do GameCore.addDialogicSeen("res://assets/characters/scene-8-3.dtl")

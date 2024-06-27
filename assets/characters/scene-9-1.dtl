@@ -12,5 +12,4 @@ teacher3: É fundamental analisar as relações de diferentes grupos, povos e so
 do GameCore.onAddWhitelistDialogic("res://assets/characters/scene-9-2.dtl")
 do GameCore.onAddWhitelistQuestion("6")
 do QuestionsGame.changeSceneQuiz("6", "res://assets/images/background_menu.jpg", "res://assets/characters/scene-9-2.dtl")
-do GameCore.addDialogicSeen("res://assets/characters/scene-9-1.dtl")
 do GameMusic.pauseMusic()
