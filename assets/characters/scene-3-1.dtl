@@ -1,16 +1,16 @@
 # Ocorre ao entrar na sala 101 pela primeira vez
 [background arg="res://assets/images/teacher_room.jpg" fade="0.0"]
 set 
-narrator: Você entra na sala
+narrator: Você entra na sala.
 [wait time="1.0"]
 - Bom dia!
 - Olá!
 join chairwoman 1
 chairwoman: Olá {GameCore.getNamePlayer()}, bem-vindo à Escola.
-chairwoman: Sabemos que há muitas perguntas, mas logo faremos uma apresentação no auditório localizado na Sala 303, no terceiro andar.
-chairwoman: Após, você poderá ir para a Sala 102, onde conversaremos com os alunos do 1º ano.
+chairwoman: Sabemos que há muitas perguntas, mas logo faremos uma apresentação no auditório, localizado na sala 303, no terceiro andar.
+chairwoman: Após, você poderá ir para a sala 102, onde conversaremos com os alunos do 1º ano.
 leave chairwoman
-narrator: Você deve ir para a sala 303 no terceiro andar
+narrator: Você deve ir para a sala 303, no terceiro andar
 do GameCore.onChangeCurrentMission("Suba os andares e vá até a sala 303")
 do GameCore.onChangePlayerInDialogic(false)
 do GameCore.onAddWhitelistDialogic("res://assets/characters/scene-5-1.dtl")

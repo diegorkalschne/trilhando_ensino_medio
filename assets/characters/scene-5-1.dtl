@@ -10,9 +10,9 @@ join teacher1 4 [ mirrored="true"]
 chairwoman: Esta é a professora Flávia, uma das responsáveis por guiá-los durante este ano letivo. Ela irá ajudá-los a se adaptarem ao Novo Ensino Médio e estará disponível para quaisquer dúvidas ou problemas que possam surgir.
 teacher1: Olá a todos! Estou muito feliz por estar aqui e mal posso esperar para conhecê-los melhor. Nosso objetivo é proporcionar um ambiente acolhedor e propício para o aprendizado.
 teacher1: Teremos várias atividades e projetos ao longo do ano que irão ajudá-los a desenvolver novas habilidades e a se prepararem para o futuro.
-teacher1: Além de tudo, neste ano, os nossos alunos do ensino médio, iniciarão um novo modelo de ensino - o Novo Ensino Médio. Quando voltarem às salas, explicarei esse novo processo.
+teacher1: Além de tudo, neste ano, os nossos alunos do Ensino Nédio, iniciarão um novo modelo de ensino - o Novo Ensino Médio. Quando voltarem às salas, explicarei esse novo processo.
 leave --All--
-narrator: Você deve ir para a sala 102 no primeiro andar.
+narrator: Você deve ir para a sala 102, no primeiro andar.
 do GameCore.onChangeCurrentMission("Vá para a sala de aula (sala 102)")
 do GameCore.onChangePlayerInDialogic(false)
 do GameCore.onAddWhitelistDialogic("res://assets/characters/scene-7-1.dtl")

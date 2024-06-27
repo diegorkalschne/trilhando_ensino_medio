@@ -1,7 +1,7 @@
 [background arg="res://assets/images/classroom_background.jpg" fade="0.0"]
 join teacher2 1
 teacher2: Isso mesmo!
-teacher2: Muito bem alunos, não se preocupem se não acertaram muitas respostas, vocês terão o ano todo para aprenderem sobre esses conteúdos. Agora, se puderem, vão até a sala 305, lá a professora Josi vai querer falar com vocês.
+teacher2: Muito bem alunos, não se preocupem se não acertaram muitas respostas, vocês terão o ano todo para aprenderem sobre esses conteúdos. Agora, se puderem, vão até a sala 305. Lá a professora Josi vai querer falar com vocês.
 do GameCore.onChangeCurrentMission("Vá para a sala 305")
 do GameCore.onChangePlayerInDialogic(false)
 do GameCore.onAddWhitelistDialogic("res://assets/characters/scene-9-1.dtl")

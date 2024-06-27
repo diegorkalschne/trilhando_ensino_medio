@@ -1,5 +1,6 @@
 [background arg="res://assets/images/classroom_background.jpg" fade="0.0"]
-teacher1: Isso aí!!
+join teacher1 1
+teacher1: Isso aí!
 teacher1: Ao fim do ano você terá a oportunidade de escolher uma trilha de conhecimento para seguir durante o resto do Ensino Médio, mas até lá você terá muito tempo para pensar nisso.
 leave --All--
 narrator: Com isso chega ao fim o seu primeiro dia no Ensino Médio. Um longo ano vem por aí, com muitas escolhas a serem feitas e muito conhecimento a ser ganho.

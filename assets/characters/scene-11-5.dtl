@@ -1,6 +1,6 @@
 [background arg="res://assets/images/classroom_background.jpg" fade="0.0"]
 join teacher1 1
-teacher1: Certo!!
+teacher1: Certo!
 teacher1: Em Ciências da Natureza e suas Tecnologias, um tema relevante é a sustentabilidade ambiental.
 teacher1: Isso envolve a análise de como as atividades humanas impactam os ecossistemas e como tecnologias podem ser utilizadas para mitigar esses impactos.
 # pergunta18

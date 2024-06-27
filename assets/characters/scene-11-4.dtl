@@ -1,6 +1,6 @@
 [background arg="res://assets/images/classroom_background.jpg" fade="0.0"]
 join teacher1 1
-teacher1: Correto!!
+teacher1: Correto!
 teacher1: Um aspecto essencial em Ciências da Natureza é o estudo da biodiversidade e das interações entre os seres vivos e o ambiente.
 teacher1: Isso inclui compreender como as espécies se adaptam e influenciam seu habitat.
 # pergunta17
