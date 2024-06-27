@@ -52,9 +52,9 @@ func playMusicMenu():
 	var audio_stream = load("res://songs/menu_music.mp3")
 	
 	_player_menu.stream = audio_stream
-	_player_menu.volume_db = 10
+	_player_menu.volume_db = -2
 	
-	get_tree().root.add_child(_player_menu)
+	add_child(_player_menu)
 	
 	_player_menu.play()
 

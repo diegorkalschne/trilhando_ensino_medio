@@ -1,4 +1,4 @@
-extends VBoxContainer
+extends Node2D
 
 func _ready():
 	GameMusic.playMusicMenu()
