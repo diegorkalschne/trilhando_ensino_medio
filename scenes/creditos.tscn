@@ -6505,7 +6505,6 @@ text = "O jogo \"Trilhando o Ensino Médio\" foi desenvolvido durante o 7º seme
 da Unijuí, pelos os alunos:
 - Diego Rafael Kalschne;
 - Guilherme Izidro Leal;
-- Guilherme Henke Saueressig;
 
 O desenvolvimento do jogo contou também com orientação da professora Me. Simone Lehnhart Vargas."
 label_settings = SubResource("LabelSettings_md4bw")
