@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://ddnqng3fgtlh7"]
+[gd_scene load_steps=12 format=3 uid="uid://ddnqng3fgtlh7"]
 
 [ext_resource type="Script" path="res://scripts/quiz.gd" id="1_h2cl7"]
+[ext_resource type="Texture2D" uid="uid://c2rq6np2nrxpb" path="res://assets/images/background_menu.jpg" id="2_jb27q"]
 [ext_resource type="Script" path="res://scripts/background_quiz.gd" id="2_s5wsq"]
 [ext_resource type="Script" path="res://scripts/vbox_container_buttons_quiz.gd" id="3_dwwht"]
 [ext_resource type="AudioStream" uid="uid://dtua46lpfxlst" path="res://songs/music1.wav" id="3_k6ejs"]
@@ -31,6 +32,9 @@ script = ExtResource("1_h2cl7")
 [node name="canvas" type="CanvasLayer" parent="."]
 
 [node name="background" type="Sprite2D" parent="canvas"]
+position = Vector2(536, 303)
+scale = Vector2(0.697917, 0.564815)
+texture = ExtResource("2_jb27q")
 script = ExtResource("2_s5wsq")
 
 [node name="question" type="Label" parent="canvas"]

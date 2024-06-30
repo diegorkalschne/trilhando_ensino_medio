@@ -7,6 +7,9 @@ extends Node2D
 @onready var pontuacao = $canvas/pontuacao
 @onready var label_area = $canvas/label_area
 
+# Quantidade de pontos ganhos com cada acerto
+var pontuacao_on_correct_answer = 5
+
 var quiz_general_id = "" # Armaneza o "id" geral do quiz (o ID "pai")
 var current_quiz # Armazena o quiz atual (todas as perguntas disponíveis)
 
@@ -30,7 +33,7 @@ func _exit_tree():
 
 func initQuiz(quiz, quiz_id, background_path: String, callbackDialogic: String):
 	# Seta o background da cena
-	background.setTexture(background_path);
+	#background.setTexture(background_path);
 	
 	current_quiz = quiz # Armazena globalmente qual o quiz atual
 	quiz_general_id = quiz_id
@@ -127,10 +130,7 @@ func _on_correct_answer(button: Button, question_id: String):
 	
 	GameCore.addQuestionResolved(question_id)
 	
-	# Pontuação que o jogador ganha por acertar uma questão
-	var pontuacao_ganha: int = 5
-	
-	_show_pontos(pontuacao_ganha, false) # Jogador ganhou pontos
+	_show_pontos(pontuacao_on_correct_answer, false) # Jogador ganhou pontos
 	
 	await get_tree().create_timer(2).timeout # Delay de 2 segundos
 	
